@@ -1,0 +1,197 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 2,
+            "name": "adidas Samba OG “White Blue” sneakers",
+            "price": 695000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/adidas-samba.png",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 3,
+            "name": "Nike SB Dunk Low Orange Label White Black",
+            "price": 779000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/nike-sb-duck.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 4,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 6,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 5,
+            "name": "Air Jordan 4 Mid “Blue Off-White",
+            "price": 768000,
+            "category": "SNEAKER",
+            "image": "./assets/images/products/air_jd_4_blue.jpg",
+            "size": [39, 40, 41, 42, 43]
+        }
+    ],
+    "categoies": ["GIẢM GIÁ/SALE", "SNEAKER", "DÉP", "ÁO", "QUẦN", "BALO"]
+}
