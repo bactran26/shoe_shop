@@ -1,0 +1,54 @@
+:root{
+  --bg:#0f0f10; --fg:#ffffff; --muted:#c6c7c9; --acc:#ff3b30;
+  --card:#151517; --line:#232326;
+  --container: 1160px;
+  --radius: 10px;
+  --shadow: 0 8px 24px rgba(0,0,0,.25);
+  --font: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font); color:var(--fg); background:#0b0b0c}
+a{color:inherit; text-decoration:none}
+
+/* layout */
+.container{max-width:var(--container); margin-inline:auto; padding:0 16px}
+
+.topbar{background:#09090a; border-bottom:1px solid var(--line); font-size:14px}
+.topbar .container{display:flex; gap:16px; justify-content:space-between; padding:8px 16px; color:var(--muted)}
+
+.site-header{position:sticky; top:0; z-index:5; background:var(--bg); border-bottom:1px solid var(--line)}
+.header-inner{display:flex; align-items:center; gap:16px; padding:14px 16px}
+.logo{font-weight:800; letter-spacing:.5px}
+.logo span{color:var(--acc)}
+.nav{display:flex; gap:14px; flex:1; flex-wrap:wrap}
+.nav a{padding:8px 10px; border-radius:8px; color:var(--muted)}
+.nav a:hover{background:#1b1b1e; color:var(--fg)}
+.btn-admin{padding:10px 12px; border:1px solid var(--line); border-radius:8px}
+.btn-admin:hover{background:#1b1b1e}
+
+.hero{background:linear-gradient(135deg,#1d1d22, #111218); border-bottom:1px solid var(--line)}
+.hero .container{padding:48px 16px}
+.hero h2{margin:0 0 8px}
+.hero p{margin:0 0 16px; color:var(--muted)}
+.btn{display:inline-block; background:var(--acc); color:#fff; padding:10px 16px; border-radius:8px; font-weight:600}
+.btn:hover{opacity:.9}
+
+.section{padding:40px 0}
+.section--alt{background:#0e0e10; border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+.section h3{margin:0 0 16px}
+.grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+.card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:12px; box-shadow:var(--shadow)}
+.thumb{height:160px; border-radius:8px; border:1px dashed #3a3a3c; background:#111}
+.price{color:#87e35f; font-weight:700}
+
+.site-footer{border-top:1px solid var(--line); padding:24px 0; color:var(--muted); text-align:center}
+
+/* responsive */
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .nav{display:none}
+  .grid{grid-template-columns:1fr}
+}
