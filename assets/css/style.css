@@ -188,12 +188,24 @@ html {
     max-width: 100%;
 }
 
-.banner-sale{
+
+
+.banner-shoe, .banner-new-products, .banner-seller-products{
     margin-top: 30px;
     display: flex;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
+
 }
 
+.banner-shoe img{ 
+    width: 75%;
+}
 
+.banner-new-products img{
+    width: 75%;
+}
 
+<!--.banner-seller-products{
+    width: 75%;
+}
