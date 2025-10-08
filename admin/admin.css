@@ -1,0 +1,97 @@
+:root{
+  --bg:#0f0f10; --panel:#151517; --line:#232326; --muted:#c6c7c9; --fg:#fff; --acc:#ff3b30;
+  --radius:12px; --shadow:0 10px 30px rgba(0,0,0,.35);
+  --sidebar: 260px;
+  --font: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font); background:#0b0b0c; color:var(--fg)}
+
+.layout{display:grid; grid-template-columns: var(--sidebar) 1fr; min-height:100dvh}
+
+/* Sidebar */
+.sidebar{background:#0e0e10; border-right:1px solid var(--line); padding:18px; display:flex; flex-direction:column; gap:18px}
+.brand{font-weight:800; letter-spacing:.4px}
+.brand span{color:var(--acc)}
+.menu{display:flex; flex-direction:column; gap:8px}
+.menu .item{display:block; padding:10px 12px; border-radius:10px; color:var(--muted); cursor:pointer}
+.menu .item:hover{background:#1a1a1e; color:#fff}
+.back{margin-top:auto; opacity:.9}
+
+/* Header */
+.content{display:flex; flex-direction:column}
+.admin-header{display:flex; justify-content:space-between; align-items:center; padding:18px; border-bottom:1px solid var(--line); background:#0f0f10}
+#title{margin:0; font-size:20px}
+.actions{display:flex; align-items:center; gap:12px}
+.search input{background:#121215; border:1px solid var(--line); color:#fff; padding:8px 10px; border-radius:8px}
+.user{background:#121215; padding:8px 10px; border-radius:8px; border:1px solid var(--line)}
+
+.panel{padding:18px}
+.panel-head{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px}
+.panel h2{margin:0}
+.panel-actions .btn{padding:10px 12px; background:var(--acc); border-radius:8px; color:#fff}
+.panel-actions .btn:hover{opacity:.9}
+
+/* KPI cards */
+.cards{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:16px}
+.kpi{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:14px; box-shadow:var(--shadow)}
+.kpi-title{color:var(--muted); font-size:14px}
+.kpi-num{font-size:24px; font-weight:800}
+.hint{color:var(--muted)}
+
+/* Toolbar */
+.toolbar{display:flex; gap:12px; flex-wrap:wrap; background:#101014; border:1px solid var(--line); padding:12px; border-radius:10px; margin-bottom:12px}
+.field{display:flex; flex-direction:column; gap:6px; min-width:140px}
+.field select{background:#131318; color:#fff; border:1px solid var(--line); padding:8px 10px; border-radius:8px}
+
+/* Table */
+.table-wrap{overflow:auto; border:1px solid var(--line); border-radius:10px}
+.table{width:100%; border-collapse:separate; border-spacing:0; min-width:720px}
+.table th,.table td{padding:12px 10px; border-bottom:1px solid var(--line); text-align:left}
+.table thead th{background:#121217; color:#cfd0d2; position:sticky; top:0}
+.table tbody tr:hover{background:#131318}
+.table .act a{color:#87e35f}
+.table .act a + a{margin-left:8px}
+
+/* Pagination */
+.pagination{display:flex; gap:8px; align-items:center; margin-top:12px}
+.page{display:inline-block; padding:8px 12px; border:1px solid var(--line); border-radius:8px; color:#fff; background:#121216}
+.page:hover{background:#1a1a20}
+.is-current{background:#2b2b33}
+
+/* Modal (CSS :target) */
+.modal{position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; place-items:center; padding:16px}
+.modal:target{display:grid}
+.modal__dialog{background:#111115; border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); width:100%; max-width:520px; padding:16px}
+.modal__close{position:absolute; right:22px; top:18px; font-size:24px; text-decoration:none}
+.form{display:grid; gap:12px}
+.form label{display:grid; gap:6px; color:#e5e6e7}
+.form input,.form select{background:#15151a; border:1px solid var(--line); color:#fff; padding:10px 12px; border-radius:8px}
+.form__actions{display:flex; gap:10px; justify-content:flex-end; margin-top:8px}
+.btn{display:inline-block; padding:10px 12px; border-radius:8px; background:#2b2b33; color:#fff; border:1px solid var(--line)}
+.btn:hover{opacity:.95}
+.btn--ghost{background:transparent}
+.btn--danger{background:#e5484d}
+
+/* Điều khiển hiển thị panel bằng radio */
+.panel{display:none}
+#tab-dashboard:checked ~ .layout .content [data-panel="dashboard"],
+#tab-products:checked  ~ .layout .content [data-panel="products"],
+#tab-orders:checked    ~ .layout .content [data-panel="orders"],
+#tab-categories:checked~ .layout .content [data-panel="categories"]{display:block}
+
+/* Đồng bộ tiêu đề theo tab (mẹo CSS-only) */
+#tab-dashboard:checked ~ .layout .content #title::after{content:""}
+#tab-products:checked  ~ .layout .content #title{content: "Quản lý sản phẩm"}
+#tab-orders:checked    ~ .layout .content #title{content: "Đơn hàng"}
+#tab-categories:checked~ .layout .content #title{content: "Danh mục"}
+/* (do hạn chế CSS, ta giữ #title là “Bảng điều khiển”, tiêu đề phụ hiển thị ở panel) */
+
+/* Responsive */
+@media (max-width:920px){
+  .layout{grid-template-columns: 1fr}
+  .sidebar{position:sticky; top:0; z-index:5; flex-direction:row; align-items:center; gap:12px}
+  .menu{flex-direction:row; flex-wrap:wrap}
+  .cards{grid-template-columns:1fr}
+}
