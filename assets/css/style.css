@@ -206,6 +206,67 @@ html {
     width: 75%;
 }
 
-<!--.banner-seller-products{
+.banner-seller-products img{
     width: 75%;
+}
+
+.footer-section{
+    padding: 40px 0;
+
+}
+
+.footer-container{
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 80%;
+    gap: 20px;
+}
+.list-infor-container li{
+    padding: 4px 0;
+    list-style-type: none;
+}
+
+.footer-infor-name {
+    margin-bottom: 20px;
+}
+
+.list-infor-container li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-about {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-about h3 {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.about-content {
+    width: 50%;
+    text-align: justify;
+    margin: 0 auto;
+    line-height: 1.5;
+    color: #333;
+}
+
+.payment-methods, .shipping-partners {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.payment-methods h4, .shipping-partners h4 {
+    padding: 20px 0;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #333;
 }
