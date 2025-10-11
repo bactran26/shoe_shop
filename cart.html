@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shoe-shop</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/products.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/themify-icons/themify-icons.css"
+    />
+    <link rel="stylesheet" href="./assets/css/cart.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="header" style="height: auto !important">
+        <div class="header-topbar">
+          <div class="header-container">
+            <div class="header-hotline">
+              <span
+                >Hotline: 0903.150.443 | Free Ship cho đơn hàng trên 1tr
+                đồng</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="header-wrapper-middle">
+          <div class="header-container">
+            <div class="header-middle">
+              <div class="header-logo">
+                <div class="header-logo-img">
+                  <a href="#">
+                    <img
+                      src="./assets/images/new-logo-ss-2021-1-150x63.png.avif"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="header-search">
+                <div class="header-space-search"></div>
+                <form class="header-input-search">
+                  <input
+                    type="text"
+                    placeholder="Search for products"
+                    class="input-search"
+                  />
+                  <button class="button-search">
+                    <i class="ti-search"></i>
+                  </button>
+                </form>
+                <div class="header-space-after"></div>
+              </div>
+
+              <div class="header-right">
+                <div class="header-user">
+                  <a href="#"><i class="ti-stamp"></i></a>
+                </div>
+
+                <div class="header-cart">
+                  <a href="!!!"><i class="ti-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottomforcart">
+        <ul class="nav-bars">
+          <li><a href="">GIẢM GIÁ/SALE</a></li>
+          <li>
+            <a href="">
+              SNEAKER
+              <i class="ti-angle-down"></i>
+            </a>
+            <ul class="sub-nav">
+              <li><a href="">New Balence</a></li>
+              <li><a href="">Nike</a></li>
+              <li><a href="">Adidas</a></li>
+              <li><a href="">Jordan</a></li>
+              <li><a href="">Yeezy</a></li>
+              <li><a href="">Vans</a></li>
+              <li><a href="">MLB</a></li>
+              <li><a href="">Converse</a></li>
+              <li><a href="">Balenciaga</a></li>
+            </ul>
+          </li>
+          <li><a href="">DÉP</a></li>
+          <li><a href="">ÁO</a></li>
+          <li><a href="">QUẦN</a></li>
+          <li><a href="">BALO</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <a>SHOPING CART</a>
+        <div class="line"></div>
+        <a class="link2" href="cartcheckout.html">CHECK OUT</a>
+        <div class="line"></div>
+        <a class="link1">ODER COMPLETE</a>
+      </div>
+      <div class="bodycart">
+        <div class="bodybox1">
+          <div class="bodybox1_b1">
+            <div class="cart-col">SẢN PHẨM</div>
+            <div class="cart-col">GIÁ</div>
+            <div class="cart-col">SỐ LƯỢNG</div>
+            <div class="cart-col">TẠM TÍNH</div>
+          </div>
+          <div class="bodybox1_b2">
+            <div class="cart-col">
+              <div class="product-info">
+                <img
+                  src="assets/images/mau-banner-giay-nu-1.jpg"
+                  style="transform: translateX(-15px)"
+                  alt="H-FORCE BLUE"
+                />
+                <span>H-FORCE BLUE / - 43</span>
+              </div>
+            </div>
+            <div class="cart-col">1.190.000₫</div>
+            <div class="cart-col">
+              <div class="quantity-box">
+                <button class="qty-btn" id="minus">−</button>
+                <span id="quantity">1</span>
+                <button class="qty-btn" id="plus">+</button>
+              </div>
+            </div>
+            <div class="cart-col"><span id="tempPrice">1.190.000₫</span></div>
+          </div>
+
+          <div class="magiamgia">
+            <input type="text" id="discount" placeholder="MÃ GIẢM GIÁ..." />
+            <button id="apply" onclick="alert('Nhập mã thành công')">
+              ÁP DỤNG
+            </button>
+          </div>
+        </div>
+        <div class="bodybox2">
+          <div class="thanhtoan">TỔNG CỘNG GIỎ HÀNG</div>
+          <div class="thanhtoan1">
+            <span class="span_right">TẠM TÍNH</span>
+            <span
+              class="spand_left"
+              style="text-align: right; transform: translateX(-35px)"
+              >1.190.000₫</span
+            >
+          </div>
+          <div class="linethanhtoan"></div>
+          <div class="thanhtoan2">
+            <span class="spand_right">GIAO HÀNG</span>
+            <p class="info">Tiêu chuẩn: 35,000₫</p>
+
+            <p>
+              Tùy chọn giao hàng sẽ được cập nhật trong quá trình <br />
+              thanh toán.
+            </p>
+          </div>
+          <div class="linethanhtoan"></div>
+          <div class="thanhtoan3">
+            <span class="spand_right">TỔNG</span>
+            <span
+              class="spand_left"
+              style="text-align: right; transform: translateX(-35px)"
+              >1.190.000₫</span
+            >
+          </div>
+          <div class="thanhtoan4">
+            <button style="font-size: 15px">TIẾN HÀNH THANH TOÁN</button>
+          </div>
+        </div>
+      </div>
+      <div class="linebodycart"></div>
+      <div class="boxrong"></div>
+      <div class="sanphamvuaxem">sản phẩm vua xem</div>
+      <div class="underbodycart">
+        <div class="underbodycart-item">
+            <a href="link san pham"> <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"></i></a>
+            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
+            <p class="brand">local brand</p>
+            <p class="brand">★★★★★</p>
+            <div class="price-container">
+              <span class="old-price">999,000₫</span>
+              <span class="new-price">888,000₫</span> 
+            </div>
+        </div>
+        <div class="underbodycart-item">
+            <a href="link san pham"> <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"></i></a>
+            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
+            <p class="brand">local brand</p>
+            <p class="brand">★★★★★</p>
+            <div class="price-container">
+              <span class="old-price">999,000₫</span>
+              <span class="new-price">888,000₫</span> 
+            </div>
+        </div>
+        <div class="underbodycart-item">
+            <a href="link san pham"> <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"></i></a>
+            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
+            <p class="brand">local brand</p>
+            <p class="brand">★★★★★</p>
+            <div class="price-container">
+              <span class="old-price">999,000₫</span>
+              <span class="new-price">888,000₫</span> 
+            </div>
+        </div>
+    
+        <div class="underbodycart-item">
+            <a href="link san pham"> <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"></i></a>
+            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
+            <p class="brand">local brand</p>
+            <p class="brand">★★★★★</p>
+            <div class="price-container">
+              <span class="old-price">999,000₫</span>
+              <span class="new-price">888,000₫</span> 
+            </div>
+        </div>
+      </div>
+      <div class="boxrong"></div>
+      <div id="footer-section">
+        <div class="footer-container">
+          <div class="footer-infor">
+            <h3 class="footer-infor-name">SAIGONSNEAKER.COM</h3>
+            <ul class="list-infor-container">
+              <li class="infor-address">
+                Address: 48B Thạch Thị Thanh, Tân Định, Q1, Hồ Chí Minh.
+              </li>
+              <li class="infor-phone">Phone: 0903 150 443</li>
+              <li class="infor-open">
+                Open: T2-T6 từ 13h – 21h30, T7-Cn từ 11h-21h30
+              </li>
+              <li class="infor-email">Email: cskh@saigonsneaker.com</li>
+            </ul>
+          </div>
+          <div class="footer-customer">
+            <h3 class="footer-infor-name">CHĂM SÓC KHÁC HÀNG</h3>
+            <ul class="list-infor-container">
+              <li>
+                <a href="">Hướng dẫn mua hàng</a>
+              </li>
+              <li>
+                <a href="">Chính sách bảo mật</a>
+              </li>
+              <li>
+                <a href="">Hình thức thanh toán</a>
+              </li>
+              <li>
+                <a href="">Vận chuyển và giao nhận</a>
+              </li>
+              <li>
+                <a href="">Bảo hành và đổi trả</a>
+              </li>
+              <li>
+                <a href="">Tuyển dụng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-info-details">
+            <h3 class="footer-infor-name">THÔNG TIN</h3>
+            <ul class="list-infor-container">
+              <li><a href="">Tài khoản</a></li>
+              <li><a href="">Kiểm tra đơn hàng</a></li>
+              <li><a href="">Đăng ký nhận tin</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-shop">
+            <h3 class="footer-infor-name">SHOP</h3>
+            <ul class="list-infor-container">
+              <li><a href="">Adidas</a></li>
+              <li><a href="">Nike</a></li>
+              <li><a href="">Jordan</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-about">
+          <h3>Sneaker store in Ho Chi Minh City</h3>
+          <div class="about-content">
+            <p>
+              Tìm kiếm đôi giày sneaker yêu thích của bạn tại SAIGONSNEAKER, cửa
+              hàng giày sneaker và phụ kiện thời trang đường phố hàng đầu Việt
+              Nam. Tự hào phục vụ hơn 5000 khách hàng tại HCM và toàn Việt Nam
+              từ 2016. Chúng tôi có đầy đủ các loại giày sneaker từ các thương
+              hiệu nổi tiếng nhất thế giới từ Nike, Adidas, Converse đến New
+              Balance, Jordan, Vans…v.v. Đội ngũ nhân viên thân thiện và nhiệt
+              tình sẽ giúp bạn tìm được đôi giày hoàn hảo cho phong cách của
+              mình.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="payment-methods">
+            <h4>PHƯƠNG THỨC THANH TOÁN</h4>
+            <p>Visa Master Card MOMO Cash on Delivery</p>
+          </div>
+
+          <div class="shipping-partners">
+            <h4>ĐỐI TÁC VẬN CHUYỂN</h4>
+            <p>Giaohangtietkiem Giaohangnhanh Lalamove Aahamove GrabExpress</p>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p>Saigonsneaker.com © 2025</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./data/dataManager.js"></script>
+    <script type="module" src="./assets/js/products.js"></script>
+    <script src="assets/js/cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+.underbodycart {
+  display: flex;
+  height: 700px;
+  background-color: #fff;
+  position: relative;
+  width: 85%;
+  transform: translateX(140px);
+  justify-content: center;
+  gap: 20px;
+}
