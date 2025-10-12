@@ -1,97 +1,218 @@
-:root{
-  --bg:#0f0f10; --panel:#151517; --line:#232326; --muted:#c6c7c9; --fg:#fff; --acc:#ff3b30;
-  --radius:12px; --shadow:0 10px 30px rgba(0,0,0,.35);
-  --sidebar: 260px;
-  --font: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+/* General Body Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f4f7fa;
+  color: #333;
+  display: flex;
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{font-family:var(--font); background:#0b0b0c; color:var(--fg)}
 
-.layout{display:grid; grid-template-columns: var(--sidebar) 1fr; min-height:100dvh}
+/* Main Wrapper */
+.admin-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
 
-/* Sidebar */
-.sidebar{background:#0e0e10; border-right:1px solid var(--line); padding:18px; display:flex; flex-direction:column; gap:18px}
-.brand{font-weight:800; letter-spacing:.4px}
-.brand span{color:var(--acc)}
-.menu{display:flex; flex-direction:column; gap:8px}
-.menu .item{display:block; padding:10px 12px; border-radius:10px; color:var(--muted); cursor:pointer}
-.menu .item:hover{background:#1a1a1e; color:#fff}
-.back{margin-top:auto; opacity:.9}
+/* Sidebar Navigation */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
 
-/* Header */
-.content{display:flex; flex-direction:column}
-.admin-header{display:flex; justify-content:space-between; align-items:center; padding:18px; border-bottom:1px solid var(--line); background:#0f0f10}
-#title{margin:0; font-size:20px}
-.actions{display:flex; align-items:center; gap:12px}
-.search input{background:#121215; border:1px solid var(--line); color:#fff; padding:8px 10px; border-radius:8px}
-.user{background:#121215; padding:8px 10px; border-radius:8px; border:1px solid var(--line)}
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid #34495e;
+}
 
-.panel{padding:18px}
-.panel-head{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px}
-.panel h2{margin:0}
-.panel-actions .btn{padding:10px 12px; background:var(--acc); border-radius:8px; color:#fff}
-.panel-actions .btn:hover{opacity:.9}
+.sidebar-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  flex-grow: 1;
+}
 
-/* KPI cards */
-.cards{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:16px}
-.kpi{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:14px; box-shadow:var(--shadow)}
-.kpi-title{color:var(--muted); font-size:14px}
-.kpi-num{font-size:24px; font-weight:800}
-.hint{color:var(--muted)}
+.sidebar-nav li a {
+  display: block;
+  padding: 15px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
 
-/* Toolbar */
-.toolbar{display:flex; gap:12px; flex-wrap:wrap; background:#101014; border:1px solid var(--line); padding:12px; border-radius:10px; margin-bottom:12px}
-.field{display:flex; flex-direction:column; gap:6px; min-width:140px}
-.field select{background:#131318; color:#fff; border:1px solid var(--line); padding:8px 10px; border-radius:8px}
+.sidebar-nav li a:hover,
+.sidebar-nav li a.active {
+  background-color: #3498db;
+  color: #fff;
+}
 
-/* Table */
-.table-wrap{overflow:auto; border:1px solid var(--line); border-radius:10px}
-.table{width:100%; border-collapse:separate; border-spacing:0; min-width:720px}
-.table th,.table td{padding:12px 10px; border-bottom:1px solid var(--line); text-align:left}
-.table thead th{background:#121217; color:#cfd0d2; position:sticky; top:0}
-.table tbody tr:hover{background:#131318}
-.table .act a{color:#87e35f}
-.table .act a + a{margin-left:8px}
+.sidebar-footer a {
+  display: block;
+  padding: 15px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  background-color: #e74c3c;
+  text-align: center;
+  font-weight: bold;
+}
 
-/* Pagination */
-.pagination{display:flex; gap:8px; align-items:center; margin-top:12px}
-.page{display:inline-block; padding:8px 12px; border:1px solid var(--line); border-radius:8px; color:#fff; background:#121216}
-.page:hover{background:#1a1a20}
-.is-current{background:#2b2b33}
+/* Main Content Area */
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+}
 
-/* Modal (CSS :target) */
-.modal{position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; place-items:center; padding:16px}
-.modal:target{display:grid}
-.modal__dialog{background:#111115; border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); width:100%; max-width:520px; padding:16px}
-.modal__close{position:absolute; right:22px; top:18px; font-size:24px; text-decoration:none}
-.form{display:grid; gap:12px}
-.form label{display:grid; gap:6px; color:#e5e6e7}
-.form input,.form select{background:#15151a; border:1px solid var(--line); color:#fff; padding:10px 12px; border-radius:8px}
-.form__actions{display:flex; gap:10px; justify-content:flex-end; margin-top:8px}
-.btn{display:inline-block; padding:10px 12px; border-radius:8px; background:#2b2b33; color:#fff; border:1px solid var(--line)}
-.btn:hover{opacity:.95}
-.btn--ghost{background:transparent}
-.btn--danger{background:#e5484d}
+.content-header {
+  margin-bottom: 30px;
+}
 
-/* Điều khiển hiển thị panel bằng radio */
-.panel{display:none}
-#tab-dashboard:checked ~ .layout .content [data-panel="dashboard"],
-#tab-products:checked  ~ .layout .content [data-panel="products"],
-#tab-orders:checked    ~ .layout .content [data-panel="orders"],
-#tab-categories:checked~ .layout .content [data-panel="categories"]{display:block}
+.content-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #2c3e50;
+}
 
-/* Đồng bộ tiêu đề theo tab (mẹo CSS-only) */
-#tab-dashboard:checked ~ .layout .content #title::after{content:""}
-#tab-products:checked  ~ .layout .content #title{content: "Quản lý sản phẩm"}
-#tab-orders:checked    ~ .layout .content #title{content: "Đơn hàng"}
-#tab-categories:checked~ .layout .content #title{content: "Danh mục"}
-/* (do hạn chế CSS, ta giữ #title là “Bảng điều khiển”, tiêu đề phụ hiển thị ở panel) */
+/* Cards for Dashboard */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-/* Responsive */
-@media (max-width:920px){
-  .layout{grid-template-columns: 1fr}
-  .sidebar{position:sticky; top:0; z-index:5; flex-direction:row; align-items:center; gap:12px}
-  .menu{flex-direction:row; flex-wrap:wrap}
-  .cards{grid-template-columns:1fr}
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #3498db;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0 0;
+}
+
+/* Table Styles */
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.content-table th,
+.content-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.content-table thead {
+  background-color: #34495e;
+  color: #fff;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.content-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.product-image-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Action Buttons in Tables */
+.action-buttons a {
+  text-decoration: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #2980b9;
+}
+.delete-btn {
+  background-color: #c0392b;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.header-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
 }
