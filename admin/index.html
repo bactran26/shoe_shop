@@ -1,173 +1,47 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Admin — ShoeShop</title>
-  ./admin.css
-</head>
-<body>
-  <!-- Radio điều hướng (ẩn) -->
-  <input type="radio" name="tab" id="tab-dashboard" checked hidden>
-  <input type="radio" name="tab" id="tab-products" hidden>
-  <input type="radio" name="tab" id="tab-orders" hidden>
-  <input type="radio" name="tab" id="tab-categories" hidden>
-
-  <div class="layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="brand">Shoe<span>Shop</span> Admin</div>
-      <nav class="menu">
-        <label for="tab-dashboard" class="item">📊 Dashboard</label>
-        <label for="tab-products"  class="item">👟 Sản phẩm</label>
-        <label for="tab-orders"    class="item">🧾 Đơn hàng</label>
-        <label for="tab-categories"class="item">🏷️ Danh mục</label>
-      </nav>
-      ../index.html← Về trang bán</a>
-    </aside>
-
-    <!-- Nội dung -->
-    <main class="content">
-      <header class="admin-header">
-        <h1 id="title">Bảng điều khiển</h1>
-        <div class="actions">
-          <div class="search">
-            <input type="text" placeholder="Tìm kiếm (demo UI)" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-style.css" />
+  </head>
+  <body>
+    <div class="admin-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-header">Admin Panel</div>
+        <ul class="sidebar-nav">
+          <li><a href="index.html" class="active">Dashboard</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="orders.html">Orders</a></li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="../index.html">Back to Shop</a>
+        </div>
+      </aside>
+      <main class="main-content">
+        <div class="content-header">
+          <h1>Dashboard</h1>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <h3>Total Sales</h3>
+            <p>1,250,000₫</p>
           </div>
-          <div class="user">Admin</div>
-        </div>
-      </header>
-
-      <!-- PANEL: Dashboard -->
-      <section class="panel" data-panel="dashboard">
-        <div class="cards">
-          <div class="kpi"><div class="kpi-title">Doanh thu (giả lập)</div><div class="kpi-num">₫ 120,000,000</div></div>
-          <div class="kpi"><div class="kpi-title">Đơn hàng tuần</div><div class="kpi-num">215</div></div>
-          <div class="kpi"><div class="kpi-title">Tồn kho thấp</div><div class="kpi-num">18 SP</div></div>
-        </div>
-        <p class="hint">* Tất cả số liệu chỉ minh họa giao diện vì đồ án không dùng JavaScript.</p>
-      </section>
-
-      <!-- PANEL: Sản phẩm (sẽ hoàn thiện ở Bước 3) -->
-      <section class="panel" data-panel="products">
-        <div class="panel-head">
-          <h2>Quản lý sản phẩm</h2>
-          <div class="panel-actions">
-            #add-product+ Thêm sản phẩm</a>
+          <div class="card">
+            <h3>New Orders</h3>
+            <p>15</p>
+          </div>
+          <div class="card">
+            <h3>Total Products</h3>
+            <p>112</p>
+          </div>
+          <div class="card">
+            <h3>Visitors Today</h3>
+            <p>450</p>
           </div>
         </div>
-
-        <!-- Thanh công cụ (UI) -->
-        <div class="toolbar">
-          <div class="field">
-            <label>Danh mục</label>
-            <select>
-              <option>Tất cả</option>
-              <option>Sneaker</option>
-              <option>Áo</option>
-              <option>Quần</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>Thương hiệu</label>
-            <select>
-              <option>Tất cả</option><option>Nike</option><option>Adidas</option><option>NB</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>Trạng thái</label>
-            <select>
-              <option>Đang bán</option><option>Hết hàng</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Bảng sản phẩm (demo) -->
-        <div class="table-wrap">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Mã</th><th>Tên</th><th>Danh mục</th><th>Giá</th><th>Tồn</th><th>Hành động</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>SP001</td><td>Nike AF1 '07</td><td>Sneaker</td><td>2.990.000₫</td><td>12</td>
-                <td class="act">
-                  #edit-productSửa</a> · #confirm-deleteXoá</a>
-                </td>
-              </tr>
-              <tr>
-                <td>SP002</td><td>Adidas Samba OG</td><td>Sneaker</td><td>2.450.000₫</td><td>5</td>
-                <td class="act">
-                  #edit-productSửa</a> · #confirm-deleteXoá</a>
-                </td>
-              </tr>
-              <tr>
-                <td>SP003</td><td>Converse 1970s Hi</td><td>Sneaker</td><td>1.690.000₫</td><td>23</td>
-                <td class="act">
-                  #edit-productSửa</a> · #confirm-deleteXoá</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Phân trang (UI) -->
-        <div class="pagination">
-          #1</a>
-          #2</a>
-          #3</a>
-          <span class="dots">…</span>
-          #Tiếp »</a>
-        </div>
-      </section>
-
-      <!-- PANEL: Đơn hàng (để trống, sẽ điền sau) -->
-      <section class="panel" data-panel="orders">
-        <h2>Đơn hàng</h2>
-        <p>Tạo bảng đơn hàng tương tự sản phẩm (số, khách, tổng tiền, trạng thái, ngày...).</p>
-      </section>
-
-      <!-- PANEL: Danh mục (để trống, sẽ điền sau) -->
-      <section class="panel" data-panel="categories">
-        <h2>Danh mục</h2>
-        <p>Danh sách danh mục + form thêm/sửa (CSS-only).</p>
-      </section>
-    </main>
-  </div>
-
-  <!-- MODAL: Thêm sản phẩm (CSS :target) -->
-  <div class="modal" id="add-product" aria-hidden="true">
-    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="ap-title">
-      <h3 id="ap-title">Thêm sản phẩm</h3>
-      <form class="form">
-        <label>Tên sản phẩm<input type="text" placeholder="VD: Nike AF1 '07"></label>
-        <label>Danh mục
-          <select><option>Sneaker</option><option>Áo</option><option>Quần</option></select>
-        </label>
-        <label>Giá (₫)<input type="number" placeholder="2990000"></label>
-        <label>Tồn kho<input type="number" placeholder="12"></label>
-        <div class="form__actions">
-          #Lưu (demo)</a>
-          #Huỷ</a>
-        </div>
-      </form>
-      #×</a>
+      </main>
     </div>
-  </div>
-
-  <!-- MODAL: Xác nhận xoá -->
-  <div class="modal" id="confirm-delete" aria-hidden="true">
-    <div class="modal__dialog" role="dialog" aria-modal="true">
-      <h3>Xoá sản phẩm?</h3>
-      <p>Hành động chỉ là demo giao diện (không dùng JS).</p>
-      <div class="form__actions">
-        #Xoá</a>
-        #Huỷ</a>
-      </div>
-      #×</a>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
