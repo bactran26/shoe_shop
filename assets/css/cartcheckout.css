@@ -1,10 +1,313 @@
-.underbodycart {
+.bodycartcheck {
   display: flex;
-  height: 700px;
-  background-color: #fff;
+  height: 1400px;
+  background-color: #ffffff;
   position: relative;
   width: 85%;
   transform: translateX(140px);
   justify-content: center;
   gap: 20px;
+  font-family: "Lexend", Sans-serif;
+}
+
+.bodycartcheck-left {
+  display: flex;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.bodycartcheck-right {
+  position: relative;
+  display: flex;
+  width: 50%;
+  height: 95%;
+  background-color: rgb(210, 196, 196);
+  border-radius: 30px;
+
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.dautren {
+  display: flex;
+  height: 9%;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Lexend", Sans-serif;
+  font-size: 25px;
+}
+.gancuoi {
+  display: flex;
+  height: 5%;
+  width: 90%;
+  align-items: center;
+  text-align: center;
+  font-family: "Lexend", Sans-serif;
+  font-size: 23px;
+}
+.daucuoi {
+  height: 6%;
+  width: 90%;
+  font-family: "Lexend", Sans-serif;
+}
+
+.daucuoi a {
+  text-decoration: none;
+}
+
+.daucuoi button {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 15px;
+  text-transform: uppercase;
+  background-color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-family: "Lexend", Sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.bodycartcheck .than {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  height: 78%;
+  width: 95%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  gap: 5px;
+}
+
+.small {
+  display: flex;
+  width: 90%;
+  height: 7%;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  align-items: center;
+}
+.big {
+  display: flex;
+  width: 90%;
+  height: 15%;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  align-items: center;
+  gap: 10px;
+}
+.big img {
+  height: 90px;
+}
+
+.left {
+  display: flex;
+  background-color: white;
+  width: 75%;
+  text-align: left;
+  font-family: "Lexend", Sans-serif;
+  color: black;
+  font-size: 22px;
+  gap: 20px;
+  font-weight: bold;
+}
+.right {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 25%;
+  justify-content: center;
+  justify-content: flex-end;
+  font-family: "Lexend", Sans-serif;
+  color: black;
+  font-size: 22px;
+}
+.bodycartcheck-right .line {
+  width: 90%;
+  height: 2px;
+  background-color: rgb(146, 146, 146);
+  border-radius: 20px;
+}
+
+///
+.checkout-container {
+  width: 100%;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Tiêu đề các phần */
+.section-header {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  font-family: "Lexend", Sans-serif;
+}
+.additional-info-header {
+  margin-top: 25px;
+}
+
+/* Nhóm input cho hàng ngang (Họ và Tên) */
+.input-group-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* Khung input chung */
+.input-box {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-width {
+  width: 48%; /* Gần 50% nhưng để lại khoảng trống giữa */
+}
+
+.full-width {
+  width: 100%;
+  gap: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff; /* Màu xanh khi focus */
+}
+
+/* Input Họ Tên có đường viền đỏ nổi bật */
+.highlighted-input {
+  border-color: red !important;
+}
+
+/* Custom style cho select box (Thị trấn/Thành phố) */
+.select-box select {
+  appearance: none; /* Bỏ giao diện mặc định */
+  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-5.4H18.6A17.6%2017.6%200%200%200%205.4%2069.4a17.6%2017.6%200%200%200%200%2025.3l129.5%20129.5a17.6%2017.6%200%200%200%2025.3%200l129.5-129.5a17.6%2017.6%200%200%200%200-25.3z%22%2F%3E%3C%2Fsvg%3E")
+    no-repeat right 10px center;
+  background-size: 12px;
+  padding-right: 30px; /* Thêm padding để biểu tượng không che chữ */
+}
+
+/* Khu vực Tạo tài khoản mới / reCAPTCHA */
+.create-account-group {
+  margin: 20px 0;
+}
+
+.checkbox-label {
+  margin-bottom: 10px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.recaptcha-box {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.recaptcha-box p {
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.terms-checkbox {
+  margin-top: 15px;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Khu vực THÔNG TIN BỔ SUNG */
+textarea {
+  min-height: 100px; /* Đảm bảo chiều cao của textarea */
+  resize: vertical;
+}
+
+.bodyordercl {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+}
+.thana {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 84.5%;
+  justify-content: center;
+}
+.thongbao {
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  height: 40%;
+  font-size: 20px;
+  text-align: left;
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  font-weight: bold;
+}
+.nutbam {
+  display: flex;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nutbam button {
+  height: 60px;
+  width: 300px;
+  border: rgb(149, 171, 193);
+  background-color: rgb(149, 171, 193);
+  color: black;
+  border-radius: 20px;
+  font-size: 22px;
 }
