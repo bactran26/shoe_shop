@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">Admin Panel</div>
+            <ul class="sidebar-nav">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="orders.html">Orders</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="../index.html">Back to Shop</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <h1>Edit Product</h1>
+            <div class="form-container">
+                <form>
+                    <div class="form-group">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product-name" name="product-name" value="Balenciaga Triple S Orange Grey" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-brand">Brand</label>
+                        <input type="text" id="product-brand" name="product-brand" value="Balenciaga" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Price (₫)</label>
+                        <input type="number" id="product-price" name="product-price" value="888000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-old-price">Old Price (Optional, for sales)</label>
+                        <input type="number" id="product-old-price" name="product-old-price">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image">Image URL</label>
+                        <input type="text" id="product-image" name="product-image" value="../assets/images/mau-banner-giay-nu-1.jpg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Description</label>
+                        <textarea id="product-description" name="product-description"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Save Changes</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
