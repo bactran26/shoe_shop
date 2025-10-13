@@ -1,0 +1,134 @@
+.header-search {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 99999;
+}
+
+.advanced-box {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    padding: 15px 20px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.35s ease;
+    z-index: 99999;
+}
+
+.advanced-box.open {
+    max-height: 250px;
+    opacity: 1;
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.filter-row label {
+    flex: 1;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.filter-row input,
+.filter-row select {
+    flex: 2;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.2s;
+}
+
+.filter-row input:focus,
+.filter-row select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search-btn-box {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.apply-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.apply-btn:hover {
+    background: #0056b3;
+}
+
+.search-results {
+    position: absolute;
+    top: calc(110% + 200px);
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    z-index: 99999;
+}
+
+.search-results.show {
+    display: block;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.product-item:hover {
+    background: #f4f7ff;
+    border-radius: 6px;
+}
+
+.product-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.product-item h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-item p {
+    margin: 2px 0 0 0;
+    font-size: 13px;
+    color: #555;
+}

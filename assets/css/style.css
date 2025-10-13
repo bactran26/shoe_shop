@@ -11,17 +11,18 @@ html {
 #main {
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 #header {
   position: relative;
-  height: 198px;
 }
 
 .header-container {
   margin: 0 48px;
   padding: 0 15px;
 }
+
 .header-topbar {
   display: flex;
   background-color: #fff;
@@ -57,9 +58,11 @@ html {
   align-items: center;
   width: 100%;
 }
+
 .header-space-search {
   width: 100px;
 }
+
 .header-space-after {
   width: 200px;
 }
@@ -74,11 +77,19 @@ html {
 
 .input-search {
   width: 100%;
-  height: 46px;
+  height: 56px;
   font-size: 17px;
   border: 1px solid #333;
   border-radius: 25px;
   padding-right: 50px;
+  padding-left: 15px;
+  transition: none;
+}
+
+.input-search:focus {
+  border: 2px solid #000;
+  box-shadow: none;
+  background-color: #fff;
 }
 
 .button-search {
@@ -126,16 +137,14 @@ html {
   justify-content: center;
   border-bottom: 2px solid #000;
   position: sticky;
-  top: 0px;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  margin-top: 0;
-  font-weight: bold;
 }
 
 .nav-bars {
   display: flex;
-  position: sticky;
-  top: 0px;
   font-size: 15px;
   list-style: none;
   align-items: center;
@@ -148,17 +157,17 @@ html {
   text-decoration: none;
 }
 
-.nav-bars > li {
+.nav-bars>li {
   position: sticky;
-  top: 0px;
+  top: 0;
 }
 
-.nav-bars > li > a {
+.nav-bars>li>a {
   padding: 5px 20px;
   display: inline-block;
 }
 
-.nav-bars > li:hover .sub-nav {
+.nav-bars>li:hover .sub-nav {
   display: block;
 }
 
@@ -168,12 +177,13 @@ html {
   top: 100%;
   left: 0;
   background-color: hsl(0, 14%, 95%);
-  z-index: 1000;
+  z-index: 9999;
   list-style-type: none;
   padding: 12px 20px;
   min-width: 180px;
   border-radius: 5px;
 }
+
 .sub-nav li a {
   color: #333;
   font-size: 18px;
@@ -198,14 +208,8 @@ html {
   justify-content: center;
 }
 
-.banner-shoe img {
-  width: 75%;
-}
-
-.banner-new-products img {
-  width: 75%;
-}
-
+.banner-shoe img,
+.banner-new-products img,
 .banner-seller-products img {
   width: 75%;
 }
@@ -222,6 +226,7 @@ html {
   width: 80%;
   gap: 20px;
 }
+
 .list-infor-container li {
   padding: 4px 0;
   list-style-type: none;
