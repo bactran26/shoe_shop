@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+             <div class="sidebar-header">Admin Panel</div>
+             <ul class="sidebar-nav">
+                 <li><a href="dashboard.html">Dashboard</a></li>
+                 <li><a href="products.html">Products</a></li>
+                 <li><a href="orders.html">Orders</a></li>
+                 <li><a href="customers.html" class="active">Customers</a></li>
+             </ul>
+             <div class="sidebar-footer">
+                 <a href="../index.html">Back to Shop</a>
+             </div>
+        </aside>
+        <main class="main-content">
+            <h1>Customer Details: Tran Thi B 🚩</h1>
+            
+            <div class="activity-container">
+                <div class="activity-list">
+                    <h3>Customer Information</h3>
+                    <p><strong>Name:</strong> Tran Thi B</p>
+                    <p><strong>Email:</strong> tranthib@email.com</p>
+                    <p><strong>Phone:</strong> 090xxxxxxx</p>
+                    <p><strong>Total Orders:</strong> 2</p>
+                </div>
+                <div class="activity-list">
+                    <h3>Add a Note / Flag Customer</h3>
+                    <form>
+                        <textarea class="note-input" placeholder="E.g., Bom hàng COD ngày 17/10/2025. Cần xác nhận cho đơn hàng tiếp theo."></textarea>
+                        <div style="margin-top: 10px; display: flex; align-items: center; gap: 15px;">
+                            <button type="submit" class="btn">Save Note</button>
+                            <label><input type="checkbox" checked> Flag this customer 🚩</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="notes-section">
+                <h3>History & Notes</h3>
+                <div class="note">
+                    <p class="note-content">Bom hàng COD đơn #1015. Lý do: không nghe máy.</p>
+                    <p class="note-meta">Added by admin on 15/09/2025</p>
+                </div>
+                <div class="note">
+                    <p class="note-content">Khiếu nại về sản phẩm XYZ, đã giải quyết.</p>
+                    <p class="note-meta">Added by admin on 01/08/2025</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
