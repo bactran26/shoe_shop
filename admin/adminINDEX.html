@@ -14,6 +14,7 @@
           <li><a href="dashboard.html" class="active">Dashboard</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="orders.html">Orders</a></li>
+          <li><a href="customers.html">Customers</a></li> </ul>
         </ul>
         <div class="sidebar-footer">
           <a href="../index.html">Back to Shop</a>
@@ -22,6 +23,11 @@
       <main class="main-content">
         <div class="content-header">
           <h1>Dashboard</h1>
+          <div class="time-filters">
+            <button class="filter-btn active">Today</button>
+            <button class="filter-btn">This Week</button>
+            <button class="filter-btn">This Month</button>
+          </div>
         </div>
         <div class="card-container">
           <div class="card">
@@ -41,7 +47,95 @@
             <p>450</p>
           </div>
         </div>
+        <div class="chart-container">
+          <h3>Sales Trend (Last 7 Days)</h3>
+          <canvas id="salesChart"></canvas>
+        </div>
+
+        <div class="activity-container">
+          <div class="activity-list">
+            <h3>Latest Orders</h3>
+            <table class="mini-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1024</td>
+                  <td>Nguyen Van A</td>
+                  <td>1,190,000₫</td>
+                </tr>
+                <tr>
+                  <td>#1023</td>
+                  <td>Tran Thi B</td>
+                  <td>888,000₫</td>
+                </tr>
+                <tr>
+                  <td>#1022</td>
+                  <td>Le Van C</td>
+                  <td>2,078,000₫</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="activity-list">
+            <h3>Top Selling Products</h3>
+            <table class="mini-table">
+              <thead>
+                <tr>
+                  <th>Product Name</th>
+                  <th>Sales</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>H-FORCE BLUE</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Balenciaga Triple S</td>
+                  <td>35</td>
+                </tr>
+                <tr>
+                  <td>Nike Air Jordan 1</td>
+                  <td>28</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById('salesChart').getContext('2d');
+      const salesChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], // Labels for the X-axis
+          datasets: [{
+            label: 'Sales (₫)',
+            data: [1200000, 1900000, 3000000, 5000000, 2300000, 3800000, 4200000], // Dummy data for the Y-axis
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 2,
+            tension: 0.1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
   </body>
 </html>
