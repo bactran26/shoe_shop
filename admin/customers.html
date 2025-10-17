@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Customers</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">Admin Panel</div>
+            <ul class="sidebar-nav">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="customers.html" class="active">Customers</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="../index.html">Back to Shop</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <h1>Manage Customers</h1>
+            <div class="search-container">
+                <form>
+                    <input type="text" class="search-input" placeholder="Search by customer name or email...">
+                    <button type="submit" class="btn search-btn">Search</button>
+                </form>
+            </div>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Total Orders</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#C001</td>
+                        <td><a href="customer-details.html">Nguyen Van A</a></td>
+                        <td>nguyenvana@email.com</td>
+                        <td>5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>#C002</td>
+                        <td><a href="customer-details.html">Tran Thi B</a></td>
+                        <td>tranthib@email.com</td>
+                        <td>2</td>
+                        <td style="font-size: 20px;">🚩</td>
+                    </tr>
+                    <tr>
+                        <td>#C003</td>
+                        <td><a href="customer-details.html">Le Van C</a></td>
+                        <td>levanc@email.com</td>
+                        <td>8</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>
