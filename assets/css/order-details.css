@@ -44,7 +44,7 @@
 .shipping-info h3,
 .payment-info h3,
 .order-timeline h3 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 15px;
   border-bottom: 1px solid #b5b5b5;
@@ -54,7 +54,7 @@
 .order-info p,
 .shipping-info p,
 .payment-info p {
-  font-size: 16px;
+  font-size: 18px;
   margin: 8px 0;
   color: #333;
 }
@@ -63,7 +63,7 @@
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -96,19 +96,19 @@
 }
 
 .product-info img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
   border-radius: 5px;
 }
 
 .product-text {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
 }
 
 .product-text .name {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: #000;
 }
@@ -149,7 +149,7 @@
 }
 
 .timeline-item .timeline-status {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .timeline-item .timeline-date {

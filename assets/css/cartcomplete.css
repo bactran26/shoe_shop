@@ -55,7 +55,7 @@
 .product-details h3,
 .shipping-info h3,
 .payment-info h3 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 15px;
   border-bottom: 1px solid #b5b5b5;
@@ -65,7 +65,7 @@
 .order-info p,
 .shipping-info p,
 .payment-info p {
-  font-size: 16px;
+  font-size: 18px;
   margin: 8px 0;
   color: #333;
 }
@@ -74,7 +74,7 @@
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -92,13 +92,13 @@
 
 .product-info {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
 }
 
 .product-info img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
   border-radius: 5px;
 }
 
@@ -165,5 +165,5 @@
 }
 
 .view-orders-btn:hover {
-  background-color: #5a6268;
+  background-color: #303438;
 }
