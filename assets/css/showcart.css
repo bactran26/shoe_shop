@@ -1,0 +1,222 @@
+/* showcart.css */
+.bodycart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 600px; /* Adjusted for additional rows */
+  width: 100%;
+  position: relative;
+}
+
+.bodybox1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(-180px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 520px; /* Adjusted for additional rows */
+  width: 1000px; /* Slightly wider to accommodate new columns */
+  color: rgb(0, 0, 0);
+}
+
+.bodybox1_b1 {
+  top: 0px;
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  font-weight: bold;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  color: #000;
+  border-bottom: 2px solid #b5b5b5;
+}
+
+.cart-col {
+  flex: 1;
+  text-align: center;
+  align-items: center;
+}
+
+.cart-col:first-child {
+  flex: 2;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.bodybox1_b2 {
+  top: 70px;
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  font-weight: bold;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 120px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid #b5b5b5;
+}
+
+/* Adjust positions for multiple rows */
+.bodybox1_b2:nth-child(2) {
+  top: 70px;
+}
+.bodybox1_b2:nth-child(3) {
+  top: 190px;
+}
+.bodybox1_b2:nth-child(4) {
+  top: 310px;
+}
+
+.bodybox1_b3 {
+  top: 430px; /* Adjusted for three rows */
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  color: white;
+  border-bottom: 2px solid #b5b5b5;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status.completed {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.status.canceled {
+  background-color: #dc3545; /* Red */
+  color: white;
+}
+
+.status.processing {
+  background-color: #ffc107; /* Yellow */
+  color: black;
+}
+
+.view-details-btn {
+  padding: 8px 15px;
+  background-color: #111827;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Lexend", Sans-serif;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.view-details-btn:hover {
+  background-color: #1f2937;
+}
+
+/* Styles for underbodycart */
+.underbodycart {
+  display: flex;
+  height: 500px;
+  background-color: #fff;
+  position: relative;
+  width: 85%;
+  transform: translateX(140px);
+  justify-content: center;
+  gap: 20px;
+}
+
+.underbodycart-item {
+  position: relative;
+  width: 280px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.underbodycart-item p.name {
+  color: black;
+  font-family: "Lexend", Sans-serif;
+  font-size: 22px;
+  position: relative;
+  padding: 15px;
+  text-align: left;
+}
+
+.underbodycart-item p.brand {
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+.underbodycart-item img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 280px;
+  height: 250px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  font-family: "Lexend", Sans-serif;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  bottom: 0px;
+  margin-top: auto;
+}
+
+.old-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 18px;
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+.new-price {
+  color: #000;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.old-price::after,
+.new-price::after {
+  content: "₫";
+  font-size: 80%;
+}
+
+.sanphamvuaxem {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 20px;
+  transform: translateX(210px);
+}

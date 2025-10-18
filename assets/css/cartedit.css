@@ -1,0 +1,166 @@
+/* editcart.css */
+/* Similar to cartcheckout.css, customized for editing shipping info */
+.bodycartcheck {
+  display: flex;
+  height: 1400px;
+  background-color: #ffffff;
+  position: relative;
+  width: 85%;
+  transform: translateX(140px);
+  justify-content: center;
+  gap: 20px;
+  font-family: "Lexend", Sans-serif;
+}
+
+.bodycartcheck-left {
+  display: flex;
+  width: 100%; /* Full width for edit page */
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+/* Remove right side if not needed for edit */
+.bodycartcheck-right {
+  display: none; /* Hide summary for edit page */
+}
+
+.section-header {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  font-family: "Lexend", Sans-serif;
+}
+
+.additional-info-header {
+  margin-top: 25px;
+}
+
+.input-group-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.input-box {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-width {
+  width: 48%;
+}
+
+.full-width {
+  width: 100%;
+  gap: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+}
+
+.highlighted-input {
+  border-color: red !important;
+}
+
+.select-box select {
+  appearance: none;
+  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-5.4H18.6A17.6%2017.6%200%200%200%205.4%2069.4a17.6%2017.6%200%200%200%200%2025.3l129.5%20129.5a17.6%2017.6%200%200%200%2025.3%200l129.5-129.5a17.6%2017.6%200%200%200%200-25.3z%22%2F%3E%3C%2Fsvg%3E")
+    no-repeat right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
+}
+
+.create-account-group {
+  margin: 20px 0;
+}
+
+.checkbox-label {
+  margin-bottom: 10px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.recaptcha-box {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.recaptcha-box p {
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.terms-checkbox {
+  margin-top: 15px;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.daucuoi {
+  height: 6%;
+  width: 90%;
+  font-family: "Lexend", Sans-serif;
+}
+
+.daucuoi a {
+  text-decoration: none;
+}
+
+.daucuoi button {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 15px;
+  text-transform: uppercase;
+  background-color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-family: "Lexend", Sans-serif;
+  color: white;
+  font-weight: bold;
+}

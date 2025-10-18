@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shoe-shop - Order Complete</title>
+    <title>shoe-shop - Show Cart</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/products.css" />
     <link
@@ -11,7 +11,7 @@
       href="./assets/fonts/themify-icons/themify-icons.css"
     />
     <link rel="stylesheet" href="./assets/css/cart.css" />
-    <link rel="stylesheet" href="./assets/css/cartcomplete.css" />
+    <link rel="stylesheet" href="./assets/css/showcart.css" />
   </head>
   <body>
     <div id="main">
@@ -100,119 +100,159 @@
         <div class="line"></div>
         <a class="link2" href="cartcheckout.html">CHECK OUT</a>
         <div class="line"></div>
-        <a class="link2 active" href="cartcomplete.html">ORDER COMPLETE</a>
+        <a class="link2" href="cartcomplete.html">ORDER COMPLETE</a>
       </div>
       <div class="boxrong"></div>
-      <div class="order-complete">
-        <div class="order-complete-header">
-          <i class="ti-check-circle"></i>
-          <h2>ĐẶT HÀNG THÀNH CÔNG!</h2>
-          <p>
-            Cảm ơn bạn đã mua sắm tại SAIGONSNEAKER. Đơn hàng của bạn đã được
-            xác nhận.
-          </p>
-        </div>
-        <div class="order-complete-container">
-          <div class="order-info">
-            <h3>Thông tin đơn hàng</h3>
-            <p><strong>Mã đơn hàng:</strong> <span id="order-id">1</span></p>
-            <p><strong>Ngày đặt hàng:</strong> 18/10/2025</p>
-            <p>
-              <strong>Trạng thái:</strong>
-              <span class="status completed">Hoàn thành</span>
-            </p>
+      <div class="bodycart">
+        <div class="bodybox1">
+          <div class="bodybox1_b1">
+            <div class="cart-col">SẢN PHẨM</div>
+            <div class="cart-col">GIÁ</div>
+            <div class="cart-col">SỐ LƯỢNG</div>
+            <div class="cart-col">TẠM TÍNH</div>
+            <div class="cart-col">TRẠNG THÁI</div>
+            <div class="cart-col">HÀNH ĐỘNG</div>
           </div>
-          <div class="product-details">
-            <h3>Chi tiết sản phẩm</h3>
-            <div class="product-item">
+          <!-- Product 1: Completed -->
+          <div class="bodybox1_b2">
+            <div class="cart-col">
               <div class="product-info">
                 <img
                   src="assets/images/mau-banner-giay-nu-1.jpg"
-                  alt="Product"
+                  style="transform: translateX(-15px)"
+                  alt="H-FORCE BLUE"
                 />
-                <div class="product-text">
-                  <p class="name">H-FORCE BLUE / - 43</p>
-                  <p class="brand">Local Brand</p>
-                  <p class="price">1.190.000₫</p>
-                  <p><strong>Số lượng:</strong> 1</p>
-                  <p><strong>Tạm tính:</strong> 1.190.000₫</p>
-                </div>
+                <span>H-FORCE BLUE / - 43</span>
               </div>
             </div>
+            <div class="cart-col">1.190.000₫</div>
+            <div class="cart-col">
+              <div class="quantity-box">
+                <span id="quantity">1</span>
+              </div>
+            </div>
+            <div class="cart-col">1.190.000₫</div>
+            <div class="cart-col">
+              <span class="status completed">Hoàn thành</span>
+            </div>
+            <div class="cart-col">
+              <a href="order-details.html?order=1"
+                ><button class="view-details-btn">Xem chi tiết</button></a
+              >
+            </div>
           </div>
-          <div class="shipping-info">
-            <h3>Thông tin giao hàng</h3>
-            <p><strong>Họ và tên:</strong> Nguyễn Văn A</p>
-            <p>
-              <strong>Địa chỉ:</strong> 123 Đường Láng, Quận 1, TP. Hồ Chí Minh
-            </p>
-            <p><strong>Số điện thoại:</strong> 0903 123 456</p>
-            <p><strong>Email:</strong> example@saigonsneaker.com</p>
-            <p><strong>Ghi chú:</strong> Giao hàng trong giờ hành chính</p>
+          <!-- Product 2: Canceled -->
+          <div class="bodybox1_b2">
+            <div class="cart-col">
+              <div class="product-info">
+                <img
+                  src="assets/images/mau-banner-giay-nu-1.jpg"
+                  style="transform: translateX(-15px)"
+                  alt="Balenciaga Triple S"
+                />
+                <span>Balenciaga Triple S / - 37</span>
+              </div>
+            </div>
+            <div class="cart-col">888.000₫</div>
+            <div class="cart-col">
+              <div class="quantity-box">
+                <span id="quantity">2</span>
+              </div>
+            </div>
+            <div class="cart-col">1.776.000₫</div>
+            <div class="cart-col">
+              <span class="status canceled">Bị hủy</span>
+            </div>
+            <div class="cart-col">
+              <a href="order-details.html?order=2"
+                ><button class="view-details-btn">Xem chi tiết</button></a
+              >
+            </div>
           </div>
-          <div class="payment-info">
-            <h3>Thông tin thanh toán</h3>
-            <p><strong>Phương thức thanh toán:</strong> MOMO</p>
-            <p><strong>Tổng tiền hàng:</strong> 1.190.000₫</p>
-            <p><strong>Phí vận chuyển:</strong> 30.000₫</p>
-            <p><strong>Tổng thanh toán:</strong> 1.220.000₫</p>
+          <!-- Product 3: Processing -->
+          <div class="bodybox1_b2">
+            <div class="cart-col">
+              <div class="product-info">
+                <img
+                  src="assets/images/mau-banner-giay-nu-1.jpg"
+                  style="transform: translateX(-15px)"
+                  alt="Nike Air Max"
+                />
+                <span>Nike Air Max / - 42</span>
+              </div>
+            </div>
+            <div class="cart-col">1.500.000₫</div>
+            <div class="cart-col">
+              <div class="quantity-box">
+                <span id="quantity">1</span>
+              </div>
+            </div>
+            <div class="cart-col">1.500.000₫</div>
+            <div class="cart-col">
+              <span class="status processing">Đang xử lý</span>
+            </div>
+            <div class="cart-col">
+              <a href="order-details.html?order=3"
+                ><button class="view-details-btn">Xem chi tiết</button></a
+              >
+            </div>
           </div>
-          <div class="order-actions">
-            <a href="index.html"
-              ><button class="continue-shopping-btn">
-                Tiếp tục mua sắm
-              </button></a
-            >
-            <a href="showcart.html"
-              ><button class="view-orders-btn">Xem đơn hàng</button></a
-            >
-          </div>
+          <div class="bodybox1_b3"></div>
         </div>
       </div>
       <div class="linebodycart"></div>
       <div class="boxrong"></div>
-      <div class="sanphamvuaxem">sản phẩm vừa xem</div>
+      <div class="sanphamvuaxem">SẢN PHẨM ĐÃ MUA</div>
       <div class="underbodycart">
         <div class="underbodycart-item">
-            <a href="link san pham"> <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"></i></a>
-            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
-            <p class="brand">local brand</p>
-            <p class="brand">★★★★★</p>
-            <div class="price-container">
-              <span class="old-price">999,000₫</span>
-              <span class="new-price">888,000₫</span> 
-            </div>
+          <a href="link san pham">
+            <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"
+          /></a>
+          <p class="name">H-FORCE BLUE - Size 43</p>
+          <p class="brand">local brand</p>
+          <p class="brand">★★★★★</p>
+          <div class="price-container">
+            <span class="old-price">1.300.000₫</span>
+            <span class="new-price">1.190.000₫</span>
+          </div>
         </div>
         <div class="underbodycart-item">
-            <a href="link san pham"> <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"></i></a>
-            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
-            <p class="brand">local brand</p>
-            <p class="brand">★★★★★</p>
-            <div class="price-container">
-              <span class="old-price">999,000₫</span>
-              <span class="new-price">888,000₫</span> 
-            </div>
+          <a href="link san pham">
+            <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"
+          /></a>
+          <p class="name">
+            Balenciaga Triple S Clear Sole Orange Grey Black - Size 37
+          </p>
+          <p class="brand">local brand</p>
+          <p class="brand">★★★★★</p>
+          <div class="price-container">
+            <span class="old-price">999.000₫</span>
+            <span class="new-price">888.000₫</span>
+          </div>
         </div>
         <div class="underbodycart-item">
-            <a href="link san pham"> <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"></i></a>
-            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
-            <p class="brand">local brand</p>
-            <p class="brand">★★★★★</p>
-            <div class="price-container">
-              <span class="old-price">999,000₫</span>
-              <span class="new-price">888,000₫</span> 
-            </div>
+          <a href="link san pham">
+            <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"
+          /></a>
+          <p class="name">Nike Air Max - Size 42</p>
+          <p class="brand">local brand</p>
+          <p class="brand">★★★★★</p>
+          <div class="price-container">
+            <span class="old-price">1.700.000₫</span>
+            <span class="new-price">1.500.000₫</span>
+          </div>
         </div>
-    
         <div class="underbodycart-item">
-            <a href="link san pham"> <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"></i></a>
-            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
-            <p class="brand">local brand</p>
-            <p class="brand">★★★★★</p>
-            <div class="price-container">
-              <span class="old-price">999,000₫</span>
-              <span class="new-price">888,000₫</span> 
-            </div>
+          <a href="link san pham">
+            <img src="assets/images/mau-banner-giay-nu-1.jpg" alt="Giay nu"
+          /></a>
+          <p class="name">Nike Air Limited - Size 36</p>
+          <p class="brand">local brand</p>
+          <p class="brand">★★★★★</p>
+          <div class="price-container">
+            <span class="old-price">1.700.000₫</span>
+            <span class="new-price">1.500.000₫</span>
+          </div>
         </div>
       </div>
       <div class="boxrong"></div>
@@ -260,7 +300,6 @@
             </ul>
           </div>
         </div>
-    
         <div class="footer-about">
           <h3>Sneaker store in Ho Chi Minh City</h3>
           <div class="about-content">
@@ -291,60 +330,8 @@
         </div>
       </div>
     </div>
-    
     <script type="module" src="./data/dataManager.js"></script>
     <script type="module" src="./assets/js/products.js"></script>
     <script src="assets/js/cart.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Placeholder for dynamic data (replace with actual data fetching)
-        const orderData = {
-          id: "1",
-          status: "completed",
-          statusText: "Hoàn thành",
-          productName: "H-FORCE BLUE / - 43",
-          price: "1.190.000₫",
-          quantity: 1,
-          total: "1.190.000₫",
-          shipping: {
-            name: "Nguyễn Văn A",
-            address: "123 Đường Láng, Quận 1, TP. Hồ Chí Minh",
-            phone: "0903 123 456",
-            email: "example@saigonsneaker.com",
-            note: "Giao hàng trong giờ hành chính",
-          },
-          payment: {
-            method: "COD",
-            subtotal: "1.190.000₫",
-            shippingFee: "30.000₫",
-            total: "1.220.000₫",
-          },
-        };
-        
-        document.getElementById("order-id").textContent = orderData.id;
-        document.querySelector(".product-text").innerHTML = `
-          <p class="name">${orderData.productName}</p>
-          <p class="brand">Local Brand</p>
-          <p class="price">${orderData.price}</p>
-          <p><strong>Số lượng:</strong> ${orderData.quantity}</p>
-          <p><strong>Tạm tính:</strong> ${orderData.total}</p>
-        `;
-        document.querySelector(".shipping-info").innerHTML = `
-          <h3>Thông tin giao hàng</h3>
-          <p><strong>Họ và tên:</strong> ${orderData.shipping.name}</p>
-          <p><strong>Địa chỉ:</strong> ${orderData.shipping.address}</p>
-          <p><strong>Số điện thoại:</strong> ${orderData.shipping.phone}</p>
-          <p><strong>Email:</strong> ${orderData.shipping.email}</p>
-          <p><strong>Ghi chú:</strong> ${orderData.shipping.note}</p>
-        `;
-        document.querySelector(".payment-info").innerHTML = `
-          <h3>Thông tin thanh toán</h3>
-          <p><strong>Phương thức thanh toán:</strong> ${orderData.payment.method}</p>
-          <p><strong>Tổng tiền hàng:</strong> ${orderData.payment.subtotal}</p>
-          <p><strong>Phí vận chuyển:</strong> ${orderData.payment.shippingFee}</p>
-          <p><strong>Tổng thanh toán:</strong> ${orderData.payment.total}</p>
-        `;
-      });
-    </script>
   </body>
 </html>

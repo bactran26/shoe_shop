@@ -1,0 +1,169 @@
+.order-complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 85%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Lexend", Sans-serif;
+}
+
+.order-complete-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.order-complete-header .ti-check-circle {
+  font-size: 60px;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.order-complete-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.order-complete-header p {
+  font-size: 18px;
+  color: #333;
+}
+
+.order-complete-container {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-info,
+.product-details,
+.shipping-info,
+.payment-info {
+  margin-bottom: 20px;
+}
+
+.order-info h3,
+.product-details h3,
+.shipping-info h3,
+.payment-info h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #b5b5b5;
+  padding-bottom: 5px;
+}
+
+.order-info p,
+.shipping-info p,
+.payment-info p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status.completed {
+  background-color: #28a745;
+  color: white;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #b5b5b5;
+  padding-bottom: 10px;
+}
+
+.product-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.product-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product-text .name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.product-text .brand {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.product-text .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.product-text p {
+  font-size: 16px;
+  color: #333;
+}
+
+.order-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.continue-shopping-btn,
+.view-orders-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Lexend", Sans-serif;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.continue-shopping-btn {
+  background-color: #111827;
+  color: white;
+}
+
+.continue-shopping-btn:hover {
+  background-color: #1f2937;
+}
+
+.view-orders-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.view-orders-btn:hover {
+  background-color: #5a6268;
+}
