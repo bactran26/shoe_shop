@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Đơn Hàng</title>
+    <link rel="stylesheet" href="./assets/css/admin-style.css">
+</head>
+<body>
+<a href="../index.html" target="_blank" class="view-site-button">
+        <i class="ti-world"></i> Xem Trang Web
+    </a>
+<header class="admin-header">
+    <div class="header-container">
+        <div class="header-logo">
+            <a href="dashboard.html">
+                <img src="../assets/images/new-logo-ss-2021-1-150x63.png.avif" alt="Site Logo">
+            </a>
+        </div>
+        <nav class="admin-nav">
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Tổng Quan</a></li>
+                <li><a href="manage-users.html">Quản Lý Khách Hàng</a></li>
+                <li><a href="manage-categories.html">Quản Lý Loại Sản Phẩm</a></li>
+                <li><a href="manage-products.html">Quản Lý Sản Phẩm</a></li>
+                <li><a href="manage-imports.html">Quản Lý Nhập Hàng</a></li>
+                <li><a href="manage-pricing.html">Quản Lý Giá Bán</a></li>
+                <li class="active"><a href="manage-orders.html">Quản Lý Đơn Hàng</a></li>
+                <li><a href="manage-inventory.html">Quản Lý Tồn Kho</a></li>
+                <li><a href="login.html">Đăng Xuất</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="admin-wrapper">
+    <main class="main-content">
+        <header class="main-header">
+            <h1>Chi Tiết Đơn Hàng #1021</h1>
+        </header>
+        <div class="content-body">
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Thông tin khách hàng</h3>
+                    <p><strong>Họ và tên:</strong> Nguyễn Văn A</p>
+                    <p><strong>Địa chỉ:</strong> 123 Đường Láng, Quận 1, TP. Hồ Chí Minh</p>
+                    <p><strong>Số điện thoại:</strong> 0903 123 456</p>
+                    <p><strong>Email:</strong> nguyenvana@email.com</p>
+                </div>
+                 <div class="card">
+                    <h3>Cập nhật trạng thái</h3>
+                    <form>
+                        <div class="input-group">
+                            <label for="order-status">Trạng thái đơn hàng</label>
+                            <select id="order-status">
+                                <option value="new">Mới đặt</option>
+                                <option value="processing" selected>Đã xử lý</option>
+                                <option value="delivered">Đã giao</option>
+                                <option value="cancelled">Hủy</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn">Cập Nhật</button>
+                    </form>
+                </div>
+            </div>
+             <div class="card">
+                <h3>Chi tiết sản phẩm</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sản Phẩm</th>
+                            <th>Số Lượng</th>
+                            <th>Giá</th>
+                            <th>Tạm Tính</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>H-FORCE BLUE / - 43</td>
+                            <td>1</td>
+                            <td>1,190,000₫</td>
+                            <td>1,190,000₫</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Tổng tiền hàng:</strong></td>
+                            <td>1,190,000₫</td>
+                        </tr>
+                         <tr>
+                            <td colspan="3"><strong>Phí vận chuyển:</strong></td>
+                            <td>30,000₫</td>
+                        </tr>
+                         <tr>
+                            <td colspan="3"><strong>Tổng thanh toán:</strong></td>
+                            <td><strong>1,220,000₫</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>

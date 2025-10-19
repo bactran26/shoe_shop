@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Phiếu Nhập Hàng</title>
+    <link rel="stylesheet" href="./assets/css/admin-style.css">
+</head>
+<body>
+<a href="../index.html" target="_blank" class="view-site-button">
+        <i class="ti-world"></i> Xem Trang Web
+    </a>
+<header class="admin-header">
+    <div class="header-container">
+        <div class="header-logo">
+            <a href="dashboard.html">
+                <img src="../assets/images/new-logo-ss-2021-1-150x63.png.avif" alt="Site Logo">
+            </a>
+        </div>
+        <nav class="admin-nav">
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Tổng Quan</a></li>
+                <li><a href="manage-users.html">Quản Lý Khách Hàng</a></li>
+                <li><a href="manage-categories.html">Quản Lý Loại Sản Phẩm</a></li>
+                <li><a href="manage-products.html">Quản Lý Sản Phẩm</a></li>
+                <li class="active"><a href="manage-imports.html">Quản Lý Nhập Hàng</a></li>
+                <li><a href="manage-pricing.html">Quản Lý Giá Bán</a></li>
+                <li><a href="manage-orders.html">Quản Lý Đơn Hàng</a></li>
+                <li><a href="manage-inventory.html">Quản Lý Tồn Kho</a></li>
+                <li><a href="login.html">Đăng Xuất</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="admin-wrapper">
+    <main class="main-content">
+        <header class="main-header">
+            <h1>Thêm Phiếu Nhập Hàng</h1>
+        </header>
+        <div class="content-body">
+            <div class="card">
+                <form>
+                    <div class="input-group">
+                        <label for="import-date">Ngày nhập</label>
+                        <input type="date" id="import-date" required>
+                    </div>
+                    <hr>
+                    <h3>Chi Tiết Sản Phẩm Nhập</h3>
+                    <div id="product-list">
+                        <div class="product-entry">
+                            <select>
+                                <option>Chọn sản phẩm</option>
+                                <option value="NK001">H-FORCE BLUE / - 43</option>
+                                <option value="BLG002">Balenciaga Triple S</option>
+                            </select>
+                            <input type="number" placeholder="Số lượng" min="1">
+                            <input type="number" placeholder="Giá nhập (VNĐ)">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="addProductEntry()">Thêm sản phẩm</button>
+                    <div class="form-actions" style="margin-top: 20px;">
+                        <button type="submit" class="btn">Lưu Phiếu Nhập</button>
+                        <a href="manage-imports.html" class="btn btn-secondary">Hủy</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+<script>
+    function addProductEntry() {
+        const list = document.getElementById('product-list');
+        const entry = document.createElement('div');
+        entry.className = 'product-entry';
+        entry.innerHTML = `
+            <select>
+                <option>Chọn sản phẩm</option>
+                <option value="NK001">H-FORCE BLUE / - 43</option>
+                <option value="BLG002">Balenciaga Triple S</option>
+            </select>
+            <input type="number" placeholder="Số lượng" min="1">
+            <input type="number" placeholder="Giá nhập (VNĐ)">
+             <button type="button" class="btn btn-danger btn-sm" onclick="this.parentElement.remove()">Xóa</button>
+        `;
+        list.appendChild(entry);
+    }
+</script>
+<style>
+    .product-entry {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+    .product-entry select, .product-entry input { flex: 1; }
+</style>
+</body>
+</html>
