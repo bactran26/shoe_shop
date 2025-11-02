@@ -21,6 +21,30 @@ function createProductCard(product) {
     `;
 }
 
+document.addEventListener('DOMContentLoaded', async () => {
+    // Lấy tham số từ URL, ví dụ: products.html?category=sneaker&brand=nike
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    const brand = params.get('brand');
+
+    const products = await getProducts();
+
+    // Lọc sản phẩm theo category và brand
+    const filtered = products.filter(p =>
+        (!category || p.category.toLowerCase() === category.toLowerCase()) &&
+        (!brand || p.brand.toLowerCase() === brand.toLowerCase())
+    );
+
+    const container = document.getElementById('products-grid');
+    container.innerHTML = filtered.map(product => `
+        <div class="product-card">
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <div>${product.price.toLocaleString()}₫</div>
+        </div>
+    `).join('');
+});
+
 async function displayProducts() {
     try {
         const products = await getProducts();
@@ -29,7 +53,7 @@ async function displayProducts() {
         const saleContainer = document.getElementById('sale-products');
         if (saleContainer) {
             saleContainer.innerHTML = products
-                .slice(0, 12) // First 12 products for sale section
+                .slice(0, 12)
                 .map(product => createProductCard(product))
                 .join('');
         }
@@ -38,24 +62,30 @@ async function displayProducts() {
         const newContainer = document.getElementById('new-products');
         if (newContainer) {
             newContainer.innerHTML = products
-                .slice(12, 24) // Next 12 products for new arrivals
+                .slice(12, 24)
                 .map(product => createProductCard(product))
                 .join('');
         }
 
-         // Display best sellers
+        // Display best sellers
         const bestSellersContainer = document.getElementById('best-sellers');
         if (bestSellersContainer) {
             bestSellersContainer.innerHTML = products
-                .slice(24, 36) // First 12 products for best sellers (2 rows x 6 columns)
+                .slice(24, 36)
                 .map(product => createProductCard(product))
                 .join('');
         }
+
+        // Add click event listeners to all product cards
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const productId = card.getAttribute('data-id');
+                window.location.href = `product-details.html?id=${productId}`;
+            });
+        });
     } catch (error) {
         console.error('Error:', error);
     }
 }
-
-    
 
 document.addEventListener('DOMContentLoaded', displayProducts);
