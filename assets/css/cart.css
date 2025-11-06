@@ -476,7 +476,7 @@
   position: relative;
   width: 280px;             /* độ rộng mỗi sản phẩm */
   background: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #695d5d;
   border-radius: 8px;
 
   text-align: left;
@@ -504,8 +504,7 @@
 }
 .underbodycart-item img{
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px; 
-    width: 280px;
+    width: 275px;
     height: 250px;
 }
 
@@ -519,44 +518,36 @@
 .price-container {
     
     display: flex; 
-    align-items: center; /* Căn chỉnh theo chiều dọc */
+    align-items: center; 
     font-family: "Lexend", Sans-serif; 
     padding-left: 15px;
-    padding-bottom:10px ;
+    padding-bottom:20px ;
     padding-top:10px;
     bottom :0px;
      margin-top: auto; 
     
 }
 
-/* Kiểu cho Giá Cũ (490,000₫) */
+
 .old-price {
-    /* Màu xám mờ */
+  
     color: #999; 
-    /* Gạch ngang chữ */
     text-decoration: line-through; 
-    /* Kích thước chữ nhỏ hơn giá mới */
     font-size: 18px; 
-    /* Độ đậm thường */
     font-weight: normal; 
-    /* Khoảng cách với giá mới */
     margin-right: 5px; 
 }
 
-/* Kiểu cho Giá Mới (149,000₫) */
+
 .new-price {
-    /* Màu chữ đen đậm */
     color: #000; 
-    /* Kích thước chữ lớn và nổi bật */
     font-size: 17px; 
-    /* Rất đậm (Bold/Black) */
     font-weight: 900; 
 }
 
-/* Tùy chỉnh nhỏ: Giữ cho ký hiệu '₫' có thể nhỏ hơn chút để tinh tế hơn */
 .old-price::after, .new-price::after {
     content: '₫';
-    font-size: 80%; /* Nhỏ hơn một chút so với số */
+    font-size: 80%;
 }
 .boxrong{
   height: 30px;

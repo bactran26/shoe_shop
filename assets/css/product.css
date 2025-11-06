@@ -79,7 +79,7 @@ body {
 .chon-size span {
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 6px 10px;
   margin: 3px;
   cursor: pointer;
@@ -97,7 +97,8 @@ body {
 
 .so-luong input {
   width: 50px;
-  text-align: center;
+  text-align: center;'
+  border-radius:8px;
   padding: 4px;
 }
 
@@ -108,7 +109,7 @@ body {
   color: #fff;
   padding: 12px 24px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
   transition: background 0.2s;
