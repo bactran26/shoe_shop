@@ -142,7 +142,7 @@
                <label for="matkhaudangky">Nhập mật khẩu *</label>
               <input
                 type="password"
-                id="emaildangky"
+                id="matkhaudangky"
                 class="oinputmatkhau"
                 placeholder="Nhập mật khẩu"
                 required
@@ -166,7 +166,7 @@
                   I agree to these terms (required).
                 </label>
               </div>
-              <a href="dangnhap.html" class="nutdangky">ĐĂNG KÝ</a>
+              <button type="submit" class="nutdangky">ĐĂNG KÝ</button>
              
             </form>
           </div>
@@ -267,5 +267,24 @@
     <script type="module" src="./data/dataManager.js"></script>
     <script type="module" src="./assets/js/products.js"></script>
     <script src="assets/js/cart.js"></script>
-  </body>
+    <script>
+      document.querySelector('.formdangky').addEventListener('submit', function(e) {
+          e.preventDefault();
+          const email = document.getElementById('emaildangky').value.trim();
+          const username = this.querySelector('input[placeholder="Nhập tên đăng nhập"]').value.trim();
+          const password = document.getElementById('matkhaudangky').value.trim();
+          const agree = this.querySelector('input[type="checkbox"]').checked;
+
+          if (!email || !username || !password) {
+              alert('Vui lòng nhập đầy đủ thông tin!');
+              return;
+          }
+          if (!agree) {
+              alert('Bạn phải đồng ý với điều khoản!');
+              return;
+          }
+          window.location.href = 'dangnhap.html';
+      });
+      </script>
+</body>
 </html>
