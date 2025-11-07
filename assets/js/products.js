@@ -25,7 +25,7 @@ async function displayProducts() {
     try {
         const products = await getProducts();
         
-        // Display sale products
+        
         const saleContainer = document.getElementById('sale-products');
         if (saleContainer) {
             saleContainer.innerHTML = products
@@ -34,7 +34,7 @@ async function displayProducts() {
                 .join('');
         }
 
-        // Display new products
+        
         const newContainer = document.getElementById('new-products');
         if (newContainer) {
             newContainer.innerHTML = products
@@ -43,7 +43,7 @@ async function displayProducts() {
                 .join('');
         }
 
-        // Display best sellers
+        
         const bestSellersContainer = document.getElementById('best-sellers');
         if (bestSellersContainer) {
             bestSellersContainer.innerHTML = products
@@ -52,7 +52,7 @@ async function displayProducts() {
                 .join('');
         }
 
-        // Add click event listeners to all product cards
+        
         document.querySelectorAll('.product-card').forEach(card => {
             card.addEventListener('click', () => {
                 const productId = card.getAttribute('data-id');

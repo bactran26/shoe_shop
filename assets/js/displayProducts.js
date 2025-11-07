@@ -1,46 +1,38 @@
 import { getProducts } from '../../data/dataManager.js';
 
+const productsPerPage = 12;
+let currentPage = 1;
+let filteredProducts = [];
+
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     let brand = urlParams.get('brand');
     let category = urlParams.get('category');
 
-    // Xử lý giá trị null
     if (brand === 'null' || !brand) brand = null;
     if (category === 'null' || !category) category = null;
-    
-    console.log('🔍 Lọc theo:', { category, brand });
-    
+
     const brandTitle = document.getElementById('brandTitle');
     const productsContainer = document.getElementById('brand-products');
-    
-    if (!productsContainer) {
-        console.error('❌ Không tìm thấy container #brand-products');
-        return;
-    }
-    
+    const paginationContainer = document.getElementById('pagination');
+
+    if (!productsContainer) return;
+
     try {
         const products = await getProducts();
-        console.log('📦 Tổng sản phẩm:', products.length);
-        
-        // Lọc sản phẩm
-        let filteredProducts = products;
-        
+
+        filteredProducts = products;
         if (category) {
-            filteredProducts = filteredProducts.filter(p => 
+            filteredProducts = filteredProducts.filter(p =>
                 p.category && p.category.toLowerCase() === category.toLowerCase()
             );
-            console.log(`📌 Sau khi lọc category "${category}":`, filteredProducts.length);
         }
-        
         if (brand) {
-            filteredProducts = filteredProducts.filter(p => 
+            filteredProducts = filteredProducts.filter(p =>
                 p.brand && p.brand.toLowerCase() === brand.toLowerCase()
             );
-            console.log(`📌 Sau khi lọc brand "${brand}":`, filteredProducts.length);
         }
-        
-        // Cập nhật tiêu đề
+
         if (category && brand) {
             brandTitle.textContent = `${category.toUpperCase()} ${brand.toUpperCase()}`;
         } else if (brand) {
@@ -50,37 +42,60 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else {
             brandTitle.textContent = 'TẤT CẢ SẢN PHẨM';
         }
-        
-        // Hiển thị sản phẩm
-        if (filteredProducts.length === 0) {
-            productsContainer.innerHTML = '<p style="text-align: center; padding: 40px;">Không tìm thấy sản phẩm</p>';
-            console.log('⚠️ Không có sản phẩm nào');
-            return;
-        }
-        
-        productsContainer.innerHTML = filteredProducts
-            .map(product => createProductElement(product))
-            .join('');
-        
-        console.log('✅ Đã hiển thị', filteredProducts.length, 'sản phẩm');
-        
-        // Thêm sự kiện click
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const productId = card.getAttribute('data-id');
-                window.location.href = `product-details.html?id=${productId}`;
-            });
-        });
-        
+
+        renderPage(currentPage);
+
     } catch (error) {
-        console.error('❌ Lỗi:', error);
         productsContainer.innerHTML = '<p style="text-align: center; padding: 40px; color: red;">Có lỗi xảy ra</p>';
     }
 });
 
+function renderPage(page) {
+    const productsContainer = document.getElementById('brand-products');
+    const paginationContainer = document.getElementById('pagination');
+    const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+    if (filteredProducts.length === 0) {
+        productsContainer.innerHTML = '<p style="text-align: center; padding: 40px;">Không tìm thấy sản phẩm</p>';
+        if (paginationContainer) paginationContainer.innerHTML = '';
+        return;
+    }
+
+    const start = (page - 1) * productsPerPage;
+    const end = start + productsPerPage;
+    const productsToShow = filteredProducts.slice(start, end);
+
+    productsContainer.innerHTML = productsToShow.map(product => createProductElement(product)).join('');
+
+   
+    if (paginationContainer) {
+        let html = '';
+        if (page > 1) {
+            html += `<button class="page-btn" data-page="${page - 1}">Trước</button>`;
+        }
+        for (let i = 1; i <= totalPages; i++) {
+            html += `<button class="page-btn${i === page ? ' active' : ''}" data-page="${i}">${i}</button>`;
+        }
+        if (page < totalPages) {
+            html += `<button class="page-btn" data-page="${page + 1}">Sau</button>`;
+        }
+        paginationContainer.innerHTML = html;
+
+        
+        document.querySelectorAll('.page-btn').forEach(btn => {
+            btn.onclick = (e) => {
+                currentPage = Number(btn.getAttribute('data-page'));
+                renderPage(currentPage);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        });
+    }
+}
+
+
 function createProductElement(product) {
     return `
-        <div class="product-card" data-id="${product.id}">
+        <a href="product-details.html?id=${product.id}" class="product-card">
             <div class="product-image">
                 <img src="${product.image}" alt="${product.name}" onerror="this.src='./assets/images/placeholder.jpg'">
             </div>
@@ -88,7 +103,7 @@ function createProductElement(product) {
                 <h3 class="product-name">${product.name}</h3>
                 <div class="product-price">${formatPrice(product.price)}</div>
             </div>
-        </div>
+        </a>
     `;
 }
 
