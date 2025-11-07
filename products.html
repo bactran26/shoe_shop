@@ -1,235 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Shoe Shop</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/products.css" />
-    <link rel="stylesheet" href="./assets/css/search.css" />
-    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Shoe Shop</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/products.css" />
+  <link rel="stylesheet" href="./assets/css/search.css" />
+  <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css" />
 </head>
+
 <body>
-    <!-- Copy phần header từ index.html -->
-    <div id="header">
-        <div class="header-topbar">
-          <div class="header-container">
-            <div class="header-hotline">
-              <span
-                >Hotline: 0903.150.443 | Free Ship cho đơn hàng trên 1tr
-                đồng</span
-              >
-            </div>
-          </div>
+  <!-- Copy phần header từ index.html -->
+  <div id="header">
+    <div class="header-topbar">
+      <div class="header-container">
+        <div class="header-hotline">
+          <span>Hotline: 0903.150.443 | Free Ship cho đơn hàng trên 1tr
+            đồng</span>
         </div>
+      </div>
+    </div>
 
-        <div class="header-wrapper-middle">
-          <div class="header-container">
-            <div class="header-middle">
-              <div class="header-logo">
-                <div class="header-logo-img">
-                  <a href="index.html">
-                    <img
-                      src="./assets/images/new-logo-ss-2021-1-150x63.png.avif"
-                      alt=""
-                    />
-                  </a>
-                </div>
-              </div>
-
-              <div class="header-search">
-                <div class="header-space-search"></div>
-                <form
-                  class="header-input-search"
-                  onsubmit="event.preventDefault(); apply();"
-                >
-                  <input
-                    type="text"
-                    placeholder="Search for products"
-                    class="input-search"
-                  />
-                  <button class="button-search">
-                    <i class="ti-search"></i>
-                  </button>
-
-                  <div id="advancedBox" class="advanced-box">
-                    <div class="filter-row">
-                      <label>Thương hiệu:</label>
-                      <select id="filterBrand">
-                        <option value="">Tất cả</option>
-                        <option value="SNEAKER">Sneaker</option>
-                        <option value="DÉP">Dép</option>
-                        <option value="ÁO">Áo</option>
-                        <option value="QUẦN">Quần</option>
-                        <option value="BALO">Balo</option>
-                      </select>
-                    </div>
-
-                    <div class="filter-row">
-                      <label>Giá từ:</label>
-                      <input type="number" id="minPrice" placeholder="0" />
-
-                      <label>đến:</label>
-                      <input type="number" id="maxPrice" placeholder="0" />
-                    </div>
-
-                    <div class="search-btn-box">
-                      <button type="button" class="apply-btn" onclick="apply()">
-                        Tìm kiếm
-                      </button>
-                    </div>
-                  </div>
-
-                  <div id="searchResults" class="search-results"></div>
-                </form>
-                <div class="header-space-after"></div>
-              </div>
-
-              <div class="header-right">
-                <div class="header-user">
-                  <a href="#"><i class="ti-stamp"></i></a>
-                </div>
-
-                <div class="header-cart">
-                  <a href="cart.html"><i class="ti-shopping-cart"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="header-bottom">
-          <ul class="nav-bars">
-            <li><a href="">GIẢM GIÁ/SALE</a></li>
-            <li>
-              <a href="#">
-                SNEAKER
-                <i class="ti-angle-down"></i>
+    <div class="header-wrapper-middle">
+      <div class="header-container">
+        <div class="header-middle">
+          <div class="header-logo">
+            <div class="header-logo-img">
+              <a href="index.html">
+                <img src="./assets/images/new-logo-ss-2021-1-150x63.png.avif" alt="" />
               </a>
-              <ul class="sub-nav">
-                <li><a href="products.html?category=sneaker&brand=newbalance">New Balance</a></li>
-                <li><a href="products.html?category=sneaker&brand=nike">Nike</a></li>
-                <li><a href="products.html?category=sneaker&brand=adidas">Adidas</a></li>
-                <li><a href="products.html?category=sneaker&brand=jordan">Jordan</a></li>
-                <li><a href="products.html?category=sneaker&brand=yeezy">Yeezy</a></li>
-                <li><a href="products.html?category=sneaker&brand=vans">Vans</a></li>
-                <li><a href="products.html?category=sneaker&brand=mlb">MLB</a></li>
-                <li><a href="products.html?category=sneaker&brand=converse">Converse</a></li>
-                <li><a href="products.html?category=sneaker&brand=balenciaga">Balenciaga</a></li>
-              </ul>
-            </li>
-            <li><a href="">DÉP</a></li>
-            <li><a href="">ÁO</a></li>
-            <li><a href="">QUẦN</a></li>
-            <li><a href="">BALO</a></li>
+            </div>
+          </div>
+
+          <div class="header-search">
+            <div class="header-space-search"></div>
+            <form class="header-input-search" onsubmit="event.preventDefault(); apply();">
+              <input type="text" placeholder="Search for products" class="input-search" />
+              <button class="button-search">
+                <i class="ti-search"></i>
+              </button>
+
+              <div id="advancedBox" class="advanced-box">
+                <div class="filter-row">
+                  <label>Thương hiệu:</label>
+                  <select id="filterBrand">
+                    <option value="">Tất cả</option>
+                    <option value="SNEAKER">Sneaker</option>
+                    <option value="DÉP">Dép</option>
+                    <option value="ÁO">Áo</option>
+                    <option value="QUẦN">Quần</option>
+                    <option value="BALO">Balo</option>
+                  </select>
+                </div>
+
+                <div class="filter-row">
+                  <label>Giá từ:</label>
+                  <input type="number" id="minPrice" placeholder="0" />
+
+                  <label>đến:</label>
+                  <input type="number" id="maxPrice" placeholder="0" />
+                </div>
+
+                <div class="search-btn-box">
+                  <button type="button" class="apply-btn" onclick="apply()">
+                    Tìm kiếm
+                  </button>
+                </div>
+              </div>
+
+              <div id="searchResults" class="search-results"></div>
+            </form>
+            <div class="header-space-after"></div>
+          </div>
+
+          <div class="header-right">
+            <div class="header-user">
+              <a href="#"><i class="ti-stamp"></i></a>
+            </div>
+
+            <div class="header-cart">
+              <a href="cart.html"><i class="ti-shopping-cart"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <ul class="nav-bars">
+        <li><a href="">GIẢM GIÁ/SALE</a></li>
+        <li>
+          <a href="">
+            SNEAKER
+            <i class="ti-angle-down"></i>
+          </a>
+          <ul class="sub-nav">
+            <li><a href="products.html?brand=New Balance" data-brand="newbalance">New Balance</a></li>
+            <li><a href="products.html?brand=Nike" data-brand="nike">Nike</a></li>
+            <li><a href="products.html?brand=Adidas" data-brand="adidas">Adidas</a></li>
+            <li><a href="products.html?brand=Jordan" data-brand="jordan">Jordan</a></li>
+            <li><a href="products.html?brand=Yeezy" data-brand="yeezy">Yeezy</a></li>
+            <li><a href="products.html?brand=Vans" data-brand="vans">Vans</a></li>
+            <li><a href="products.html?brand=MLB" data-brand="mlb">MLB</a></li>
+            <li><a href="products.html?brand=Converse" data-brand="converse">Converse</a></li>
+            <li><a href="products.html?brand=Balenciaga" data-brand="balenciaga">Balenciaga</a></li>
           </ul>
-        </div>
+
+        </li>
+        <li><a href="">DÉP</a></li>
+        <li><a href="">ÁO</a></li>
+        <li><a href="">QUẦN</a></li>
+        <li><a href="">BALO</a></li>
+      </ul>
     </div>
-  
+  </div>
 
-    <div class="products-section">
-        <div class="navigation">
-            <a href="index.html" class="back-button">← Quay về trang chủ</a>
-        </div>
-        <h2 class="section-title" id="brandTitle">PRODUCTS</h2>
-        <div class="products-grid" id="brand-products"></div>
+
+  <div class="products-section">
+    <!-- <div class="navigation">
+      <a href="index.html" class="back-button">← Quay về trang chủ</a>
+    </div> -->
+    <h2 class="section-title" id="brandTitle">PRODUCTS</h2>
+    <div class="products-grid" id="brand-products"></div>
+  </div>
+
+
+  <!-- Copy phần footer từ index.html -->
+
+  <div id="footer-section">
+    <div class="footer-container">
+      <div class="footer-infor">
+        <h3 class="footer-infor-name">SAIGONSNEAKER.COM</h3>
+        <ul class="list-infor-container">
+          <li class="infor-address">
+            Address: 48B Thạch Thị Thanh, Tân Định, Q1, Hồ Chí Minh.
+          </li>
+          <li class="infor-phone">Phone: 0903 150 443</li>
+          <li class="infor-open">
+            Open: T2-T6 từ 13h – 21h30, T7-Cn từ 11h-21h30
+          </li>
+          <li class="infor-email">Email: cskh@saigonsneaker.com</li>
+        </ul>
+      </div>
+      <div class="footer-customer">
+        <h3 class="footer-infor-name">CHĂM SÓC KHÁCH HÀNG</h3>
+        <ul class="list-infor-container">
+          <li>
+            <a href="">Hướng dẫn mua hàng</a>
+          </li>
+          <li>
+            <a href="">Chính sách bảo mật</a>
+          </li>
+          <li>
+            <a href="">Hình thức thanh toán</a>
+          </li>
+          <li>
+            <a href="">Vận chuyển và giao nhận</a>
+          </li>
+          <li>
+            <a href="">Bảo hành và đổi trả</a>
+          </li>
+          <li>
+            <a href="">Tuyển dụng</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-info-details">
+        <h3 class="footer-infor-name">THÔNG TIN</h3>
+        <ul class="list-infor-container">
+          <li><a href="">Tài khoản</a></li>
+          <li><a href="">Kiểm tra đơn hàng</a></li>
+          <li><a href="">Đăng ký nhận tin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-shop">
+        <h3 class="footer-infor-name">SHOP</h3>
+        <ul class="list-infor-container">
+          <li><a href="">Adidas</a></li>
+          <li><a href="">Nike</a></li>
+          <li><a href="">Jordan</a></li>
+        </ul>
+      </div>
     </div>
-    
 
-    <!-- Copy phần footer từ index.html -->
-
-    <div id="footer-section">
-        <div class="footer-container">
-          <div class="footer-infor">
-            <h3 class="footer-infor-name">SAIGONSNEAKER.COM</h3>
-            <ul class="list-infor-container">
-              <li class="infor-address">
-                Address: 48B Thạch Thị Thanh, Tân Định, Q1, Hồ Chí Minh.
-              </li>
-              <li class="infor-phone">Phone: 0903 150 443</li>
-              <li class="infor-open">
-                Open: T2-T6 từ 13h – 21h30, T7-Cn từ 11h-21h30
-              </li>
-              <li class="infor-email">Email: cskh@saigonsneaker.com</li>
-            </ul>
-          </div>
-          <div class="footer-customer">
-            <h3 class="footer-infor-name">CHĂM SÓC KHÁC HÀNG</h3>
-            <ul class="list-infor-container">
-              <li>
-                <a href="">Hướng dẫn mua hàng</a>
-              </li>
-              <li>
-                <a href="">Chính sách bảo mật</a>
-              </li>
-              <li>
-                <a href="">Hình thức thanh toán</a>
-              </li>
-              <li>
-                <a href="">Vận chuyển và giao nhận</a>
-              </li>
-              <li>
-                <a href="">Bảo hành và đổi trả</a>
-              </li>
-              <li>
-                <a href="">Tuyển dụng</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-info-details">
-            <h3 class="footer-infor-name">THÔNG TIN</h3>
-            <ul class="list-infor-container">
-              <li><a href="">Tài khoản</a></li>
-              <li><a href="">Kiểm tra đơn hàng</a></li>
-              <li><a href="">Đăng ký nhận tin</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-shop">
-            <h3 class="footer-infor-name">SHOP</h3>
-            <ul class="list-infor-container">
-              <li><a href="">Adidas</a></li>
-              <li><a href="">Nike</a></li>
-              <li><a href="">Jordan</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-about">
-          <h3>Sneaker store in Ho Chi Minh City</h3>
-          <div class="about-content">
-            <p>
-              Tìm kiếm đôi giày sneaker yêu thích của bạn tại SAIGONSNEAKER, cửa
-              hàng giày sneaker và phụ kiện thời trang đường phố hàng đầu Việt
-              Nam. Tự hào phục vụ hơn 5000 khách hàng tại HCM và toàn Việt Nam
-              từ 2016. Chúng tôi có đầy đủ các loại giày sneaker từ các thương
-              hiệu nổi tiếng nhất thế giới từ Nike, Adidas, Converse đến New
-              Balance, Jordan, Vans…v.v. Đội ngũ nhân viên thân thiện và nhiệt
-              tình sẽ giúp bạn tìm được đôi giày hoàn hảo cho phong cách của
-              mình.
-            </p>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <div class="payment-methods">
-            <h4>PHƯƠNG THỨC THANH TOÁN</h4>
-            <p>Visa Master Card MOMO Cash on Delivery</p>
-          </div>
-
-          <div class="shipping-partners">
-            <h4>ĐỐI TÁC VẬN CHUYỂN</h4>
-            <p>Giaohangtietkiem Giaohangnhanh Lalamove Aahamove GrabExpress</p>
-          </div>
-        </div>
-
-        <div class="footer-copyright">
-          <p>Saigonsneaker.com © 2025</p>
-        </div>
+    <div class="footer-about">
+      <h3>Sneaker store in Ho Chi Minh City</h3>
+      <div class="about-content">
+        <p>
+          Tìm kiếm đôi giày sneaker yêu thích của bạn tại SAIGONSNEAKER, cửa
+          hàng giày sneaker và phụ kiện thời trang đường phố hàng đầu Việt
+          Nam. Tự hào phục vụ hơn 5000 khách hàng tại HCM và toàn Việt Nam
+          từ 2016. Chúng tôi có đầy đủ các loại giày sneaker từ các thương
+          hiệu nổi tiếng nhất thế giới từ Nike, Adidas, Converse đến New
+          Balance, Jordan, Vans…v.v. Đội ngũ nhân viên thân thiện và nhiệt
+          tình sẽ giúp bạn tìm được đôi giày hoàn hảo cho phong cách của
+          mình.
+        </p>
+      </div>
     </div>
-    
-    <script type="module" src="./data/dataManager.js"></script>
-    <script type="module" src="./assets/js/search.js"></script>
-    <script type="module" src="./assets/js/navigation.js"></script>
-    <script type="module" src="./assets/js/displayProducts.js"></script>
+
+    <div class="footer-bottom">
+      <div class="payment-methods">
+        <h4>PHƯƠNG THỨC THANH TOÁN</h4>
+        <p>Visa Master Card MOMO Cash on Delivery</p>
+      </div>
+
+      <div class="shipping-partners">
+        <h4>ĐỐI TÁC VẬN CHUYỂN</h4>
+        <p>Giaohangtietkiem Giaohangnhanh Lalamove Aahamove GrabExpress</p>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <p>Saigonsneaker.com © 2025</p>
+    </div>
+  </div>
+
+  <script type="module" src="./data/dataManager.js"></script>
+  <script src="./assets/js/search.js"></script>
+  <script type="module" src="./assets/js/navigation.js"></script>
+  <script type="module" src="./assets/js/displayProducts.js"></script>
 </body>
+
 </html>
