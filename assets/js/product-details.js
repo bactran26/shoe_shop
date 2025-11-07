@@ -16,25 +16,25 @@ function showToast(message, type = 'info') {
 }
 
 function getCart() {
-    return JSON.parse(localStorage.getItem('cart')) || [];
+  return JSON.parse(localStorage.getItem('cart')) || [];
 }
 
 function saveCart(cart) {
-    localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 function updateCartCount() {
-    const cart = getCart();
-    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-    const cartCountEl = document.querySelector('.cart-count');
-    if (cartCountEl) cartCountEl.textContent = count;
+  const cart = getCart();
+  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const cartCountEl = document.querySelector('.cart-count');
+  if (cartCountEl) cartCountEl.textContent = count;
 }
 
 export async function DetailProducts(id) {
   try {
     const products = await getProducts();
     const product = products.find(p => p.id === parseInt(id));
-    
+
     if (!product) {
       showToast('Không tìm thấy sản phẩm', 'error');
       return;
@@ -120,7 +120,7 @@ export async function DetailProducts(id) {
 }
 
 function setupEventListeners(product) {
-  
+
   document.querySelectorAll('.size_product .btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.size_product .btn').forEach(b => b.classList.remove('check'));
@@ -128,7 +128,7 @@ function setupEventListeners(product) {
     });
   });
 
-  
+
   const quantityInput = document.querySelector('.input-quantity');
   document.querySelector('.btn-down').addEventListener('click', () => {
     const currentValue = parseInt(quantityInput.value);
@@ -139,46 +139,46 @@ function setupEventListeners(product) {
     quantityInput.value = parseInt(quantityInput.value) + 1;
   });
 
-  
+
   document.querySelector('.add-to-cart').addEventListener('click', () => {
-    
+
     const selectedSizeBtn = document.querySelector('.size_product .btn.check');
     if (!selectedSizeBtn) {
-        showToast('Vui lòng chọn size', 'warning');
-        return;
+      showToast('Vui lòng chọn size', 'warning');
+      return;
     }
     const size = selectedSizeBtn.textContent;
 
-    
+
     const quantity = parseInt(document.querySelector('.input-quantity').value) || 1;
 
-  
+
     const cartItem = {
-        id: product.id,
-        name: product.name,
-        price: product.price,
-        image: product.image,
-        size: size,
-        quantity: quantity
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      size: size,
+      quantity: quantity
     };
 
-    
+
     addToCart(cartItem);
     showToast('Đã thêm vào giỏ hàng', 'success');
-});
+  });
 }
 
 function addToCart(item) {
-    const cart = getCart();
-    
-    const existing = cart.find(i => i.id === item.id && i.size === item.size);
-    if (existing) {
-        existing.quantity += item.quantity;
-    } else {
-        cart.push(item);
-    }
-    saveCart(cart);
-    updateCartCount();
+  const cart = getCart();
+
+  const existing = cart.find(i => i.id === item.id && i.size === item.size);
+  if (existing) {
+    existing.quantity += item.quantity;
+  } else {
+    cart.push(item);
+  }
+  saveCart(cart);
+  updateCartCount();
 }
 
 function generateSizeButtons() {
@@ -186,29 +186,29 @@ function generateSizeButtons() {
   return sizes.map(size => `<button class="btn">${size}</button>`).join('');
 }
 
-
+// sua khong tim thay san pham
 document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('id');
+  try {
 
-        if (!productId) {
-            showToast('Không tìm thấy sản phẩm', 'error');
-            return;
-        }
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
 
-        
-        const products = await getProducts();
-        const product = products.find(p => p.id === parseInt(productId));
-        
-        if (!product) {
-            showToast('Không tìm thấy sản phẩm', 'error');
-            return;
-        }
+    if (!productId) {
+      showToast('', 'error');
+      return;
+    }
 
-        
-        document.querySelector('.detail-product').innerHTML = `
+
+    const products = await getProducts();
+    const product = products.find(p => p.id === parseInt(productId));
+
+    if (!product) {
+      showToast('Không tìm thấy sản phẩm', 'error');
+      return;
+    }
+
+
+    document.querySelector('.detail-product').innerHTML = `
             <div class="detail-flex">
                 <div class="image">
                     <div class="main-img">
@@ -274,18 +274,18 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
         `;
 
-        
-        setupEventListeners(product);
 
-    } catch (error) {
-        console.error('Lỗi:', error);
-        showToast('Có lỗi xảy ra', 'error');
-    }
+    setupEventListeners(product);
+
+  } catch (error) {
+    console.error('Lỗi:', error);
+    showToast('Có lỗi xảy ra', 'error');
+  }
 });
 
 
 function createProductCard(product) {
-    return `
+  return `
         <div class="product-card" onclick="window.location.href='product-details.html?id=${product.id}'">
             <!-- ... rest of product card code ... -->
         </div>
