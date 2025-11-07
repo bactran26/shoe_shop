@@ -21,30 +21,6 @@ function createProductCard(product) {
     `;
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-    // Lấy tham số từ URL, ví dụ: products.html?category=sneaker&brand=nike
-    const params = new URLSearchParams(window.location.search);
-    const category = params.get('category');
-    const brand = params.get('brand');
-
-    const products = await getProducts();
-
-    // Lọc sản phẩm theo category và brand
-    const filtered = products.filter(p =>
-        (!category || p.category.toLowerCase() === category.toLowerCase()) &&
-        (!brand || p.brand.toLowerCase() === brand.toLowerCase())
-    );
-
-    const container = document.getElementById('products-grid');
-    container.innerHTML = filtered.map(product => `
-        <div class="product-card">
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <div>${product.price.toLocaleString()}₫</div>
-        </div>
-    `).join('');
-});
-
 async function displayProducts() {
     try {
         const products = await getProducts();
