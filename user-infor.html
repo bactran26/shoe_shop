@@ -3,19 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đăng nhập - Shoe Shop</title>
+    <title>Thông tin tài khoản - Shoe Shop</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/products.css" />
     <link
       rel="stylesheet"
       href="./assets/fonts/themify-icons/themify-icons.css"
     />
-    <link rel="stylesheet" href="./assets/css/cart.css" />
-    <link rel="stylesheet" href="./assets/css/dangnhap.css" />
+    <link rel="stylesheet" href="./assets/css/user-infor.css" />
   </head>
   <body>
     <div id="main">
-      <div id="header" style="height: auto !important">
+      <div id="header">
         <div class="header-topbar">
           <div class="header-container">
             <div class="header-hotline">
@@ -58,7 +57,7 @@
 
               <div class="header-right">
                 <div class="header-user">
-                  <a href="#"><i class="ti-stamp"></i></a>
+                  <a href="user-infor.html"><i class="ti-stamp"></i></a>
                 </div>
 
                 <div class="header-cart">
@@ -69,7 +68,8 @@
           </div>
         </div>
       </div>
-      <div class="header-bottomforcart">
+
+      <div class="header-bottom">
         <ul class="nav-bars">
           <li><a href="">GIẢM GIÁ/SALE</a></li>
           <li>
@@ -116,50 +116,92 @@
           <li><a href="products.html?category=balo">BALO</a></li>
         </ul>
       </div>
-      <div id="main">
-        <div class="khungdangnhap">
-          <h1 class="tieudedangnhap">ĐĂNG NHẬP</h1>
-          <p class="duongdan">Home / Đăng nhập</p>
 
-          <div class="hopdangnhap">
-            <form class="formdangnhap">
-              <label style="font-size: 18px" for="emaildangnhap"
-                >Địa chỉ email/Tên đăng nhập *</label
-              >
-              <input
-                type="email"
-                id="emaildangnhap"
-                class="oemaildangnhap"
-                placeholder="Tên đăng nhập/email"
-                required
-              />
+      <div class="user-infor-container">
+        <h1 class="page-title">THÔNG TIN TÀI KHOẢN</h1>
+        <p class="breadcrumb">Home / Tài khoản</p>
 
-              <label style="font-size: 18px" for="matkhaudangnhap"
-                >Mật khẩu *</label
-              >
-              <input
-                type="password"
-                id="matkhaudangnhap"
-                class="omatkhaudangnhap"
-                placeholder="Nhập mật khẩu"
-                required
-              />
+        <div class="user-content">
+          <div class="user-sidebar">
+            <div class="user-avatar">
+              <i class="ti-user"></i>
+            </div>
+            <h3 class="user-name" id="userName">Nguyễn Văn A</h3>
+            <ul class="user-menu">
+              <li class="active"><a href="#"><i class="ti-user"></i> Thông tin cá nhân</a></li>
+              <li><a href="cart.html"><i class="ti-shopping-cart"></i> Đơn hàng của tôi</a></li>
+              <li><a href="index.html" id="logoutBtn"><i class="ti-power-off"></i> Đăng xuất</a></li>
+            </ul>
+          </div>
 
-              <div class="tuychon">
-                <label class="ghinho">
-                  <input type="checkbox" />
-                  Ghi nhớ đăng nhập
-                </label>
-                <a href="quenmatkhau.html" class="quenmatkhau"
-                  >Quên mật khẩu?</a
-                >
-              </div>
+          <div class="user-main">
+            <div class="info-card">
+              <h2>Thông tin cá nhân</h2>
+              <form class="user-form">
+                <div class="form-group">
+                  <label for="fullName">Họ và tên *</label>
+                  <input type="text" id="fullName" placeholder="Nguyễn Văn A" required />
+                </div>
 
-              <a href="user-infor.html" class="nutdangnhap">ĐĂNG NHẬP</a>
-            </form>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" placeholder="example@gmail.com" required />
+                </div>
 
-            <div class="chuyendangky">
-              <p>Chưa có tài khoản? <a href="dangki.html">Đăng ký ngay</a></p>
+                <div class="form-group">
+                  <label for="phone">Số điện thoại *</label>
+                  <input type="tel" id="phone" placeholder="0901234567" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="address">Địa chỉ</label>
+                  <input type="text" id="address" placeholder="Nhập địa chỉ của bạn" />
+                </div>
+
+                <div class="form-group">
+                  <label for="birthday">Ngày sinh</label>
+                  <input type="date" id="birthday" />
+                </div>
+
+                <div class="form-group">
+                  <label>Giới tính</label>
+                  <div class="radio-group">
+                    <label>
+                      <input type="radio" name="gender" value="male" checked /> Nam
+                    </label>
+                    <label>
+                      <input type="radio" name="gender" value="female" /> Nữ
+                    </label>
+                    <label>
+                      <input type="radio" name="gender" value="other" /> Khác
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-save">CẬP NHẬT THÔNG TIN</button>
+              </form>
+            </div>
+
+            <div class="info-card">
+              <h2>Đổi mật khẩu</h2>
+              <form class="password-form">
+                <div class="form-group">
+                  <label for="currentPassword">Mật khẩu hiện tại *</label>
+                  <input type="password" id="currentPassword" placeholder="Nhập mật khẩu hiện tại" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="newPassword">Mật khẩu mới *</label>
+                  <input type="password" id="newPassword" placeholder="Nhập mật khẩu mới" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="confirmPassword">Xác nhận mật khẩu mới *</label>
+                  <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu mới" required />
+                </div>
+
+                <button type="submit" class="btn-save">ĐỔI MẬT KHẨU</button>
+              </form>
             </div>
           </div>
         </div>
@@ -184,24 +226,12 @@
           <div class="footer-customer">
             <h3 class="footer-infor-name">CHĂM SÓC KHÁC HÀNG</h3>
             <ul class="list-infor-container">
-              <li>
-                <a href="">Hướng dẫn mua hàng</a>
-              </li>
-              <li>
-                <a href="">Chính sách bảo mật</a>
-              </li>
-              <li>
-                <a href="">Hình thức thanh toán</a>
-              </li>
-              <li>
-                <a href="">Vận chuyển và giao nhận</a>
-              </li>
-              <li>
-                <a href="">Bảo hành và đổi trả</a>
-              </li>
-              <li>
-                <a href="">Tuyển dụng</a>
-              </li>
+              <li><a href="">Hướng dẫn mua hàng</a></li>
+              <li><a href="">Chính sách bảo mật</a></li>
+              <li><a href="">Hình thức thanh toán</a></li>
+              <li><a href="">Vận chuyển và giao nhận</a></li>
+              <li><a href="">Bảo hành và đổi trả</a></li>
+              <li><a href="">Tuyển dụng</a></li>
             </ul>
           </div>
           <div class="footer-info-details">
@@ -229,25 +259,8 @@
             <p>
               Tìm kiếm đôi giày sneaker yêu thích của bạn tại SAIGONSNEAKER, cửa
               hàng giày sneaker và phụ kiện thời trang đường phố hàng đầu Việt
-              Nam. Tự hào phục vụ hơn 5000 khách hàng tại HCM và toàn Việt Nam
-              từ 2016. Chúng tôi có đầy đủ các loại giày sneaker từ các thương
-              hiệu nổi tiếng nhất thế giới từ Nike, Adidas, Converse đến New
-              Balance, Jordan, Vans…v.v. Đội ngũ nhân viên thân thiện và nhiệt
-              tình sẽ giúp bạn tìm được đôi giày hoàn hảo cho phong cách của
-              mình.
+              Nam.
             </p>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <div class="payment-methods">
-            <h4>PHƯƠNG THỨC THANH TOÁN</h4>
-            <p>Visa Master Card MOMO Cash on Delivery</p>
-          </div>
-
-          <div class="shipping-partners">
-            <h4>ĐỐI TÁC VẬN CHUYỂN</h4>
-            <p>Giaohangtietkiem Giaohangnhanh Lalamove Aahamove GrabExpress</p>
           </div>
         </div>
 
@@ -256,8 +269,7 @@
         </div>
       </div>
     </div>
-    <script type="module" src="./data/dataManager.js"></script>
-    <script type="module" src="./assets/js/products.js"></script>
-    <script src="assets/js/cart.js"></script>
+
+    <script type="module" src="./assets/js/user-infor.js"></script>
   </body>
 </html>
