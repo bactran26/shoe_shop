@@ -1,362 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>shoe-shop - Order Details</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/products.css" />
-  <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css" />
-  <link rel="stylesheet" href="./assets/css/cart.css" />
-  <link rel="stylesheet" href="./assets/css/showcart.css" />
-  <link rel="stylesheet" href="./assets/css/order-details.css" />
-</head>
-
-<body>
-  <div id="main">
-    <div id="header" style="height: auto !important">
-      <div class="header-topbar">
-        <div class="header-container">
-          <div class="header-hotline">
-            <span>Hotline: 0903.150.443 | Free Ship cho đơn hàng trên 1tr
-              đồng</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="header-wrapper-middle">
-        <div class="header-container">
-          <div class="header-middle">
-            <div class="header-logo">
-              <div class="header-logo-img">
-                <a href="index.html">
-                  <img src="./assets/images/new-logo-ss-2021-1-150x63.png.avif" alt="" />
-                </a>
-              </div>
-            </div>
-
-            <div class="header-search">
-              <div class="header-space-search"></div>
-              <form class="header-input-search">
-                <input type="text" placeholder="Search for products" class="input-search" />
-                <button class="button-search">
-                  <i class="ti-search"></i>
-                </button>
-              </form>
-              <div class="header-space-after"></div>
-            </div>
-
-            <div class="header-right">
-              <div class="header-user">
-                <a href="#"><i class="ti-stamp"></i></a>
-              </div>
-
-              <div class="header-cart">
-                <a href="cart.html"><i class="ti-shopping-cart"></i></a>
-              </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shoe-shop - Order Details</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/products.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/themify-icons/themify-icons.css"
+    />
+    <link rel="stylesheet" href="./assets/css/cart.css" />
+    <link rel="stylesheet" href="./assets/css/showcart.css" />
+    <link rel="stylesheet" href="./assets/css/order-details.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="header" style="height: auto !important">
+        <div class="header-topbar">
+          <div class="header-container">
+            <div class="header-hotline">
+              <span
+                >Hotline: 0903.150.443 | Free Ship cho đơn hàng trên 1tr
+                đồng</span
+              >
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="header-bottomforcart">
-      <ul class="nav-bars">
-        <li><a href="">GIẢM GIÁ/SALE</a></li>
-        <li>
-          <a href="">
-            SNEAKER
-            <i class="ti-angle-down"></i>
-          </a>
-          <ul class="sub-nav">
-            <li><a href="">New Balence</a></li>
-            <li><a href="">Nike</a></li>
-            <li><a href="">Adidas</a></li>
-            <li><a href="">Jordan</a></li>
-            <li><a href="">Yeezy</a></li>
-            <li><a href="">Vans</a></li>
-            <li><a href="">MLB</a></li>
-            <li><a href="">Converse</a></li>
-            <li><a href="">Balenciaga</a></li>
-          </ul>
-        </li>
-        <li><a href="">DÉP</a></li>
-        <li><a href="">ÁO</a></li>
-        <li><a href="">QUẦN</a></li>
-        <li><a href="">BALO</a></li>
-      </ul>
-    </div>
-    <div class="box">
-      <a class="link2" href="cart.html">SHOPPING CART</a>
-      <div class="line"></div>
-      <a class="link2" href="cartcheckout.html">CHECK OUT</a>
-      <div class="line"></div>
-      <a class="link2" href="cartcomplete.html">ORDER COMPLETE</a>
-    </div>
-    <div class="boxrong"></div>
-    <div class="order-details">
-      <div class="section-header">CHI TIẾT ĐƠN HÀNG</div>
-      <div class="order-details-container">
-        <div class="order-info">
-          <h3>Thông tin đơn hàng</h3>
-          <p><strong>Mã đơn hàng:</strong> <span id="order-id">1</span></p>
-          <p><strong>Ngày đặt hàng:</strong> 18/10/2025</p>
-          <p>
-            <strong>Trạng thái:</strong>
-            <span id="order-status" class="status completed">Hoàn thành</span>
-          </p>
-        </div>
-        <div class="product-details">
-          <h3>Chi tiết sản phẩm</h3>
-          <div class="product-item">
-            <div class="product-info">
-              <img src="assets/images/giay1.jpg" alt="Product" />
-              <div class="product-text">
-                <p class="name">H-FORCE BLUE / - 43</p>
-                <p class="brand">Local Brand</p>
-                <p class="price">1.190.000₫</p>
-                <p><strong>Số lượng:</strong> 1</p>
-                <p><strong>Tạm tính:</strong> 1.190.000₫</p>
+
+        <div class="header-wrapper-middle">
+          <div class="header-container">
+            <div class="header-middle">
+              <div class="header-logo">
+                <div class="header-logo-img">
+                  <a href="index.html">
+                    <img
+                      src="./assets/images/new-logo-ss-2021-1-150x63.png.avif"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="header-search">
+                <div class="header-space-search"></div>
+                <form class="header-input-search">
+                  <input
+                    type="text"
+                    placeholder="Search for products"
+                    class="input-search"
+                  />
+                  <button class="button-search">
+                    <i class="ti-search"></i>
+                  </button>
+                </form>
+                <div class="header-space-after"></div>
+              </div>
+
+              <div class="header-right">
+                <div class="header-user">
+                  <a href="#"><i class="ti-stamp"></i></a>
+                </div>
+
+                <div class="header-cart">
+                  <a href="cart.html"><i class="ti-shopping-cart"></i></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="shipping-info">
-          <h3>Thông tin giao hàng</h3>
-          <p><strong>Họ và tên:</strong> Nguyễn Văn A</p>
-          <p>
-            <strong>Địa chỉ:</strong> 123 Đường Láng, Quận 1, TP. Hồ Chí Minh
-          </p>
-          <p><strong>Số điện thoại:</strong> 0903 123 456</p>
-          <p><strong>Email:</strong> example@saigonsneaker.com</p>
-          <p><strong>Ghi chú:</strong> Giao hàng trong giờ hành chính</p>
+      </div>
+      <div class="header-bottomforcart">
+        <ul class="nav-bars">
+          <li><a href="">GIẢM GIÁ/SALE</a></li>
+          <li>
+            <a href="">
+              SNEAKER
+              <i class="ti-angle-down"></i>
+            </a>
+            <ul class="sub-nav">
+              <li>
+                <a href="products.html?category=sneaker&brand=nike">Nike</a>
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=adidas">Adidas</a>
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=newbalance"
+                  >New Balance</a
+                >
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=jordan">Jordan</a>
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=vans">Vans</a>
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=mlb">MLB</a>
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=converse"
+                  >Converse</a
+                >
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=balenciaga"
+                  >Balenciaga</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="products.html?category=dep">DÉP</a></li>
+          <li><a href="products.html?category=ao">ÁO</a></li>
+          <li><a href="products.html?category=quan">QUẦN</a></li>
+          <li><a href="products.html?category=balo">BALO</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <a class="link2" href="cart.html">SHOPPING CART</a>
+        <div class="line"></div>
+        <a class="link2" href="cartcheckout.html">CHECK OUT</a>
+        <div class="line"></div>
+        <a class="link2" href="cartcomplete.html">ORDER COMPLETE</a>
+      </div>
+      <div class="boxrong"></div>
+      <div class="order-details">
+        <div class="section-header">CHI TIẾT ĐƠN HÀNG</div>
+        <div class="order-details-container">
+          <div class="order-info">
+            <h3>Thông tin đơn hàng</h3>
+            <p><strong>Mã đơn hàng:</strong> <span id="order-id">1</span></p>
+            <p><strong>Ngày đặt hàng:</strong> 18/10/2025</p>
+            <p>
+              <strong>Trạng thái:</strong>
+              <span id="order-status" class="status completed">Hoàn thành</span>
+            </p>
+          </div>
+          <div class="product-details">
+            <h3>Chi tiết sản phẩm</h3>
+            <div class="product-item">
+              <div class="product-info">
+                <img src="assets/images/giay1.jpg" alt="Product" />
+                <div class="product-text">
+                  <p class="name">H-FORCE BLUE / - 43</p>
+                  <p class="brand">Local Brand</p>
+                  <p class="price">1.190.000₫</p>
+                  <p><strong>Số lượng:</strong> 1</p>
+                  <p><strong>Tạm tính:</strong> 1.190.000₫</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shipping-info">
+            <h3>Thông tin giao hàng</h3>
+            <p><strong>Họ và tên:</strong> Nguyễn Văn A</p>
+            <p>
+              <strong>Địa chỉ:</strong> 123 Đường Láng, Quận 1, TP. Hồ Chí Minh
+            </p>
+            <p><strong>Số điện thoại:</strong> 0903 123 456</p>
+            <p><strong>Email:</strong> example@saigonsneaker.com</p>
+            <p><strong>Ghi chú:</strong> Giao hàng trong giờ hành chính</p>
+          </div>
+          <div class="payment-info">
+            <h3>Thông tin thanh toán</h3>
+            <p><strong>Phương thức thanh toán:</strong> COD</p>
+            <p><strong>Tổng tiền hàng:</strong> 1.190.000₫</p>
+            <p><strong>Phí vận chuyển:</strong> 30.000₫</p>
+            <p><strong>Tổng thanh toán:</strong> 1.220.000₫</p>
+          </div>
+          <div class="order-timeline">
+            <h3>Tiến trình đơn hàng</h3>
+            <ul class="timeline-list">
+              <li class="timeline-item completed">
+                <span class="timeline-status">Đặt hàng</span>
+                <span class="timeline-date">18/10/2025 09:00</span>
+              </li>
+              <li class="timeline-item completed">
+                <span class="timeline-status">Xác nhận</span>
+                <span class="timeline-date">18/10/2025 10:00</span>
+              </li>
+              <li class="timeline-item completed">
+                <span class="timeline-status">Đang xử lý</span>
+                <span class="timeline-date">18/10/2025 12:00</span>
+              </li>
+              <li class="timeline-item completed">
+                <span class="timeline-status">Đã giao</span>
+                <span class="timeline-date">20/10/2025 14:00</span>
+              </li>
+            </ul>
+          </div>
+          <div class="order-actions">
+            <a href="editcart.html"
+              ><button class="edit-order-btn">Chỉnh sửa đơn hàng</button></a
+            >
+            <a href="showcart.html"
+              ><button class="back-btn">Quay lại</button></a
+            >
+          </div>
         </div>
-        <div class="payment-info">
-          <h3>Thông tin thanh toán</h3>
-          <p><strong>Phương thức thanh toán:</strong> COD</p>
-          <p><strong>Tổng tiền hàng:</strong> 1.190.000₫</p>
-          <p><strong>Phí vận chuyển:</strong> 30.000₫</p>
-          <p><strong>Tổng thanh toán:</strong> 1.220.000₫</p>
+      </div>
+      <div class="linebodycart"></div>
+      <div class="boxrong"></div>
+      <div id="footer-section">
+        <div class="footer-container">
+          <div class="footer-infor">
+            <h3 class="footer-infor-name">SAIGONSNEAKER.COM</h3>
+            <ul class="list-infor-container">
+              <li class="infor-address">
+                Address: 48B Thạch Thị Thanh, Tân Định, Q1, Hồ Chí Minh.
+              </li>
+              <li class="infor-phone">Phone: 0903 150 443</li>
+              <li class="infor-open">
+                Open: T2-T6 từ 13h – 21h30, T7-Cn từ 11h-21h30
+              </li>
+              <li class="infor-email">Email: cskh@saigonsneaker.com</li>
+            </ul>
+          </div>
+          <div class="footer-customer">
+            <h3 class="footer-infor-name">CHĂM SÓC KHÁC HÀNG</h3>
+            <ul class="list-infor-container">
+              <li><a href="">Hướng dẫn mua hàng</a></li>
+              <li><a href="">Chính sách bảo mật</a></li>
+              <li><a href="">Hình thức thanh toán</a></li>
+              <li><a href="">Vận chuyển và giao nhận</a></li>
+              <li><a href="">Bảo hành và đổi trả</a></li>
+              <li><a href="">Tuyển dụng</a></li>
+            </ul>
+          </div>
+          <div class="footer-info-details">
+            <h3 class="footer-infor-name">THÔNG TIN</h3>
+            <ul class="list-infor-container">
+              <li><a href="">Tài khoản</a></li>
+              <li><a href="">Kiểm tra đơn hàng</a></li>
+              <li><a href="">Đăng ký nhận tin</a></li>
+            </ul>
+          </div>
+          <div class="footer-shop">
+            <h3 class="footer-infor-name">SHOP</h3>
+            <ul class="list-infor-container">
+              <li><a href="">Adidas</a></li>
+              <li><a href="">Nike</a></li>
+              <li><a href="">Jordan</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="order-timeline">
-          <h3>Tiến trình đơn hàng</h3>
-          <ul class="timeline-list">
-            <li class="timeline-item completed">
-              <span class="timeline-status">Đặt hàng</span>
-              <span class="timeline-date">18/10/2025 09:00</span>
-            </li>
-            <li class="timeline-item completed">
-              <span class="timeline-status">Xác nhận</span>
-              <span class="timeline-date">18/10/2025 10:00</span>
-            </li>
-            <li class="timeline-item completed">
-              <span class="timeline-status">Đang xử lý</span>
-              <span class="timeline-date">18/10/2025 12:00</span>
-            </li>
-            <li class="timeline-item completed">
-              <span class="timeline-status">Đã giao</span>
-              <span class="timeline-date">20/10/2025 14:00</span>
-            </li>
-          </ul>
+        <div class="footer-about">
+          <h3>Sneaker store in Ho Chi Minh City</h3>
+          <div class="about-content">
+            <p>
+              Tìm kiếm đôi giày sneaker yêu thích của bạn tại SAIGONSNEAKER, cửa
+              hàng giày sneaker và phụ kiện thời trang đường phố hàng đầu Việt
+              Nam. Tự hào phục vụ hơn 5000 khách hàng tại HCM và toàn Việt Nam
+              từ 2016. Chúng tôi có đầy đủ các loại giày sneaker từ các thương
+              hiệu nổi tiếng nhất thế giới từ Nike, Adidas, Converse đến New
+              Balance, Jordan, Vans…v.v. Đội ngũ nhân viên thân thiện và nhiệt
+              tình sẽ giúp bạn tìm được đôi giày hoàn hảo cho phong cách của
+              mình.
+            </p>
+          </div>
         </div>
-        <div class="order-actions">
-          <a href="editcart.html"><button class="edit-order-btn">Chỉnh sửa đơn hàng</button></a>
-          <a href="showcart.html"><button class="back-btn">Quay lại</button></a>
+        <div class="footer-bottom">
+          <div class="payment-methods">
+            <h4>PHƯƠNG THỨC THANH TOÁN</h4>
+            <p>Visa Master Card COD Cash on Delivery</p>
+          </div>
+          <div class="shipping-partners">
+            <h4>ĐỐI TÁC VẬN CHUYỂN</h4>
+            <p>Giaohangtietkiem Giaohangnhanh Lalamove Aahamove GrabExpress</p>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>Saigonsneaker.com © 2025</p>
         </div>
       </div>
     </div>
-    <div class="linebodycart"></div>
-    <div class="boxrong"></div>
-    <div id="footer-section">
-      <div class="footer-container">
-        <div class="footer-infor">
-          <h3 class="footer-infor-name">SAIGONSNEAKER.COM</h3>
-          <ul class="list-infor-container">
-            <li class="infor-address">
-              Address: 48B Thạch Thị Thanh, Tân Định, Q1, Hồ Chí Minh.
-            </li>
-            <li class="infor-phone">Phone: 0903 150 443</li>
-            <li class="infor-open">
-              Open: T2-T6 từ 13h – 21h30, T7-Cn từ 11h-21h30
-            </li>
-            <li class="infor-email">Email: cskh@saigonsneaker.com</li>
-          </ul>
-        </div>
-        <div class="footer-customer">
-          <h3 class="footer-infor-name">CHĂM SÓC KHÁCH HÀNG</h3>
-          <ul class="list-infor-container">
-            <li><a href="">Hướng dẫn mua hàng</a></li>
-            <li><a href="">Chính sách bảo mật</a></li>
-            <li><a href="">Hình thức thanh toán</a></li>
-            <li><a href="">Vận chuyển và giao nhận</a></li>
-            <li><a href="">Bảo hành và đổi trả</a></li>
-            <li><a href="">Tuyển dụng</a></li>
-          </ul>
-        </div>
-        <div class="footer-info-details">
-          <h3 class="footer-infor-name">THÔNG TIN</h3>
-          <ul class="list-infor-container">
-            <li><a href="">Tài khoản</a></li>
-            <li><a href="">Kiểm tra đơn hàng</a></li>
-            <li><a href="">Đăng ký nhận tin</a></li>
-          </ul>
-        </div>
-        <div class="footer-shop">
-          <h3 class="footer-infor-name">SHOP</h3>
-          <ul class="list-infor-container">
-            <li><a href="">Adidas</a></li>
-            <li><a href="">Nike</a></li>
-            <li><a href="">Jordan</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-about">
-        <h3>Sneaker store in Ho Chi Minh City</h3>
-        <div class="about-content">
-          <p>
-            Tìm kiếm đôi giày sneaker yêu thích của bạn tại SAIGONSNEAKER, cửa
-            hàng giày sneaker và phụ kiện thời trang đường phố hàng đầu Việt
-            Nam. Tự hào phục vụ hơn 5000 khách hàng tại HCM và toàn Việt Nam
-            từ 2016. Chúng tôi có đầy đủ các loại giày sneaker từ các thương
-            hiệu nổi tiếng nhất thế giới từ Nike, Adidas, Converse đến New
-            Balance, Jordan, Vans…v.v. Đội ngũ nhân viên thân thiện và nhiệt
-            tình sẽ giúp bạn tìm được đôi giày hoàn hảo cho phong cách của
-            mình.
-          </p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="payment-methods">
-          <h4>PHƯƠNG THỨC THANH TOÁN</h4>
-          <p>Visa Master Card COD Cash on Delivery</p>
-        </div>
-        <div class="shipping-partners">
-          <h4>ĐỐI TÁC VẬN CHUYỂN</h4>
-          <p>Giaohangtietkiem Giaohangnhanh Lalamove Aahamove GrabExpress</p>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <p>Saigonsneaker.com © 2025</p>
-      </div>
-    </div>
-  </div>
-  <script type="module" src="./data/dataManager.js"></script>
-  <script type="module" src="./assets/js/products.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const orderId = urlParams.get("order");
-      const orderStatus = document.getElementById("order-status");
-      const orderIdElement = document.getElementById("order-id");
-      const productText = document.querySelector(".product-text");
-      const shippingInfo = document.querySelector(".shipping-info");
-      const paymentInfo = document.querySelector(".payment-info");
-      const timelineList = document.querySelector(".timeline-list");
+    <script type="module" src="./data/dataManager.js"></script>
+    <script type="module" src="./assets/js/products.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get("order");
+        const orderStatus = document.getElementById("order-status");
+        const orderIdElement = document.getElementById("order-id");
+        const productText = document.querySelector(".product-text");
+        const shippingInfo = document.querySelector(".shipping-info");
+        const paymentInfo = document.querySelector(".payment-info");
+        const timelineList = document.querySelector(".timeline-list");
 
-      const orders = {
-        1: {
-          status: "completed",
-          statusText: "Hoàn thành",
-          productName: "H-FORCE BLUE / - 43",
-          price: "1.190.000₫",
-          quantity: 1,
-          total: "1.190.000₫",
-          shipping: {
-            name: "Nguyễn Văn A",
-            address: "123 Đường Láng, Quận 1, TP. Hồ Chí Minh",
-            phone: "0903 123 456",
-            email: "example@saigonsneaker.com",
-            note: "Giao hàng trong giờ hành chính",
-          },
-          payment: {
-            method: " COD",
-            subtotal: "1.190.000₫",
-            shippingFee: "30.000₫",
-            total: "1.220.000₫",
-          },
-          timeline: [
-            { status: "Đặt hàng", date: "18/10/2025 09:00", completed: true },
-            { status: "Xác nhận", date: "18/10/2025 10:00", completed: true },
-            {
-              status: "Đang xử lý",
-              date: "18/10/2025 12:00",
-              completed: true,
+        const orders = {
+          1: {
+            status: "completed",
+            statusText: "Hoàn thành",
+            productName: "H-FORCE BLUE / - 43",
+            price: "1.190.000₫",
+            quantity: 1,
+            total: "1.190.000₫",
+            shipping: {
+              name: "Nguyễn Văn A",
+              address: "123 Đường Láng, Quận 1, TP. Hồ Chí Minh",
+              phone: "0903 123 456",
+              email: "example@saigonsneaker.com",
+              note: "Giao hàng trong giờ hành chính",
             },
-            { status: "Đã giao", date: "20/10/2025 14:00", completed: true },
-          ],
-        },
-        2: {
-          status: "canceled",
-          statusText: "Bị hủy",
-          productName: "Balenciaga Triple S / - 37",
-          price: "888.000₫",
-          quantity: 2,
-          total: "1.776.000₫",
-          shipping: {
-            name: "Trần Thị B",
-            address: "456 Lê Lợi, Quận 3, TP. Hồ Chí Minh",
-            phone: "0904 567 890",
-            email: "tranb@saigonsneaker.com",
-            note: "Không có ghi chú",
-          },
-          payment: {
-            method: "Cash on Delivery",
-            subtotal: "1.776.000₫",
-            shippingFee: "30.000₫",
-            total: "1.806.000₫",
-          },
-          timeline: [
-            { status: "Đặt hàng", date: "18/10/2025 09:00", completed: true },
-            { status: "Xác nhận", date: "18/10/2025 10:00", completed: true },
-            { status: "Bị hủy", date: "18/10/2025 11:00", completed: true },
-          ],
-        },
-        3: {
-          status: "processing",
-          statusText: "Đang xử lý",
-          productName: "Nike Air Max / - 42",
-          price: "1.500.000₫",
-          quantity: 1,
-          total: "1.500.000₫",
-          shipping: {
-            name: "Lê Văn C",
-            address: "789 Nguyễn Trãi, Quận 5, TP. Hồ Chí Minh",
-            phone: "0905 678 901",
-            email: "levanc@saigonsneaker.com",
-            note: "Giao hàng nhanh",
-          },
-          payment: {
-            method: "Visa",
-            subtotal: "1.500.000₫",
-            shippingFee: "30.000₫",
-            total: "1.530.000₫",
-          },
-          timeline: [
-            { status: "Đặt hàng", date: "18/10/2025 09:00", completed: true },
-            { status: "Xác nhận", date: "18/10/2025 10:00", completed: true },
-            {
-              status: "Đang xử lý",
-              date: "18/10/2025 12:00",
-              completed: true,
+            payment: {
+              method: " COD",
+              subtotal: "1.190.000₫",
+              shippingFee: "30.000₫",
+              total: "1.220.000₫",
             },
-          ],
-        },
-      };
+            timeline: [
+              { status: "Đặt hàng", date: "18/10/2025 09:00", completed: true },
+              { status: "Xác nhận", date: "18/10/2025 10:00", completed: true },
+              {
+                status: "Đang xử lý",
+                date: "18/10/2025 12:00",
+                completed: true,
+              },
+              { status: "Đã giao", date: "20/10/2025 14:00", completed: true },
+            ],
+          },
+          2: {
+            status: "canceled",
+            statusText: "Bị hủy",
+            productName: "Balenciaga Triple S / - 37",
+            price: "888.000₫",
+            quantity: 2,
+            total: "1.776.000₫",
+            shipping: {
+              name: "Trần Thị B",
+              address: "456 Lê Lợi, Quận 3, TP. Hồ Chí Minh",
+              phone: "0904 567 890",
+              email: "tranb@saigonsneaker.com",
+              note: "Không có ghi chú",
+            },
+            payment: {
+              method: "Cash on Delivery",
+              subtotal: "1.776.000₫",
+              shippingFee: "30.000₫",
+              total: "1.806.000₫",
+            },
+            timeline: [
+              { status: "Đặt hàng", date: "18/10/2025 09:00", completed: true },
+              { status: "Xác nhận", date: "18/10/2025 10:00", completed: true },
+              { status: "Bị hủy", date: "18/10/2025 11:00", completed: true },
+            ],
+          },
+          3: {
+            status: "processing",
+            statusText: "Đang xử lý",
+            productName: "Nike Air Max / - 42",
+            price: "1.500.000₫",
+            quantity: 1,
+            total: "1.500.000₫",
+            shipping: {
+              name: "Lê Văn C",
+              address: "789 Nguyễn Trãi, Quận 5, TP. Hồ Chí Minh",
+              phone: "0905 678 901",
+              email: "levanc@saigonsneaker.com",
+              note: "Giao hàng nhanh",
+            },
+            payment: {
+              method: "Visa",
+              subtotal: "1.500.000₫",
+              shippingFee: "30.000₫",
+              total: "1.530.000₫",
+            },
+            timeline: [
+              { status: "Đặt hàng", date: "18/10/2025 09:00", completed: true },
+              { status: "Xác nhận", date: "18/10/2025 10:00", completed: true },
+              {
+                status: "Đang xử lý",
+                date: "18/10/2025 12:00",
+                completed: true,
+              },
+            ],
+          },
+        };
 
-      if (orderId && orders[orderId]) {
-        const order = orders[orderId];
-        orderIdElement.textContent = orderId;
-        orderStatus.textContent = order.statusText;
-        orderStatus.className = `status ${order.status}`;
-        productText.innerHTML = `
+        if (orderId && orders[orderId]) {
+          const order = orders[orderId];
+          orderIdElement.textContent = orderId;
+          orderStatus.textContent = order.statusText;
+          orderStatus.className = `status ${order.status}`;
+          productText.innerHTML = `
             <p class="name">${order.productName}</p>
             <p class="brand">Local Brand</p>
             <p class="price">${order.price}</p>
             <p><strong>Số lượng:</strong> ${order.quantity}</p>
             <p><strong>Tạm tính:</strong> ${order.total}</p>
           `;
-        shippingInfo.innerHTML = `
+          shippingInfo.innerHTML = `
             <h3>Thông tin giao hàng</h3>
             <p><strong>Họ và tên:</strong> ${order.shipping.name}</p>
             <p><strong>Địa chỉ:</strong> ${order.shipping.address}</p>
@@ -364,26 +399,25 @@
             <p><strong>Email:</strong> ${order.shipping.email}</p>
             <p><strong>Ghi chú:</strong> ${order.shipping.note}</p>
           `;
-        paymentInfo.innerHTML = `
+          paymentInfo.innerHTML = `
             <h3>Thông tin thanh toán</h3>
             <p><strong>Phương thức thanh toán:</strong> ${order.payment.method}</p>
             <p><strong>Tổng tiền hàng:</strong> ${order.payment.subtotal}</p>
             <p><strong>Phí vận chuyển:</strong> ${order.payment.shippingFee}</p>
             <p><strong>Tổng thanh toán:</strong> ${order.payment.total}</p>
           `;
-        timelineList.innerHTML = order.timeline
-          .map(
-            (item) => `
+          timelineList.innerHTML = order.timeline
+            .map(
+              (item) => `
             <li class="timeline-item ${item.completed ? "completed" : ""}">
               <span class="timeline-status">${item.status}</span>
               <span class="timeline-date">${item.date}</span>
             </li>
           `
-          )
-          .join("");
-      }
-    });
-  </script>
-</body>
-
+            )
+            .join("");
+        }
+      });
+    </script>
+  </body>
 </html>

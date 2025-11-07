@@ -1,249 +1,316 @@
-<!-- editcart.html -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>shoe-shop - Edit Cart</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/products.css" />
-  <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css" />
-  <link rel="stylesheet" href="./assets/css/cart.css" />
-  <link rel="stylesheet" href="./assets/css/cartcheckout.css" />
-  <link rel="stylesheet" href="./assets/css/editcart.css" />
-</head>
-
-<body>
-  <div id="main">
-    <div id="header" style="height: auto !important">
-      <div class="header-topbar">
-        <div class="header-container">
-          <div class="header-hotline">
-            <span>Hotline: 0903.150.443 | Free Ship cho đơn hàng trên 1tr
-              đồng</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="header-wrapper-middle">
-        <div class="header-container">
-          <div class="header-middle">
-            <div class="header-logo">
-              <div class="header-logo-img">
-                <a href="index.html">
-                  <img src="./assets/images/new-logo-ss-2021-1-150x63.png.avif" alt="" />
-                </a>
-              </div>
-            </div>
-
-            <div class="header-search">
-              <div class="header-space-search"></div>
-              <form class="header-input-search">
-                <input type="text" placeholder="Search for products" class="input-search" />
-                <button class="button-search">
-                  <i class="ti-search"></i>
-                </button>
-              </form>
-              <div class="header-space-after"></div>
-            </div>
-
-            <div class="header-right">
-              <div class="header-user">
-                <a href="#"><i class="ti-stamp"></i></a>
-              </div>
-
-              <div class="header-cart">
-                <a href="cart.html"><i class="ti-shopping-cart"></i></a>
-              </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shoe-shop - Edit Cart</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/products.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/themify-icons/themify-icons.css"
+    />
+    <link rel="stylesheet" href="./assets/css/cart.css" />
+    <link rel="stylesheet" href="./assets/css/cartcheckout.css" />
+    <link rel="stylesheet" href="./assets/css/editcart.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="header" style="height: auto !important">
+        <div class="header-topbar">
+          <div class="header-container">
+            <div class="header-hotline">
+              <span
+                >Hotline: 0903.150.443 | Free Ship cho đơn hàng trên 1tr
+                đồng</span
+              >
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="header-bottomforcart">
-      <ul class="nav-bars">
-        <li><a href="">GIẢM GIÁ/SALE</a></li>
-        <li>
-          <a href="">
-            SNEAKER
-            <i class="ti-angle-down"></i>
-          </a>
-          <ul class="sub-nav">
-            <li><a href="">New Balence</a></li>
-            <li><a href="">Nike</a></li>
-            <li><a href="">Adidas</a></li>
-            <li><a href="">Jordan</a></li>
-            <li><a href="">Yeezy</a></li>
-            <li><a href="">Vans</a></li>
-            <li><a href="">MLB</a></li>
-            <li><a href="">Converse</a></li>
-            <li><a href="">Balenciaga</a></li>
-          </ul>
-        </li>
-        <li><a href="">DÉP</a></li>
-        <li><a href="">ÁO</a></li>
-        <li><a href="">QUẦN</a></li>
-        <li><a href="">BALO</a></li>
-      </ul>
-    </div>
-    <div class="box">
-      <a class="link2" href="cart.html">SHOPPING CART</a>
-      <div class="line"></div>
-      <a class="link2" href="cartcheckout.html">CHECK OUT</a>
-      <div class="line"></div>
-      <a class="link2" href="cartcomplete.html">ORDER COMPLETE</a>
-    </div>
-    <div class="boxrong"></div>
-    <div class="boxrong"></div>
-    <div class="bodycartcheck">
-      <div class="bodycartcheck-left">
-        <div class="section-header">CHỈNH SỬA THÔNG TIN GIAO HÀNG</div>
-        <div class="input-group-row">
-          <div class="input-box half-width">
-            <label for="ho">Họ *</label>
-            <input type="text" id="ho" placeholder="" style="border-radius: 40px" />
-          </div>
-          <div class="input-box half-width">
-            <label for="ten">Tên *</label>
-            <input type="text" id="ten" placeholder="" style="border-radius: 40px" class="highlighted-input" />
+
+        <div class="header-wrapper-middle">
+          <div class="header-container">
+            <div class="header-middle">
+              <div class="header-logo">
+                <div class="header-logo-img">
+                  <a href="index.html">
+                    <img
+                      src="./assets/images/new-logo-ss-2021-1-150x63.png.avif"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div class="header-search">
+                <div class="header-space-search"></div>
+                <form class="header-input-search">
+                  <input
+                    type="text"
+                    placeholder="Search for products"
+                    class="input-search"
+                  />
+                  <button class="button-search">
+                    <i class="ti-search"></i>
+                  </button>
+                </form>
+                <div class="header-space-after"></div>
+              </div>
+
+              <div class="header-right">
+                <div class="header-user">
+                  <a href="#"><i class="ti-stamp"></i></a>
+                </div>
+
+                <div class="header-cart">
+                  <a href="cart.html"><i class="ti-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="input-box full-width">
-          <label for="quoc-gia">Quốc gia/Khu vực *</label>
-          <input type="text" id="quoc-gia" value="Việt Nam" readonly style="border-radius: 40px" />
-        </div>
-        <!-- Add more input fields as in cartcheckout.html -->
-        <div class="input-box full-width">
-          <label for="thanh-pho">Tỉnh / Thành phố *</label>
-          <select id="thanh-pho" style="border-radius: 40px">
-            <option disabled selected>Chọn tỉnh/thành phố</option>
-            <option value="">Tp. Hồ Chí Minh</option>
-            <!-- Options here -->
-          </select>
-        </div>
-        <div class="input-box full-width">
-          <label for="quan-huyen">Quận / Huyện *</label>
-          <select id="quan-huyen" style="border-radius: 40px">
-            <option disabled selected>Chọn quận/huyện</option>
-            <option value="">Quận 5</option>
-            <!-- Options here -->
-          </select>
-        </div>
-        <div class="input-box full-width">
-          <label for="xa-phuong">Xã / Phường *</label>
-          <select id="xa-phuong" style="border-radius: 40px"="Chọn xã/phường">
-            <option disabled selected>Chọn xã/phường</option>
-            <option value="">Phường Chợ Quán</option>
+      </div>
+      <div class="header-bottomforcart">
+        <ul class="nav-bars">
+          <li><a href="">GIẢM GIÁ/SALE</a></li>
+          <li>
+            <a href="">
+              SNEAKER
+              <i class="ti-angle-down"></i>
+            </a>
+            <ul class="sub-nav">
+              <li>
+                <a href="products.html?category=sneaker&brand=nike">Nike</a>
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=adidas">Adidas</a>
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=newbalance"
+                  >New Balance</a
+                >
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=jordan">Jordan</a>
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=vans">Vans</a>
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=mlb">MLB</a>
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=converse"
+                  >Converse</a
+                >
+              </li>
+              <li>
+                <a href="products.html?category=sneaker&brand=balenciaga"
+                  >Balenciaga</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="products.html?category=dep">DÉP</a></li>
+          <li><a href="products.html?category=ao">ÁO</a></li>
+          <li><a href="products.html?category=quan">QUẦN</a></li>
+          <li><a href="products.html?category=balo">BALO</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <a class="link2" href="cart.html">SHOPPING CART</a>
+        <div class="line"></div>
+        <a class="link2" href="cartcheckout.html">CHECK OUT</a>
+        <div class="line"></div>
+        <a class="link2" href="cartcomplete.html">ORDER COMPLETE</a>
+      </div>
+      <div class="boxrong"></div>
+      <div class="boxrong"></div>
+      <div class="bodycartcheck">
+        <div class="bodycartcheck-left">
+          <div class="section-header">CHỈNH SỬA THÔNG TIN GIAO HÀNG</div>
+          <div class="input-group-row">
+            <div class="input-box half-width">
+              <label for="ho">Họ *</label>
+              <input
+                type="text"
+                id="ho"
+                placeholder=""
+                style="border-radius: 40px"
+              />
+            </div>
+            <div class="input-box half-width">
+              <label for="ten">Tên *</label>
+              <input
+                type="text"
+                id="ten"
+                placeholder=""
+                style="border-radius: 40px"
+                class="highlighted-input"
+              />
+            </div>
+          </div>
+          <div class="input-box full-width">
+            <label for="quoc-gia">Quốc gia/Khu vực *</label>
+            <input
+              type="text"
+              id="quoc-gia"
+              value="Việt Nam"
+              readonly
+              style="border-radius: 40px"
+            />
+          </div>
+          <!-- Add more input fields as in cartcheckout.html -->
+          <div class="input-box full-width">
+            <label for="thanh-pho">Tỉnh / Thành phố *</label>
+            <select id="thanh-pho" style="border-radius: 40px">
+              <option disabled selected>Chọn tỉnh/thành phố</option>
+              <option value="">Tp. Hồ Chí Minh</option>
+              <!-- Options here -->
+            </select>
+          </div>
+          <div class="input-box full-width">
+            <label for="quan-huyen">Quận / Huyện *</label>
+            <select id="quan-huyen" style="border-radius: 40px">
+              <option disabled selected>Chọn quận/huyện</option>
+              <option value="">Quận 5</option>
+              <!-- Options here -->
+            </select>
+          </div>
+          <div class="input-box full-width">
+            <label for="xa-phuong">Xã / Phường *</label>
+            <select
+              id="xa-phuong"
+              style="border-radius: 40px"
+              ="Chọn xã/phường"
+            >
+              <option disabled selected>Chọn xã/phường</option>
+              <option value="">Phường Chợ Quán</option>
 
-            <!-- Options here -->
-          </select>
+              <!-- Options here -->
+            </select>
+          </div>
+          <div class="input-box full-width">
+            <label for="dia-chi">Địa chỉ nhà *</label>
+            <input
+              type="text"
+              id="dia-chi"
+              placeholder="Số nhà và tên đường"
+              style="border-radius: 40px"
+            />
+          </div>
+          <div class="input-box full-width">
+            <label for="so-dien-thoai">Số điện thoại *</label>
+            <input
+              type="tel"
+              id="so-dien-thoai"
+              placeholder=""
+              style="border-radius: 40px"
+            />
+          </div>
+          <div class="input-box full-width">
+            <label for="email">Địa chỉ email *</label>
+            <input
+              type="email"
+              id="email"
+              placeholder=""
+              style="border-radius: 40px"
+            />
+          </div>
+          <!-- Additional info -->
+          <div class="additional-info-header section-header">
+            THÔNG TIN BỔ SUNG
+          </div>
+          <div class="input-box full-width">
+            <label for="ghi-chu">Ghi chú về đơn hàng (tùy chọn)</label>
+            <textarea
+              id="ghi-chu"
+              placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."
+              style="border-radius: 20px"
+            ></textarea>
+          </div>
+          <div class="daucuoi">
+            <a href="endcart.html"><button>LƯU THAY ĐỔI</button></a>
+          </div>
         </div>
-        <div class="input-box full-width">
-          <label for="dia-chi">Địa chỉ nhà *</label>
-          <input type="text" id="dia-chi" placeholder="Số nhà và tên đường" style="border-radius: 40px" />
+      </div>
+      <div class="linebodycart"></div>
+      <div class="boxrong"></div>
+      <div id="footer-section">
+        <div class="footer-container">
+          <div class="footer-infor">
+            <h3 class="footer-infor-name">SAIGONSNEAKER.COM</h3>
+            <ul class="list-infor-container">
+              <li class="infor-address">
+                Address: 48B Thạch Thị Thanh, Tân Định, Q1, Hồ Chí Minh.
+              </li>
+              <li class="infor-phone">Phone: 0903 150 443</li>
+              <li class="infor-open">
+                Open: T2-T6 từ 13h – 21h30, T7-Cn từ 11h-21h30
+              </li>
+              <li class="infor-email">Email: cskh@saigonsneaker.com</li>
+            </ul>
+          </div>
+          <div class="footer-customer">
+            <h3 class="footer-infor-name">CHĂM SÓC KHÁC HÀNG</h3>
+            <ul class="list-infor-container">
+              <li><a href="">Hướng dẫn mua hàng</a></li>
+              <li><a href="">Chính sách bảo mật</a></li>
+              <li><a href="">Hình thức thanh toán</a></li>
+              <li><a href="">Vận chuyển và giao nhận</a></li>
+              <li><a href="">Bảo hành và đổi trả</a></li>
+              <li><a href="">Tuyển dụng</a></li>
+            </ul>
+          </div>
+          <div class="footer-info-details">
+            <h3 class="footer-infor-name">THÔNG TIN</h3>
+            <ul class="list-infor-container">
+              <li><a href="">Tài khoản</a></li>
+              <li><a href="">Kiểm tra đơn hàng</a></li>
+              <li><a href="">Đăng ký nhận tin</a></li>
+            </ul>
+          </div>
+          <div class="footer-shop">
+            <h3 class="footer-infor-name">SHOP</h3>
+            <ul class="list-infor-container">
+              <li><a href="">Adidas</a></li>
+              <li><a href="">Nike</a></li>
+              <li><a href="">Jordan</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="input-box full-width">
-          <label for="so-dien-thoai">Số điện thoại *</label>
-          <input type="tel" id="so-dien-thoai" placeholder="" style="border-radius: 40px" />
+        <div class="footer-about">
+          <h3>Sneaker store in Ho Chi Minh City</h3>
+          <div class="about-content">
+            <p>
+              Tìm kiếm đôi giày sneaker yêu thích của bạn tại SAIGONSNEAKER, cửa
+              hàng giày sneaker và phụ kiện thời trang đường phố hàng đầu Việt
+              Nam. Tự hào phục vụ hơn 5000 khách hàng tại HCM và toàn Việt Nam
+              từ 2016. Chúng tôi có đầy đủ các loại giày sneaker từ các thương
+              hiệu nổi tiếng nhất thế giới từ Nike, Adidas, Converse đến New
+              Balance, Jordan, Vans…v.v. Đội ngũ nhân viên thân thiện và nhiệt
+              tình sẽ giúp bạn tìm được đôi giày hoàn hảo cho phong cách của
+              mình.
+            </p>
+          </div>
         </div>
-        <div class="input-box full-width">
-          <label for="email">Địa chỉ email *</label>
-          <input type="email" id="email" placeholder="" style="border-radius: 40px" />
+        <div class="footer-bottom">
+          <div class="payment-methods">
+            <h4>PHƯƠNG THỨC THANH TOÁN</h4>
+            <p>Visa Master Card MOMO Cash on Delivery</p>
+          </div>
+          <div class="shipping-partners">
+            <h4>ĐỐI TÁC VẬN CHUYỂN</h4>
+            <p>Giaohangtietkiem Giaohangnhanh Lalamove Aahamove GrabExpress</p>
+          </div>
         </div>
-        <!-- Additional info -->
-        <div class="additional-info-header section-header">
-          THÔNG TIN BỔ SUNG
-        </div>
-        <div class="input-box full-width">
-          <label for="ghi-chu">Ghi chú về đơn hàng (tùy chọn)</label>
-          <textarea id="ghi-chu"
-            placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."
-            style="border-radius: 20px"></textarea>
-        </div>
-        <div class="daucuoi">
-          <a href="endcart.html"><button>LƯU THAY ĐỔI</button></a>
+        <div class="footer-copyright">
+          <p>Saigonsneaker.com © 2025</p>
         </div>
       </div>
     </div>
-    <div class="linebodycart"></div>
-    <div class="boxrong"></div>
-    <div id="footer-section">
-      <div class="footer-container">
-        <div class="footer-infor">
-          <h3 class="footer-infor-name">SAIGONSNEAKER.COM</h3>
-          <ul class="list-infor-container">
-            <li class="infor-address">
-              Address: 48B Thạch Thị Thanh, Tân Định, Q1, Hồ Chí Minh.
-            </li>
-            <li class="infor-phone">Phone: 0903 150 443</li>
-            <li class="infor-open">
-              Open: T2-T6 từ 13h – 21h30, T7-Cn từ 11h-21h30
-            </li>
-            <li class="infor-email">Email: cskh@saigonsneaker.com</li>
-          </ul>
-        </div>
-        <div class="footer-customer">
-          <h3 class="footer-infor-name">CHĂM SÓC KHÁCH HÀNG</h3>
-          <ul class="list-infor-container">
-            <li><a href="">Hướng dẫn mua hàng</a></li>
-            <li><a href="">Chính sách bảo mật</a></li>
-            <li><a href="">Hình thức thanh toán</a></li>
-            <li><a href="">Vận chuyển và giao nhận</a></li>
-            <li><a href="">Bảo hành và đổi trả</a></li>
-            <li><a href="">Tuyển dụng</a></li>
-          </ul>
-        </div>
-        <div class="footer-info-details">
-          <h3 class="footer-infor-name">THÔNG TIN</h3>
-          <ul class="list-infor-container">
-            <li><a href="">Tài khoản</a></li>
-            <li><a href="">Kiểm tra đơn hàng</a></li>
-            <li><a href="">Đăng ký nhận tin</a></li>
-          </ul>
-        </div>
-        <div class="footer-shop">
-          <h3 class="footer-infor-name">SHOP</h3>
-          <ul class="list-infor-container">
-            <li><a href="">Adidas</a></li>
-            <li><a href="">Nike</a></li>
-            <li><a href="">Jordan</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-about">
-        <h3>Sneaker store in Ho Chi Minh City</h3>
-        <div class="about-content">
-          <p>
-            Tìm kiếm đôi giày sneaker yêu thích của bạn tại SAIGONSNEAKER, cửa
-            hàng giày sneaker và phụ kiện thời trang đường phố hàng đầu Việt
-            Nam. Tự hào phục vụ hơn 5000 khách hàng tại HCM và toàn Việt Nam
-            từ 2016. Chúng tôi có đầy đủ các loại giày sneaker từ các thương
-            hiệu nổi tiếng nhất thế giới từ Nike, Adidas, Converse đến New
-            Balance, Jordan, Vans…v.v. Đội ngũ nhân viên thân thiện và nhiệt
-            tình sẽ giúp bạn tìm được đôi giày hoàn hảo cho phong cách của
-            mình.
-          </p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="payment-methods">
-          <h4>PHƯƠNG THỨC THANH TOÁN</h4>
-          <p>Visa Master Card MOMO Cash on Delivery</p>
-        </div>
-        <div class="shipping-partners">
-          <h4>ĐỐI TÁC VẬN CHUYỂN</h4>
-          <p>Giaohangtietkiem Giaohangnhanh Lalamove Aahamove GrabExpress</p>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <p>Saigonsneaker.com © 2025</p>
-      </div>
-    </div>
-  </div>
-  <script type="module" src="./data/dataManager.js"></script>
-  <script type="module" src="./assets/js/products.js"></script>
-  <script src="assets/js/cart.js"></script>
-</body>
-
+    <script type="module" src="./data/dataManager.js"></script>
+    <script type="module" src="./assets/js/products.js"></script>
+    <script src="assets/js/cart.js"></script>
+  </body>
 </html>

@@ -62,24 +62,3 @@
     font-weight: 700;
     color: #ff0000;
 }
-
-.no-products {
-  display: flex;
-  justify-content: center;  /* căn giữa ngang */
-  align-items: center;       /* căn giữa dọc (nếu có chiều cao) */
-  text-align: center;
-  font-size: 1rem;
-  color: #555;
-  font-weight: 500;
-  margin-top: 20px;          /* cách tiêu đề một chút */
-  width: 100%;
-}
-
-#brand-products:has(.no-products){
-    display: flex;
-     justify-content: center;  /* căn giữa ngang */
-  align-items: center;       /* căn giữa dọc (nếu có chiều cao) */
-  text-align: center;
-}
-
-
