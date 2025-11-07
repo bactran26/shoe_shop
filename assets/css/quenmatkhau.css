@@ -1,0 +1,141 @@
+.khungtaikhoan {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+}
+
+.tieudetaikhoan {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.duongdan {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.khungdangkydangnhap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.oinputdangnhap {
+  width: 100%; /* chiếm hết chiều ngang của khung */
+  max-width: 580px; /* rộng hơn 1 chút nhưng không vượt khung */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.oinputmatkhau {
+  width: 100%; /* chiếm hết chiều ngang của khung */
+  max-width: 580px; /* rộng hơn 1 chút nhưng không vượt khung */
+  padding: 12px 42px 12px 12px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+.nutmatkhau {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: transparent;
+  pointer-events: none; /* để người dùng vẫn bấm được vào input */
+}
+
+.khungdangky,
+.khungdangnhap {
+  width: 500px; /* Chiều rộng khung */
+  margin: 0 auto; /* Canh giữa ngang */
+  text-align: left;
+}
+
+.tieudedangky,
+.tieudedangnhap {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.formdangky label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.odangkyemail {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.ghichu {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.khungbaomat {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.dieukhoan {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.dieukhoan input {
+  margin-right: 8px;
+}
+
+.nutdangky,
+.nutdatlai {
+ display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-color: #000;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+
+.nutdangky:hover,
+.nutdangnhap:hover {
+  background-color: #333;
+}
+
+.motadangnhap {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
