@@ -1,0 +1,108 @@
+.khungdangnhap {
+  width: 100%;
+  max-width: 500px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.tieudedangnhap {
+  font-size: 36px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.duongdan {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.hopdangnhap {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formdangnhap {
+  text-align: left;
+}
+
+.formdangnhap label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.oemaildangnhap,
+.omatkhaudangnhap {
+  width: 100%; /* chiếm hết chiều ngang của khung */
+  max-width: 580px;
+  height: 48px; /* rộng hơn 1 chút nhưng không vượt khung */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.tuychon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+.ghinho {
+  display: flex;
+  align-items: center;
+}
+
+.ghinho input {
+  margin-right: 6px;
+}
+
+.quenmatkhau {
+  color: #000;
+  text-decoration: none;
+}
+
+.quenmatkhau:hover {
+  text-decoration: underline;
+}
+
+.nutdangnhap {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-color: #000;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nutdangnhap:hover {
+  background-color: #333;
+}
+
+.chuyendangky {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.chuyendangky a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.chuyendangky a:hover {
+  text-decoration: underline;
+}

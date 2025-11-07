@@ -32,7 +32,7 @@
             <div class="header-middle">
               <div class="header-logo">
                 <div class="header-logo-img">
-                  <a href="#">
+                  <a href="index.html">
                     <img
                       src="./assets/images/new-logo-ss-2021-1-150x63.png.avif"
                       alt=""
@@ -92,7 +92,7 @@
 
               <div class="header-right">
                 <div class="header-user">
-                  <a href="#"><i class="ti-stamp"></i></a>
+                  <a href="dangnhap.html"><i class="ti-stamp"></i></a>
                 </div>
 
                 <div class="header-cart">
@@ -104,53 +104,61 @@
         </div>
         <div class="header-bottom">
           <ul class="nav-bars">
-            <li><a href="">GIẢM GIÁ/SALE</a></li>
-            <li class="has-submenu">
-              <a href="products.html?category=sneaker">
+            <li>
+              <a href="">
                 SNEAKER
                 <i class="ti-angle-down"></i>
               </a>
               <ul class="sub-nav">
                 <li>
-                  <a href="products.html?category=sneaker&brand=nike">Nike</a>
-                </li>
-                <li>
-                  <a href="products.html?category=sneaker&brand=adidas"
-                    >Adidas</a
-                  >
-                </li>
-                <li>
-                  <a href="products.html?category=sneaker&brand=newbalance"
+                  <a
+                    href="products.html?brand=New Balance"
+                    data-brand="newbalance"
                     >New Balance</a
                   >
                 </li>
                 <li>
-                  <a href="products.html?category=sneaker&brand=jordan"
+                  <a href="products.html?brand=Nike" data-brand="nike">Nike</a>
+                </li>
+                <li>
+                  <a href="products.html?brand=Adidas" data-brand="adidas"
+                    >Adidas</a
+                  >
+                </li>
+                <li>
+                  <a href="products.html?brand=Jordan" data-brand="jordan"
                     >Jordan</a
                   >
                 </li>
                 <li>
-                  <a href="products.html?category=sneaker&brand=vans">Vans</a>
+                  <a href="products.html?brand=Yeezy" data-brand="yeezy"
+                    >Yeezy</a
+                  >
                 </li>
                 <li>
-                  <a href="products.html?category=sneaker&brand=mlb">MLB</a>
+                  <a href="products.html?brand=Vans" data-brand="vans">Vans</a>
                 </li>
                 <li>
-                  <a href="products.html?category=sneaker&brand=converse"
+                  <a href="products.html?brand=MLB" data-brand="mlb">MLB</a>
+                </li>
+                <li>
+                  <a href="products.html?brand=Converse" data-brand="converse"
                     >Converse</a
                   >
                 </li>
                 <li>
-                  <a href="products.html?category=sneaker&brand=balenciaga"
+                  <a
+                    href="products.html?brand=Balenciaga"
+                    data-brand="balenciaga"
                     >Balenciaga</a
                   >
                 </li>
               </ul>
             </li>
-            <li><a href="products.html?category=dep">DÉP</a></li>
-            <li><a href="products.html?category=ao">ÁO</a></li>
-            <li><a href="products.html?category=quan">QUẦN</a></li>
-            <li><a href="products.html?category=balo">BALO</a></li>
+            <li><a href="">DÉP</a></li>
+            <li><a href="">ÁO</a></li>
+            <li><a href="">QUẦN</a></li>
+            <li><a href="">BALO</a></li>
           </ul>
         </div>
       </div>
@@ -164,10 +172,6 @@
                 SNEAKER GIẢM GIÁ ĐẶC BIỆT TRONG THÁNG
               </h2>
               <div class="products-grid" id="sale-products"></div>
-
-              <div class="banner-shoe">
-                <img src <div class="products-grid" id="sale-products" />
-              </div>
 
               <div class="banner-shoe">
                 <img
@@ -210,7 +214,7 @@
             </ul>
           </div>
           <div class="footer-customer">
-            <h3 class="footer-infor-name">CHĂM SÓC KHÁC HÀNG</h3>
+            <h3 class="footer-infor-name">CHĂM SÓC KHÁCH HÀNG</h3>
             <ul class="list-infor-container">
               <li>
                 <a href="">Hướng dẫn mua hàng</a>
@@ -324,5 +328,6 @@
     <script type="module" src="./assets/js/products.js"></script>
     <script type="module" src="./assets/js/navigation.js"></script>
     <script src="./assets/js/search.js"></script>
+    <script type="module" src="./assets/js/displayProducts.js"></script>
   </body>
 </html>

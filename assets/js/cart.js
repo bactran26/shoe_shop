@@ -6,10 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Giá đơn vị (1.190.000₫)
   const unitPrice = 1190000; // Đơn vị: VND, không có dấu chấm
+  document.querySelector(".nutdangky").addEventListener("click", function () {
+    alert("🎉 Đăng ký thành công!");
+  });
 
+  document.querySelector(".nutdangnhap").addEventListener("click", function () {
+    alert("🎉 Đăng nhập thành công!");
+  });
   // Hàm định dạng tiền tệ (thêm dấu chấm)
   function formatPrice(price) {
-    return price.toLocaleString('vi-VN') + "₫";
+    return price.toLocaleString("vi-VN") + "₫";
   }
 
   // Xử lý khi nhấn nút giảm (-)
@@ -31,23 +37,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function getCart() {
-    return JSON.parse(localStorage.getItem('cart')) || [];
+    return JSON.parse(localStorage.getItem("cart")) || [];
   }
 
-  const cartContainer = document.getElementById('cart-container');
+  const cartContainer = document.getElementById("cart-container");
   const cart = getCart();
 
   if (cart.length === 0) {
-    cartContainer.innerHTML = '<p>Giỏ hàng trống</p>';
+    cartContainer.innerHTML = "<p>Giỏ hàng trống</p>";
     return;
   }
 
-  cart.forEach(item => {
+  cart.forEach((item) => {
     cartContainer.innerHTML += `
       <div class="cart-row">
         <div class="cart-col">
           <div class="product-info">
-            <img src="${item.image}" alt="${item.name}" style="transform: translateX(-15px)" />
+            <img src="${item.image}" alt="${
+      item.name
+    }" style="transform: translateX(-15px)" />
             <span>${item.name} / - ${item.size}</span>
           </div>
         </div>
@@ -57,7 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <span>${item.quantity}</span>
           </div>
         </div>
-        <div class="cart-col"><span>${formatPrice(item.price * item.quantity)}</span></div>
+        <div class="cart-col"><span>${formatPrice(
+          item.price * item.quantity
+        )}</span></div>
       </div>
     `;
   });
