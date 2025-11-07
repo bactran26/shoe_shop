@@ -1,6 +1,5 @@
 import { getProducts } from '../../data/dataManager.js';
 
-// Format tiền VND
 function formatPrice(price) {
   return new Intl.NumberFormat('vi-VN', {
     style: 'currency',
@@ -8,7 +7,6 @@ function formatPrice(price) {
   }).format(price);
 }
 
-// Hiển thị thông báo
 function showToast(message, type = 'info') {
   const toast = document.createElement('div');
   toast.className = `toast toast-${type}`;
@@ -32,7 +30,6 @@ function updateCartCount() {
     if (cartCountEl) cartCountEl.textContent = count;
 }
 
-// Xử lý chi tiết sản phẩm
 export async function DetailProducts(id) {
   try {
     const products = await getProducts();
@@ -114,7 +111,6 @@ export async function DetailProducts(id) {
     document.querySelector('.detail-background').innerHTML = detailHtml;
     document.querySelector('.detail-background').style.display = 'block';
 
-    // Xử lý các sự kiện
     setupEventListeners(product);
 
   } catch (error) {
@@ -124,7 +120,7 @@ export async function DetailProducts(id) {
 }
 
 function setupEventListeners(product) {
-  // Xử lý chọn size
+  
   document.querySelectorAll('.size_product .btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.size_product .btn').forEach(b => b.classList.remove('check'));
@@ -132,7 +128,7 @@ function setupEventListeners(product) {
     });
   });
 
-  // Xử lý số lượng
+  
   const quantityInput = document.querySelector('.input-quantity');
   document.querySelector('.btn-down').addEventListener('click', () => {
     const currentValue = parseInt(quantityInput.value);
@@ -143,9 +139,9 @@ function setupEventListeners(product) {
     quantityInput.value = parseInt(quantityInput.value) + 1;
   });
 
-  // Xử lý thêm vào giỏ hàng
+  
   document.querySelector('.add-to-cart').addEventListener('click', () => {
-    // Lấy size đã chọn
+    
     const selectedSizeBtn = document.querySelector('.size_product .btn.check');
     if (!selectedSizeBtn) {
         showToast('Vui lòng chọn size', 'warning');
@@ -153,10 +149,10 @@ function setupEventListeners(product) {
     }
     const size = selectedSizeBtn.textContent;
 
-    // Lấy số lượng
+    
     const quantity = parseInt(document.querySelector('.input-quantity').value) || 1;
 
-    // Tạo object sản phẩm
+  
     const cartItem = {
         id: product.id,
         name: product.name,
@@ -166,7 +162,7 @@ function setupEventListeners(product) {
         quantity: quantity
     };
 
-    // Thêm vào giỏ hàng
+    
     addToCart(cartItem);
     showToast('Đã thêm vào giỏ hàng', 'success');
 });
@@ -174,7 +170,7 @@ function setupEventListeners(product) {
 
 function addToCart(item) {
     const cart = getCart();
-    // Kiểm tra sản phẩm đã có trong giỏ chưa (theo id và size)
+    
     const existing = cart.find(i => i.id === item.id && i.size === item.size);
     if (existing) {
         existing.quantity += item.quantity;
@@ -190,10 +186,10 @@ function generateSizeButtons() {
   return sizes.map(size => `<button class="btn">${size}</button>`).join('');
 }
 
-// Khởi tạo khi trang load
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        // Lấy ID sản phẩm từ URL
+        
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
 
@@ -202,7 +198,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        // Gọi hàm hiển thị chi tiết sản phẩm
+        
         const products = await getProducts();
         const product = products.find(p => p.id === parseInt(productId));
         
@@ -211,7 +207,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        // Hiển thị chi tiết sản phẩm
+        
         document.querySelector('.detail-product').innerHTML = `
             <div class="detail-flex">
                 <div class="image">
@@ -278,7 +274,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
         `;
 
-        // Setup các event listener
+        
         setupEventListeners(product);
 
     } catch (error) {
@@ -287,7 +283,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-// Trong file products.js khi tạo card sản phẩm
+
 function createProductCard(product) {
     return `
         <div class="product-card" onclick="window.location.href='product-details.html?id=${product.id}'">

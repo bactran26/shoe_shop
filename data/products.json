@@ -68,8 +68,8 @@
             "name": "Dép Quai Ngang Nike Benassi Just Do It Black",
             "price": 149000,
             "category": "dep",
-            "brand": "generic",
-            "image": "./assets/images/products/8.jpg",
+            "brand": "nike",
+            "image": "./assets/images/products/53.jpg",
             "size": [39, 40, 41, 42, 43]
         },
         {
@@ -322,6 +322,267 @@
             "category": "sneaker",
             "brand": "adidas",
             "image": "./assets/images/products/36.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 37,
+            "name": "Áo Thun Nike Sportswear",
+            "price": 350000,
+            "category": "ao",
+            "brand": "nike",
+            "image": "./assets/images/products/37.jpg",
+            "size": ["S", "M", "L", "XL"]
+        },
+        {
+            "id": 38,
+            "name": "Áo Thun Adidas Essentials",
+            "price": 320000,
+            "category": "ao",
+            "brand": "adidas",
+            "image": "./assets/images/products/38.jpg",
+            "size": ["S", "M", "L", "XL"]
+        },
+        {
+            "id": 39,
+            "name": "Áo Polo Lacoste Classic",
+            "price": 490000,
+            "category": "ao",
+            "brand": "lacoste",
+            "image": "./assets/images/products/39.jpg",
+            "size": ["S", "M", "L", "XL"]
+        },
+        {
+            "id": 40,
+            "name": "Áo Hoodie MLB New York",
+            "price": 650000,
+            "category": "ao",
+            "brand": "mlb",
+            "image": "./assets/images/products/40.jpg",
+            "size": ["M", "L", "XL"]
+        },
+        {
+            "id": 41,
+            "name": "Áo Khoác Gió Uniqlo",
+            "price": 420000,
+            "category": "ao",
+            "brand": "uniqlo",
+            "image": "./assets/images/products/41.jpg",
+            "size": ["S", "M", "L", "XL"]
+        },
+        {
+            "id": 42,
+            "name": "Áo Sơ Mi Nam Owen Trắng",
+            "price": 370000,
+            "category": "ao",
+            "brand": "owen",
+            "image": "./assets/images/products/42.jpg",
+            "size": ["M", "L", "XL"]
+        },
+        {
+            "id": 43,
+            "name": "Áo Thun Local Brand Degrey",
+            "price": 290000,
+            "category": "ao",
+            "brand": "degrey",
+            "image": "./assets/images/products/43.jpg",
+            "size": ["S", "M", "L", "XL"]
+        },
+        {
+            "id": 44,
+            "name": "Áo Thun Nam Basic Black",
+            "price": 180000,
+            "category": "ao",
+            "brand": "basic",
+            "image": "./assets/images/products/44.jpg",
+            "size": ["S", "M", "L", "XL"]
+        },
+        {
+            "id": 45,
+            "name": "Áo Khoác Bomber Nam",
+            "price": 520000,
+            "category": "ao",
+            "brand": "bomber",
+            "image": "./assets/images/products/45.jpg",
+            "size": ["M", "L", "XL"]
+        },
+        {
+            "id": 46,
+            "name": "Áo Hoodie Adidas Originals",
+            "price": 690000,
+            "category": "ao",
+            "brand": "adidas",
+            "image": "./assets/images/products/46.jpg",
+            "size": ["S", "M", "L", "XL"]
+        },
+        {
+            "id": 47,
+            "name": "Áo Thun Nam New Balance",
+            "price": 340000,
+            "category": "ao",
+            "brand": "newbalance",
+            "image": "./assets/images/products/47.jpg",
+            "size": ["S", "M", "L", "XL"]
+        },
+        {
+            "id": 48,
+            "name": "Áo Thun Local Brand Bad Habits",
+            "price": 310000,
+            "category": "ao",
+            "brand": "badhabits",
+            "image": "./assets/images/products/48.jpg",
+            "size": ["S", "M", "L", "XL"]
+        },
+        {
+            "id": 49,
+            "name": "Nike Air Max 97 White Black",
+            "price": 2350000,
+            "category": "sneaker",
+            "brand": "nike",
+            "image": "./assets/images/products/49.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 50,
+            "name": "Nike Air Zoom Pegasus 38",
+            "price": 2100000,
+            "category": "sneaker",
+            "brand": "nike",
+            "image": "./assets/images/products/50.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 51,
+            "name": "Nike Air Force 1 Shadow White",
+            "price": 1990000,
+            "category": "sneaker",
+            "brand": "nike",
+            "image": "./assets/images/products/51.jpg",
+            "size": [36, 37, 38, 39, 40]
+        },
+        {
+            "id": 52,
+            "name": "Nike Dunk Low Retro Black White",
+            "price": 2450000,
+            "category": "sneaker",
+            "brand": "nike",
+            "image": "./assets/images/products/52.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 53,
+            "name": "Dép Nike Benassi Just Do It Black",
+            "price": 149000,
+            "category": "dep",
+            "brand": "nike",
+            "image": "./assets/images/products/53.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 54,
+            "name": "Dép Adidas Adilette Aqua Slide",
+            "price": 175000,
+            "category": "dep",
+            "brand": "adidas",
+            "image": "./assets/images/products/54.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 55,
+            "name": "Dép Puma Leadcat FTR",
+            "price": 160000,
+            "category": "dep",
+            "brand": "puma",
+            "image": "./assets/images/products/55.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 56,
+            "name": "Dép MLB Big Ball Chunky Slide",
+            "price": 210000,
+            "category": "dep",
+            "brand": "mlb",
+            "image": "./assets/images/products/56.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 57,
+            "name": "Dép New Balance 200 Slide",
+            "price": 185000,
+            "category": "dep",
+            "brand": "newbalance",
+            "image": "./assets/images/products/57.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 58,
+            "name": "Dép Jordan Hydro 6",
+            "price": 220000,
+            "category": "dep",
+            "brand": "jordan",
+            "image": "./assets/images/products/58.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 59,
+            "name": "Dép Vans Slide-On",
+            "price": 145000,
+            "category": "dep",
+            "brand": "vans",
+            "image": "./assets/images/products/59.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 60,
+            "name": "Dép Converse All Star Slide",
+            "price": 155000,
+            "category": "dep",
+            "brand": "converse",
+            "image": "./assets/images/products/60.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 61,
+            "name": "Dép Balenciaga Pool Slide",
+            "price": 350000,
+            "category": "dep",
+            "brand": "balenciaga",
+            "image": "./assets/images/products/61.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 62,
+            "name": "Dép Crocs Classic Slide",
+            "price": 170000,
+            "category": "dep",
+            "brand": "crocs",
+            "image": "./assets/images/products/62.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 63,
+            "name": "Dép Fila Drifter Basic",
+            "price": 130000,
+            "category": "dep",
+            "brand": "fila",
+            "image": "./assets/images/products/63.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 64,
+            "name": "Dép Gucci Rubber Slide",
+            "price": 490000,
+            "category": "dep",
+            "brand": "gucci",
+            "image": "./assets/images/products/64.jpg",
+            "size": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 65,
+            "name": "Dép Nam Quai Ngang Basic",
+            "price": 90000,
+            "category": "dep",
+            "brand": "basic",
+            "image": "./assets/images/products/65.jpg",
             "size": [39, 40, 41, 42, 43]
         }
     ],
