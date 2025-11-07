@@ -2,45 +2,51 @@ import { getProducts } from '../../data/dataManager.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const brand = urlParams.get('brand');
-    const category = urlParams.get('category');
+    let brand = urlParams.get('brand');
+    let category = urlParams.get('category');
+
+    // Xử lý giá trị null
+    if (brand === 'null' || !brand) brand = null;
+    if (category === 'null' || !category) category = null;
+    
+    console.log('🔍 Lọc theo:', { category, brand });
     
     const brandTitle = document.getElementById('brandTitle');
     const productsContainer = document.getElementById('brand-products');
     
     if (!productsContainer) {
-        console.error('Không tìm thấy container sản phẩm');
+        console.error('❌ Không tìm thấy container #brand-products');
         return;
     }
     
     try {
         const products = await getProducts();
-        console.log('Tổng số sản phẩm:', products.length); // Debug
+        console.log('📦 Tổng sản phẩm:', products.length);
         
-        // Lọc sản phẩm theo category và brand
+        // Lọc sản phẩm
         let filteredProducts = products;
         
         if (category) {
             filteredProducts = filteredProducts.filter(p => 
                 p.category && p.category.toLowerCase() === category.toLowerCase()
             );
-            console.log(`Lọc theo category "${category}":`, filteredProducts.length);
+            console.log(`📌 Sau khi lọc category "${category}":`, filteredProducts.length);
         }
         
         if (brand) {
             filteredProducts = filteredProducts.filter(p => 
                 p.brand && p.brand.toLowerCase() === brand.toLowerCase()
             );
-            console.log(`Lọc theo brand "${brand}":`, filteredProducts.length);
+            console.log(`📌 Sau khi lọc brand "${brand}":`, filteredProducts.length);
         }
         
         // Cập nhật tiêu đề
         if (category && brand) {
-            brandTitle.textContent = `${brand.toUpperCase()} - ${category.toUpperCase()}`;
+            brandTitle.textContent = `${category.toUpperCase()} ${brand.toUpperCase()}`;
         } else if (brand) {
-            brandTitle.textContent = `${brand.toUpperCase()}`;
+            brandTitle.textContent = brand.toUpperCase();
         } else if (category) {
-            brandTitle.textContent = `${category.toUpperCase()}`;
+            brandTitle.textContent = category.toUpperCase();
         } else {
             brandTitle.textContent = 'TẤT CẢ SẢN PHẨM';
         }
@@ -48,6 +54,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Hiển thị sản phẩm
         if (filteredProducts.length === 0) {
             productsContainer.innerHTML = '<p style="text-align: center; padding: 40px;">Không tìm thấy sản phẩm</p>';
+            console.log('⚠️ Không có sản phẩm nào');
             return;
         }
         
@@ -55,7 +62,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             .map(product => createProductElement(product))
             .join('');
         
-        // Thêm sự kiện click cho các sản phẩm
+        console.log('✅ Đã hiển thị', filteredProducts.length, 'sản phẩm');
+        
+        // Thêm sự kiện click
         document.querySelectorAll('.product-card').forEach(card => {
             card.addEventListener('click', () => {
                 const productId = card.getAttribute('data-id');
@@ -64,8 +73,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
         
     } catch (error) {
-        console.error('Lỗi:', error);
-        productsContainer.innerHTML = '<p style="text-align: center; padding: 40px; color: red;">Có lỗi xảy ra khi tải sản phẩm</p>';
+        console.error('❌ Lỗi:', error);
+        productsContainer.innerHTML = '<p style="text-align: center; padding: 40px; color: red;">Có lỗi xảy ra</p>';
     }
 });
 
@@ -89,11 +98,3 @@ function formatPrice(price) {
         currency: 'VND'
     }).format(price);
 }
-
-<div class="products-section">
-    <div class="navigation">
-        <a href="index.html" class="back-button">← Quay về trang chủ</a>
-    </div>
-    <h2 class="section-title" id="brandTitle">PRODUCTS</h2>
-    <div class="products-grid" id="brand-products"></div>
-</div>
