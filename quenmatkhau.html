@@ -6,6 +6,8 @@
     <title>shoe-shop</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/products.css" />
+        <link rel="stylesheet" href="assets/css/search.css" />
+
     <link
       rel="stylesheet"
       href="./assets/fonts/themify-icons/themify-icons.css"
@@ -43,7 +45,10 @@
 
               <div class="header-search">
                 <div class="header-space-search"></div>
-                <form class="header-input-search">
+                <form
+                  class="header-input-search"
+                  onsubmit="event.preventDefault(); apply();"
+                >
                   <input
                     type="text"
                     placeholder="Search for products"
@@ -52,6 +57,37 @@
                   <button class="button-search">
                     <i class="ti-search"></i>
                   </button>
+
+                  <div id="advancedBox" class="advanced-box">
+                    <div class="filter-row">
+                      <label>Thương hiệu:</label>
+                      <select id="filterBrand">
+                        <option value="">Tất cả</option>
+                        <option value="sneaker">Sneaker</option>
+                        <option value="dep">Dép</option>
+                        <option value="ao">Áo</option>
+                        <option value="quan">Quần</option>
+                        <option value="balo">Balo</option>
+                        <option value="Vớ">Vớ</option>
+                      </select>
+                    </div>
+
+                    <div class="filter-row">
+                      <label>Giá từ:</label>
+                      <input type="number" id="minPrice" placeholder="0" />
+
+                      <label>đến:</label>
+                      <input type="number" id="maxPrice" placeholder="0" />
+                    </div>
+
+                    <div class="search-btn-box">
+                      <button type="button" class="apply-btn" onclick="apply()">
+                        Tìm kiếm
+                      </button>
+                    </div>
+                  </div>
+
+                  <div id="searchResults" class="search-results"></div>
                 </form>
                 <div class="header-space-after"></div>
               </div>
@@ -228,5 +264,7 @@
     <script type="module" src="./data/dataManager.js"></script>
     <script type="module" src="./assets/js/products.js"></script>
     <script src="assets/js/cart.js"></script>
+        <script src="assets/js/search.js"></script>
+
   </body>
 </html>
