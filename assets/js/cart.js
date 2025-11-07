@@ -6,9 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Giá đơn vị (1.190.000₫)
   const unitPrice = 1190000; // Đơn vị: VND, không có dấu chấm
-  document.querySelector(".nutdangky").addEventListener("click", function () {
+  /*document.querySelector(".nutdangky").addEventListener("click", function () {
     alert("🎉 Đăng ký thành công!");
   });
+  */
 
   document.querySelector(".nutdangnhap").addEventListener("click", function () {
     alert("🎉 Đăng nhập thành công!");
