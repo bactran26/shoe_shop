@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  height: 600px; /* Adjusted for additional rows */
+  height: 600px;
   width: 100%;
   position: relative;
 }
@@ -13,15 +13,17 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translateX(-180px);
+  transform: translate(-50%, -50%); /* bỏ translateX(-180px) đi */
   z-index: 1000;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* cho bố cục thẳng dọc */
   align-items: center;
   background-color: #fff;
-  height: 520px; /* Adjusted for additional rows */
-  width: 1000px; /* Slightly wider to accommodate new columns */
-  color: rgb(0, 0, 0);
+  height: 520px;
+  width: 1000px;
+  color: #000;
+
+  border-radius: 8px;
 }
 
 .bodybox1_b1 {
