@@ -11,9 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   */
 
-  document.querySelector(".nutdangnhap").addEventListener("click", function () {
-    alert("🎉 Đăng nhập thành công!");
-  });
   document.querySelector(".nutdatlai").addEventListener("click", function () {
     alert("🎉 Đặt lại mật khẩu thành công , kiểm tra email của bạn!");
   });
