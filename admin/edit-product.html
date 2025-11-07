@@ -1,83 +1,107 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sửa Thông Tin Sản Phẩm</title>
-    <link rel="stylesheet" href="./assets/css/admin-style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/themfisher/themify-icons@1.0.0/css/themify-icons.css">
-</head>
-<body>
-
-    <a href="../index.html" target="_blank" class="view-site-button">
-        <i class="ti-world"></i> Xem Trang Web
+    <link rel="stylesheet" href="./assets/css/admin-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/themfisher/themify-icons@1.0.0/css/themify-icons.css"
+    />
+  </head>
+  <body>
+    <a href="../index.html" class="view-site-button">
+      <i class="ti-world"></i> Xem Trang Web
     </a>
 
     <header class="admin-header">
-        <div class="header-container">
-            <div class="header-logo">
-                <a href="dashboard.html">
-                    <img src="../assets/images/new-logo-ss-2021-1-150x63.png.avif" alt="Site Logo">
-                </a>
-            </div>
-            <nav class="admin-nav">
-                <ul class="nav-menu">
-                    <li><a href="dashboard.html">Tổng Quan</a></li>
-                    <li><a href="manage-users.html">Quản Lý Khách Hàng</a></li>
-                    <li><a href="manage-categories.html">Quản Lý Loại Sản Phẩm</a></li>
-                    <li class="active"><a href="manage-products.html">Quản Lý Sản Phẩm</a></li>
-                    <li><a href="manage-imports.html">Quản Lý Nhập Hàng</a></li>
-                    <li><a href="manage-pricing.html">Quản Lý Giá Bán</a></li>
-                    <li><a href="manage-orders.html">Quản Lý Đơn Hàng</a></li>
-                    <li><a href="manage-inventory.html">Quản Lý Tồn Kho</a></li>
-                    <li><a href="../index.html" target="_blank" style="color: #4caf50;">Xem Trang Web</a></li>
-                    <li><a href="login.html">Đăng Xuất</a></li>
-                </ul>
-            </nav>
+      <div class="header-container">
+        <div class="header-logo">
+          <a href="dashboard.html">
+            <img
+              src="../assets/images/new-logo-ss-2021-1-150x63.png.avif"
+              alt="Site Logo"
+            />
+          </a>
         </div>
+        <nav class="admin-nav">
+          <ul class="nav-menu">
+            <li><a href="dashboard.html">Tổng Quan</a></li>
+            <li><a href="manage-users.html">Quản Lý Khách Hàng</a></li>
+            <li><a href="manage-categories.html">Quản Lý Loại Sản Phẩm</a></li>
+            <li class="active">
+              <a href="manage-products.html">Quản Lý Sản Phẩm</a>
+            </li>
+            <li><a href="manage-imports.html">Quản Lý Nhập Hàng</a></li>
+            <li><a href="manage-pricing.html">Quản Lý Giá Bán</a></li>
+            <li><a href="manage-orders.html">Quản Lý Đơn Hàng</a></li>
+            <li><a href="manage-inventory.html">Quản Lý Tồn Kho</a></li>
+            <li>
+              <a href="../index.html" target="_blank" style="color: #4caf50"
+                >Xem Trang Web</a
+              >
+            </li>
+            <li><a href="login.html">Đăng Xuất</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div class="admin-wrapper">
-        <main class="main-content">
-            <header class="main-header">
-                <h1>Sửa Thông Tin Sản Phẩm</h1>
-            </header>
-            <div class="content-body">
-                <div class="card">
-                    <form>
-                        <div class="input-group">
-                            <label for="product-name">Tên sản phẩm</label>
-                            <input type="text" id="product-name" value="H-FORCE BLUE / - 43" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="product-code">Mã sản phẩm</label>
-                            <input type="text" id="product-code" value="NK001" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="product-category">Loại sản phẩm</label>
-                            <select id="product-category" required>
-                                <option value="sneaker" selected>SNEAKER</option>
-                                <option value="dep">DÉP</option>
-                            </select>
-                        </div>
-                        <div class="input-group">
-                            <label for="product-image">Hình ảnh</label>
-                            <input type="file" id="product-image">
-                            <p>Ảnh hiện tại: <img src="../assets/images/mau-banner-giay-nu-1.jpg" width="50" alt=""></p>
-                        </div>
-                        <div class="input-group">
-                            <label for="product-description">Mô tả</label>
-                            <textarea id="product-description" rows="5">Mô tả chi tiết cho sản phẩm H-FORCE BLUE.</textarea>
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="btn">Cập Nhật</button>
-                            <a href="manage-products.html" class="btn btn-secondary">Hủy</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </main>
+      <main class="main-content">
+        <header class="main-header">
+          <h1>Sửa Thông Tin Sản Phẩm</h1>
+        </header>
+        <div class="content-body">
+          <div class="card">
+            <form>
+              <div class="input-group">
+                <label for="product-name">Tên sản phẩm</label>
+                <input
+                  type="text"
+                  id="product-name"
+                  value="H-FORCE BLUE / - 43"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="product-code">Mã sản phẩm</label>
+                <input type="text" id="product-code" value="NK001" required />
+              </div>
+              <div class="input-group">
+                <label for="product-category">Loại sản phẩm</label>
+                <select id="product-category" required>
+                  <option value="sneaker" selected>SNEAKER</option>
+                  <option value="dep">DÉP</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="product-image">Hình ảnh</label>
+                <input type="file" id="product-image" />
+                <p>
+                  Ảnh hiện tại:
+                  <img
+                    src="../assets/images/mau-banner-giay-nu-1.jpg"
+                    width="50"
+                    alt=""
+                  />
+                </p>
+              </div>
+              <div class="input-group">
+                <label for="product-description">Mô tả</label>
+                <textarea id="product-description" rows="5">
+Mô tả chi tiết cho sản phẩm H-FORCE BLUE.</textarea
+                >
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn">Cập Nhật</button>
+                <a href="manage-products.html" class="btn btn-secondary">Hủy</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
     </div>
-
-</body>
+  </body>
 </html>
