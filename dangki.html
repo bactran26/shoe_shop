@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="header-cart">
-                  <a href="cart.html"><i class="ti-shopping-cart"></i></a>
+                  <a href="#"><i class="ti-shopping-cart"></i></a>
                 </div>
               </div>
             </div>
@@ -257,22 +257,23 @@
     <script src="assets/js/cart.js"></script>
     <script>
       document.querySelector('.formdangky').addEventListener('submit', function(e) {
-          e.preventDefault();
-          const email = document.getElementById('emaildangky').value.trim();
-          const username = this.querySelector('input[placeholder="Nhập tên đăng nhập"]').value.trim();
-          const password = document.getElementById('matkhaudangky').value.trim();
-          const agree = this.querySelector('input[type="checkbox"]').checked;
+    e.preventDefault();
+    const email = document.getElementById('emaildangky').value.trim();
+    const password = document.getElementById('matkhaudangky').value.trim();
+    const agree = this.querySelector('input[type="checkbox"]').checked;
 
-          if (!email || !username || !password) {
-              alert('Vui lòng nhập đầy đủ thông tin!');
-              return;
-          }
-          if (!agree) {
-              alert('Bạn phải đồng ý với điều khoản!');
-              return;
-          }
-          window.location.href = 'dangnhap.html';
-      });
+    if (!email || !password) {
+        alert('Vui lòng nhập đầy đủ thông tin!');
+        return;
+    }
+    if (!agree) {
+        alert('Bạn phải đồng ý với điều khoản!');
+        return;
+    }
+
+    alert('Đăng ký thành công!');
+    window.location.href = 'dangnhap.html';
+});
       </script>
 </body>
 </html>
