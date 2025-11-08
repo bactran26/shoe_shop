@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products - Shoe Shop</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/products.css" />
-    <link rel="stylesheet" href="./assets/css/search.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tất cả sản phẩm - Shoe Shop</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/products.css" />
+    <link rel="stylesheet" href="assets/css/search.css" />
     <link
       rel="stylesheet"
-      href="./assets/fonts/themify-icons/themify-icons.css"
+      href="assets/fonts/themify-icons/themify-icons.css"
     />
   </head>
   <body>
@@ -17,233 +18,126 @@
       <div class="header-topbar">
         <div class="header-container">
           <div class="header-hotline">
-            <span
-              >Hotline: 0903.150.443 | Free Ship cho đơn hàng trên 1tr
-              đồng</span
-            >
+            Hotline: 0903.150.443 | Free Ship cho đơn hàng trên 1tr đồng
           </div>
         </div>
       </div>
-
       <div class="header-wrapper-middle">
         <div class="header-container">
           <div class="header-middle">
             <div class="header-logo">
-              <div class="header-logo-img">
-                <a href="indexafter.html">
-                  <img
-                    src="./assets/images/new-logo-ss-2021-1-150x63.png.avif"
-                    alt=""
-                  />
-                </a>
-              </div>
+              <a href="index.html"
+                ><img
+                  src="assets/images/new-logo-ss-2021-1-150x63.png.avif"
+                  alt="logo"
+              /></a>
             </div>
-
             <div class="header-search">
-              <div class="header-space-search"></div>
               <form
                 class="header-input-search"
-                onsubmit="event.preventDefault(); apply();"
+                method="get"
+                action="products.html"
+                onsubmit="return validateSearch(event)"
               >
                 <input
                   type="text"
-                  placeholder="Search for products"
+                  name="q"
                   class="input-search"
+                  placeholder="Search for products"
                 />
-                <button class="button-search">
+                <button class="button-search" type="submit">
                   <i class="ti-search"></i>
                 </button>
-
-                <div id="advancedBox" class="advanced-box">
-                  <div class="filter-row">
-                    <label>Thương hiệu:</label>
-                    <select id="filterBrand">
-                      <option value="">Tất cả</option>
-                      <option value="SNEAKER">Sneaker</option>
-                      <option value="DÉP">Dép</option>
-                      <option value="ÁO">Áo</option>
-                      <option value="QUẦN">Quần</option>
-                      <option value="BALO">Balo</option>
-                    </select>
-                  </div>
-
-                  <div class="filter-row">
-                    <label>Giá từ:</label>
-                    <input type="number" id="minPrice" placeholder="0" />
-
-                    <label>đến:</label>
-                    <input type="number" id="maxPrice" placeholder="0" />
-                  </div>
-
-                  <div class="search-btn-box">
-                    <button type="button" class="apply-btn" onclick="apply()">
-                      Tìm kiếm
-                    </button>
-                  </div>
-                </div>
-
-                <div id="searchResults" class="search-results"></div>
               </form>
-              <div class="header-space-after"></div>
             </div>
-
             <div class="header-right">
               <div class="header-user">
-                <a href="user-infor.html"><i class="ti-stamp"></i></a>
+                <a href="user-infor.html"><i class="ti-user"></i></a>
               </div>
-
               <div class="header-cart">
-                <a href="cart.html"><i class="ti-shopping-cart"></i></a>
+                <a href="showcart.html"><i class="ti-shopping-cart"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="header-bottom">
-        <ul class="nav-bars">
-          <li>
-            <a href="">
-              SNEAKER
-              <i class="ti-angle-down"></i>
-            </a>
-            <ul class="sub-nav">
-              <li>
-                <a href="products.html?category=sneaker&brand=nike">Nike</a>
-              </li>
-              <li>
-                <a href="products.html?category=sneaker&brand=adidas">Adidas</a>
-              </li>
-              <li>
-                <a href="products.html?category=sneaker&brand=newbalance"
-                  >New Balance</a
-                >
-              </li>
-              <li>
-                <a href="products.html?category=sneaker&brand=jordan">Jordan</a>
-              </li>
-              <li>
-                <a href="products.html?category=sneaker&brand=vans">Vans</a>
-              </li>
-              <li>
-                <a href="products.html?category=sneaker&brand=mlb">MLB</a>
-              </li>
-              <li>
-                <a href="products.html?category=sneaker&brand=converse"
-                  >Converse</a
-                >
-              </li>
-              <li>
-                <a href="products.html?category=sneaker&brand=balenciaga"
-                  >Balenciaga</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li><a href="products.html?category=dep">DÉP</a></li>
-          <li><a href="products.html?category=ao">ÁO</a></li>
-          <li><a href="products.html?category=quan">QUẦN</a></li>
-          <li><a href="products.html?category=balo">BALO</a></li>
-        </ul>
-      </div>
     </div>
 
-    <div class="products-section">
-      <h2 class="section-title" id="brandTitle">PRODUCTS</h2>
-      <div class="products-grid" id="brand-products"></div>
-      <div id="pagination" style="text-align: center; margin: 24px 0"></div>
-    </div>
+    <main class="products-section">
+      <h2 id="searchHeading" class="section-title">TẤT CẢ SẢN PHẨM</h2>
+      <div class="products-grid" id="productGrid">
+        <a
+          class="product-card"
+          href="product-details.html?id=1"
+          data-name="h-force blue"
+        >
+          <div class="product-image">
+            <img src="assets/images/giay1.jpg" alt="H-FORCE BLUE" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">H-FORCE BLUE - 43</h3>
+            <div class="product-price">1.190.000₫</div>
+          </div>
+        </a>
+
+        <a
+          class="product-card"
+          href="product-details.html?id=2"
+          data-name="balenciaga triple s"
+        >
+          <div class="product-image">
+            <img src="assets/images/giay.jpg" alt="Balenciaga Triple S" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Balenciaga Triple S - 37</h3>
+            <div class="product-price">888.000₫</div>
+          </div>
+        </a>
+
+        <a
+          class="product-card"
+          href="product-details.html?id=3"
+          data-name="nike air max"
+        >
+          <div class="product-image">
+            <img
+              src="assets/images/maxresdefault-qgjqygbo0wpjtxt8m1249ugbvf9cqm2yyx28d1t11k.jpg"
+              alt="Nike Air Max"
+            />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Nike Air Max - 42</h3>
+            <div class="product-price">1.500.000₫</div>
+          </div>
+        </a>
+      </div>
+    </main>
 
     <div id="footer-section">
-      <div class="footer-container">
-        <div class="footer-infor">
-          <h3 class="footer-infor-name">SAIGONSNEAKER.COM</h3>
-          <ul class="list-infor-container">
-            <li class="infor-address">
-              Address: 48B Thạch Thị Thanh, Tân Định, Q1, Hồ Chí Minh.
-            </li>
-            <li class="infor-phone">Phone: 0903 150 443</li>
-            <li class="infor-open">
-              Open: T2-T6 từ 13h – 21h30, T7-Cn từ 11h-21h30
-            </li>
-            <li class="infor-email">Email: cskh@saigonsneaker.com</li>
-          </ul>
-        </div>
-        <div class="footer-customer">
-          <h3 class="footer-infor-name">CHĂM SÓC KHÁC HÀNG</h3>
-          <ul class="list-infor-container">
-            <li>
-              <a href="">Hướng dẫn mua hàng</a>
-            </li>
-            <li>
-              <a href="">Chính sách bảo mật</a>
-            </li>
-            <li>
-              <a href="">Hình thức thanh toán</a>
-            </li>
-            <li>
-              <a href="">Vận chuyển và giao nhận</a>
-            </li>
-            <li>
-              <a href="">Bảo hành và đổi trả</a>
-            </li>
-            <li>
-              <a href="">Tuyển dụng</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-info-details">
-          <h3 class="footer-infor-name">THÔNG TIN</h3>
-          <ul class="list-infor-container">
-            <li><a href="">Tài khoản</a></li>
-            <li><a href="">Kiểm tra đơn hàng</a></li>
-            <li><a href="">Đăng ký nhận tin</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-shop">
-          <h3 class="footer-infor-name">SHOP</h3>
-          <ul class="list-infor-container">
-            <li><a href="">Adidas</a></li>
-            <li><a href="">Nike</a></li>
-            <li><a href="">Jordan</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-about">
-        <h3>Sneaker store in Ho Chi Minh City</h3>
-        <div class="about-content">
-          <p>
-            Tìm kiếm đôi giày sneaker yêu thích của bạn tại SAIGONSNEAKER, cửa
-            hàng giày sneaker và phụ kiện thời trang đường phố hàng đầu Việt
-            Nam. Tự hào phục vụ hơn 5000 khách hàng tại HCM và toàn Việt Nam từ
-            2016. Chúng tôi có đầy đủ các loại giày sneaker từ các thương hiệu
-            nổi tiếng nhất thế giới từ Nike, Adidas, Converse đến New Balance,
-            Jordan, Vans…v.v. Đội ngũ nhân viên thân thiện và nhiệt tình sẽ giúp
-            bạn tìm được đôi giày hoàn hảo cho phong cách của mình.
-          </p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="payment-methods">
-          <h4>PHƯƠNG THỨC THANH TOÁN</h4>
-          <p>Visa Master Card MOMO Cash on Delivery</p>
-        </div>
-
-        <div class="shipping-partners">
-          <h4>ĐỐI TÁC VẬN CHUYỂN</h4>
-          <p>Giaohangtietkiem Giaohangnhanh Lalamove Aahamove GrabExpress</p>
-        </div>
-      </div>
-
-      <div class="footer-copyright">
-        <p>Saigonsneaker.com © 2025</p>
-      </div>
+      <div class="footer-copyright"><p>Saigonsneaker.com © 2025</p></div>
     </div>
 
-    <script type="module" src="./data/dataManager.js"></script>
-    <script type="module" src="./assets/js/search.js"></script>
-    <script type="module" src="./assets/js/displayProducts.js"></script>
+    <script src="assets/js/validate.js"></script>
+    <script>
+      (function () {
+        const params = new URLSearchParams(location.search);
+        const q = params.get("q");
+        if (!q) return;
+        document.getElementById(
+          "searchHeading"
+        ).textContent = `Kết quả tìm kiếm cho: "${q}"`;
+        const key = q.trim().toLowerCase();
+        document
+          .querySelectorAll("#productGrid .product-card")
+          .forEach((it) => {
+            const name = (
+              it.dataset.name ||
+              it.textContent ||
+              ""
+            ).toLowerCase();
+            if (!name.includes(key)) it.style.display = "none";
+          });
+      })();
+    </script>
   </body>
 </html>
