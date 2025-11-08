@@ -11,7 +11,7 @@
 .menu {
   position: sticky;
   top: 1px;
-  z-index: 10000;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,6 +64,7 @@
   margin: 0 20px;
   font-family: "Lexend", Sans-serif;
 }
+
 .box a.link1{
   text-decoration: none;
   color: #685d5dc6;
@@ -74,7 +75,7 @@
 }
 
 .box a.link2{
-        position: relative;  
+    position: relative;  
     text-decoration: none;
     color: #685d5dc6;
     font-size: large;
@@ -115,7 +116,7 @@
   top: 50%;
   left:50%;
   transform: translate(-50%,-50% ) translateX(-180px);     
-  z-index: 1000;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,7 +193,7 @@
   top: 50%;
   left:50%;
   transform: translate(-50%,-50% ) translateX(480px);     
-  z-index: 1000;
+  z-index: 60;
   display: flex;
   flex-direction: column;
    border-radius: 4px;

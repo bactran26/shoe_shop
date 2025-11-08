@@ -8,7 +8,7 @@ inputSearch.addEventListener("keydown", function (event) {
     const keyword = inputSearch.value.trim();
 
     // Chuyển hướng bằng đường dẫn tuyệt đối (thay link này bằng link thật của bạn)
-    const absoluteURL = "product.html";
+    const absoluteURL = "products.html";
 
     // Nếu muốn gửi luôn từ khóa tìm kiếm:
     if (keyword !== "") {
