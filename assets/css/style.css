@@ -140,9 +140,8 @@ html {
   left: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 2px solid #000; 
+  border-bottom: 2px solid #000;
 }
-
 
 .nav-bars {
   display: flex;
@@ -158,17 +157,17 @@ html {
   text-decoration: none;
 }
 
-.nav-bars>li {
+.nav-bars > li {
   position: sticky;
   top: 0;
 }
 
-.nav-bars>li>a {
+.nav-bars > li > a {
   padding: 5px 20px;
   display: inline-block;
 }
 
-.nav-bars>li:hover .sub-nav {
+.nav-bars > li:hover .sub-nav {
   display: block;
 }
 

@@ -14,7 +14,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* bỏ translateX(-180px) đi */
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   flex-direction: column; /* cho bố cục thẳng dọc */
   align-items: center;
