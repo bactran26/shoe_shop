@@ -462,7 +462,7 @@
 .underbodycart{
     display: flex;
     height: 500px;
-    background-color: #fff ;
+    background-color: #ffffff00 ;
     position:relative;
     width:85%;
     transform: translateX(140px);
