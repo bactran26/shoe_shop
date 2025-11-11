@@ -1,24 +1,26 @@
 .page-layout {
   display: flex;
   width: 100%;
+  height: auto;
   align-items: flex-start;
   justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
 }
 .line {
   position: absolute;
-  width: 95%;
   height: 3px;
   border-radius: 20px;
-
-  left: 50%; /* canh giữa theo chiều ngang */
-  transform: translateX(-50%); /* dịch ngược lại 50% để thật giữa */
   background-color: rgb(197, 197, 190);
+
+  left: 21.45%;
+  width: 74.5%;
+  transform: none;
 }
+
 /* Box rỗng bên trái */
 .left-box {
   width: 19%;
-  background-color: #f9f9f9; /* để dễ thấy — bạn có thể đổi thành transparent */
-  border-right: 1px solid #ddd;
   height: 450px; /* 👈 có thể thay đổi tùy ý — ví dụ 300px, 500px,... */
   box-sizing: border-box;
   padding: 20px;
@@ -51,7 +53,7 @@
 /* Lưới sản phẩm */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 0 40px;
 }
@@ -180,6 +182,8 @@
 
 /* ==== BOX TÌM KIẾM NÂNG CAO ==== */
 .adv-box {
+  position: sticky;
+  top: 60px;
   width: 100%;
   background: #ffffff;
   border-radius: 12px;
@@ -205,8 +209,8 @@
   font-size: 17px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #d32a00;
-  background: linear-gradient(90deg, #fff0eb, #ffe7df);
+  color: #000000;
+  background: linear-gradient(90deg, #cfcecd, #ffffff);
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 18px;
@@ -215,7 +219,7 @@
 }
 .adv-header i {
   font-size: 18px;
-  color: #ff4d4d;
+  color: #080404;
 }
 
 /* Nội dung form */
@@ -277,7 +281,7 @@
 .adv-button {
   margin-top: 12px;
   padding: 10px;
-  background: linear-gradient(90deg, #d32a00, #f88c65);
+  background: linear-gradient(90deg, #000000, #938a8a);
   color: #fff;
   font-weight: 600;
   font-size: 15px;
