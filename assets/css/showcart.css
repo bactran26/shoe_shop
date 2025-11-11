@@ -57,7 +57,7 @@
 .bodybox1_b2 {
   top: 70px;
   position: absolute;
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   font-weight: bold;
   font-size: large;
@@ -84,7 +84,7 @@
 .bodybox1_b3 {
   top: 430px; /* Adjusted for three rows */
   position: absolute;
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;

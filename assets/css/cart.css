@@ -245,7 +245,7 @@
 }
 .product-info {
   
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   align-items: center;
     display: flex;
@@ -254,6 +254,7 @@
   text-align: center;
 }
 .product-info img {
+
     width: 100px;
     border-radius: 10px;
   display: flex;
