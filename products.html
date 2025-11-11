@@ -114,9 +114,52 @@
     </div>
     <h2 id="searchHeading" class="section-title">TẤT CẢ SẢN PHẨM</h2>
     <div class="page-layout">
-      <div style="background-color: black" class="left-box">
-        <!-- Box rỗng 20% -->
+      
+      
+
+
+
+
+
+         <div class="adv-box">
+  <div class="adv-header">
+    <i class="ti-search"></i>
+    <span>Tìm kiếm nâng cao</span>
+  </div>
+
+  <form class="adv-form" method="get" action="products-find.html">
+    <!-- Khoảng giá -->
+    <div class="adv-group">
+      <label for="adv-min">Giá từ:</label>
+      <input type="number" id="adv-min" name="min" placeholder="0 ₫" min="0" />
+    </div>
+
+    <div class="adv-group">
+      <label for="adv-max">Đến:</label>
+      <input type="number" id="adv-max" name="max" placeholder="5.000.000 ₫" min="0" />
+    </div>
+
+    <!-- Loại sản phẩm -->
+    <div class="adv-group">
+      <p class="adv-label">Loại sản phẩm:</p>
+      <div class="adv-checkbox-list">
+        <label><input type="checkbox" name="type" value="Nike" /> Nike</label>
+        <label><input type="checkbox" name="type" value="Adidas" /> Adidas</label>
+        <label><input type="checkbox" name="type" value="Sneaker" /> Sneaker</label>
+        <label><input type="checkbox" name="type" value="Jordan" /> Jordan</label>
+        <label><input type="checkbox" name="type" value="Converse" /> Converse</label>
       </div>
+    </div>
+
+    <!-- Nút tìm kiếm -->
+    <button type="submit" class="adv-button">TÌM SẢN PHẨM</button>
+  </form>
+</div>
+
+
+
+
+
 
       <main class="products-section">
         <div class="products-grid" id="productGrid">
