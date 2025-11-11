@@ -56,6 +56,35 @@
                     <i class="ti-search"></i>
                   </button>
 
+                  <div id="advancedBox" class="advanced-box">
+                    <div class="filter-row">
+                      <label>Thương hiệu:</label>
+                      <select id="filterBrand">
+                        <option value="">Tất cả</option>
+                        <option value="sneaker">Sneaker</option>
+                        <option value="dep">Dép</option>
+                        <option value="ao">Áo</option>
+                        <option value="quan">Quần</option>
+                        <option value="balo">Balo</option>
+                        <option value="Vớ">Vớ</option>
+                      </select>
+                    </div>
+
+                    <div class="filter-row">
+                      <label>Giá từ:</label>
+                      <input type="number" id="minPrice" placeholder="0" />
+
+                      <label>đến:</label>
+                      <input type="number" id="maxPrice" placeholder="0" />
+                    </div>
+
+                    <div class="search-btn-box">
+                      <button type="button" class="apply-btn" onclick="apply()">
+                        Tìm kiếm
+                      </button>
+                    </div>
+                  </div>
+
                   <div id="searchResults" class="search-results"></div>
                 </form>
                 <div class="header-space-after"></div>
