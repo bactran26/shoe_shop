@@ -295,3 +295,17 @@
   opacity: 0.95;
   transform: scale(1.02);
 }
+
+.adv-group input[type="text"] {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.adv-group input[type="text"]:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 4px rgba(255, 77, 77, 0.3);
+}

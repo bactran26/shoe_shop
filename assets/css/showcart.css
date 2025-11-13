@@ -222,3 +222,9 @@
   padding-bottom: 20px;
   transform: translateX(210px);
 }
+
+.product-info span {
+  display: block;
+  width: 180px; /* ép tên về 1 khối bằng nhau */
+  word-wrap: break-word; /* nếu dài thì xuống dòng gọn */
+}
