@@ -1,14 +1,14 @@
-import { getProducts } from '../../data/dataManager.js';
+import { getProducts } from "../../data/dataManager.js";
 
 function formatPrice(price) {
-    return new Intl.NumberFormat('vi-VN', {
-        style: 'currency',
-        currency: 'VND'
-    }).format(price);
+  return new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency: "VND",
+  }).format(price);
 }
 
 function createProductCard(product) {
-    return `
+  return `
         <div class="product-card" data-id="${product.id}">
             <div class="product-image">
                 <img src="${product.image}" alt="${product.name}">
@@ -22,46 +22,35 @@ function createProductCard(product) {
 }
 
 async function displayProducts() {
-    try {
-        const products = await getProducts();
-        
-        
-        const saleContainer = document.getElementById('sale-products');
-        if (saleContainer) {
-            saleContainer.innerHTML = products
-                .slice(0, 12)
-                .map(product => createProductCard(product))
-                .join('');
-        }
+  try {
+    const products = await getProducts();
 
-        
-        const newContainer = document.getElementById('new-products');
-        if (newContainer) {
-            newContainer.innerHTML = products
-                .slice(12, 24)
-                .map(product => createProductCard(product))
-                .join('');
-        }
-
-        
-        const bestSellersContainer = document.getElementById('best-sellers');
-        if (bestSellersContainer) {
-            bestSellersContainer.innerHTML = products
-                .slice(24, 36)
-                .map(product => createProductCard(product))
-                .join('');
-        }
-
-        
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const productId = card.getAttribute('data-id');
-                window.location.href = `product-details.html?id=${productId}`;
-            });
-        });
-    } catch (error) {
-        console.error('Error:', error);
+    const saleContainer = document.getElementById("sale-products");
+    if (saleContainer) {
+      saleContainer.innerHTML = products
+        .slice(0, 12)
+        .map((product) => createProductCard(product))
+        .join("");
     }
+
+    const newContainer = document.getElementById("new-products");
+    if (newContainer) {
+      newContainer.innerHTML = products
+        .slice(12, 24)
+        .map((product) => createProductCard(product))
+        .join("");
+    }
+
+    const bestSellersContainer = document.getElementById("best-sellers");
+    if (bestSellersContainer) {
+      bestSellersContainer.innerHTML = products
+        .slice(24, 36)
+        .map((product) => createProductCard(product))
+        .join("");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 
-document.addEventListener('DOMContentLoaded', displayProducts);
+document.addEventListener("DOMContentLoaded", displayProducts);
