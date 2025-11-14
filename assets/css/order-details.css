@@ -193,3 +193,20 @@
 .back-btn:hover {
   background-color: #5a6268;
 }
+
+.delete-product-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Lexend", Sans-serif;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: white;
+  transition: background 0.3s;
+}
+
+.delete-product-btn:hover {
+  background-color: #b02a37;
+}

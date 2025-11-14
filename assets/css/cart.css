@@ -563,3 +563,49 @@
 
   transform: translateX(210px) ;
 }
+
+.delete-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-btn {
+    background-color: #fff;
+    border: 2px solid #d4d4d4;
+    padding: 6px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    transition: 0.2s;
+    font-family: "Lexend", sans-serif;
+}
+
+.delete-btn:hover {
+    background-color: #111827;
+    color: white;
+    border-color: #111827;
+}
+
+.add-product-row {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+    padding-left: 60px;
+}
+
+.add-product-row a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #111827;
+    font-family: "Lexend", sans-serif;
+    transition: 0.2s;
+}
+
+.add-product-row a:hover {
+    color: #000;
+    text-decoration: underline;
+}

@@ -210,6 +210,7 @@
             <a href="showcart.html"
               ><button class="back-btn">Quay lại</button></a
             >
+            <button class="delete-product-btn">Xóa sản phẩm</button>
           </div>
         </div>
       </div>
@@ -433,5 +434,30 @@
       });
     </script>
     <script src="assets/js/search.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const deleteBtn = document.querySelector(".delete-product-btn");
+
+        deleteBtn.addEventListener("click", () => {
+          const confirmDelete = confirm(
+            "Bạn có chắc chắn muốn xóa sản phẩm này không?"
+          );
+
+          if (confirmDelete) {
+            window.location.href = "showcart.html?deleted=true";
+          }
+          // Không chọn OK thì không làm gì
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if (urlParams.get("deleted") === "true") {
+          alert("Xóa sản phẩm thành công!");
+        }
+      });
+    </script>
   </body>
 </html>
