@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Khách Hàng - Admin</title>
+    <link rel="stylesheet" href="./assets/css/admin-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/themfisher/themify-icons@1.0.0/css/themify-icons.css">
+</head>
+<body>
+
+    <a href="../index.html" target="_blank" class="view-site-button">
+        <i class="ti-world"></i> Xem Trang Web
+    </a>
+
+    <header class="admin-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="dashboard.html">
+                    <img src="../assets/images/new-logo-ss-2021-1-150x63.png.avif" alt="Site Logo">
+                </a>
+            </div>
+            <nav class="admin-nav">
+                <ul class="nav-menu">
+                    <li><a href="dashboard.html">Tổng Quan</a></li>
+                    <li class="active"><a href="manage-users.html">Quản Lý Khách Hàng</a></li>
+                    <li><a href="manage-categories.html">Quản Lý Loại Sản Phẩm</a></li>
+                    <li><a href="manage-products.html">Quản Lý Sản Phẩm</a></li>
+                    <li><a href="manage-imports.html">Quản Lý Nhập Hàng</a></li>
+                    <li><a href="manage-pricing.html">Quản Lý Giá Bán</a></li>
+                    <li><a href="manage-orders.html">Quản Lý Đơn Hàng</a></li>
+                    <li><a href="manage-inventory.html">Quản Lý Tồn Kho</a></li>
+                    <li><a href="../index.html" target="_blank" style="color: #4caf50;">Xem Trang Web</a></li>
+                    <li><a href="login.html">Đăng Xuất</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="admin-wrapper">
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Thông Tin Khách Hàng: Nguyễn Văn A</h1>
+            </header>
+            <div class="content-body">
+                <div class="card">
+                    <h2>Chi tiết thông tin</h2>
+                    <form>
+                        <div class="input-group">
+                            <label for="fullName">Họ và tên *</label>
+                            <input type="text" id="fullName" value="Nguyễn Văn A" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" value="example@gmail.com" required readonly style="background-color: #f0f0f0;">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="phone">Số điện thoại *</label>
+                            <input type="tel" id="phone" value="0901234567" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="address">Địa chỉ</label>
+                            <input type="text" id="address" value="123 Đường Láng, Quận 1, TP. Hồ Chí Minh">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="birthday">Ngày sinh</label>
+                            <input type="date" id="birthday" value="1995-01-10">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Giới tính</label>
+                            <div class="radio-group-admin">
+                                <label>
+                                    <input type="radio" name="gender" value="male" checked>
+                                    Nam
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="female"> Nữ
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="other"> Khác
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn">LƯU THAY ĐỔI</button>
+                            <a href="manage-users.html" class="btn btn-secondary">QUAY LẠI</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
