@@ -279,7 +279,26 @@ tbody tr:hover {
     transform: translateY(-2px); /* Hiệu ứng nhấc lên một chút */
 }
 
-/* Thêm icon world từ thư viện Themify */
 .view-site-button .ti-world {
     font-size: 16px;
+}
+
+.radio-group-admin {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 8px; /* Căn chỉnh với các input khác */
+}
+
+.radio-group-admin label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal; /* Ghi đè font-weight: bold từ .input-group label */
+    margin: 0;
+}
+
+.radio-group-admin input[type="radio"] {
+    width: auto;
+    margin: 0;
 }
