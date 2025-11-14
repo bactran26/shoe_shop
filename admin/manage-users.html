@@ -1,111 +1,107 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản Lý Khách Hàng</title>
-    <link rel="stylesheet" href="./assets/css/admin-style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/themfisher/themify-icons@1.0.0/css/themify-icons.css"
-    />
-  </head>
-  <body>
-    <a href="../index.html" class="view-site-button">
-      <i class="ti-world"></i> Xem Trang Web
+    <link rel="stylesheet" href="./assets/css/admin-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/themfisher/themify-icons@1.0.0/css/themify-icons.css">
+</head>
+<body>
+
+    <a href="../index.html"  class="view-site-button">
+        <i class="ti-world"></i> Xem Trang Web
     </a>
 
     <header class="admin-header">
-      <div class="header-container">
-        <div class="header-logo">
-          <a href="dashboard.html">
-            <img
-              src="../assets/images/new-logo-ss-2021-1-150x63.png.avif"
-              alt="Site Logo"
-            />
-          </a>
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="dashboard.html">
+                    <img src="../assets/images/new-logo-ss-2021-1-150x63.png.avif" alt="Site Logo">
+                </a>
+            </div>
+            <nav class="admin-nav">
+                <ul class="nav-menu">
+                    <li><a href="dashboard.html">Tổng Quan</a></li>
+                    <li class="active"><a href="manage-users.html">Quản Lý Khách Hàng</a></li>
+                    <li><a href="manage-categories.html">Quản Lý Loại Sản Phẩm</a></li>
+                    <li><a href="manage-products.html">Quản Lý Sản Phẩm</a></li>
+                    <li><a href="manage-imports.html">Quản Lý Nhập Hàng</a></li>
+                    <li><a href="manage-pricing.html">Quản Lý Giá Bán</a></li>
+                    <li><a href="manage-orders.html">Quản Lý Đơn Hàng</a></li>
+                    <li><a href="manage-inventory.html">Quản Lý Tồn Kho</a></li>
+                    <li><a href="login.html">Đăng Xuất</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="admin-nav">
-          <ul class="nav-menu">
-            <li><a href="dashboard.html">Tổng Quan</a></li>
-            <li class="active">
-              <a href="manage-users.html">Quản Lý Khách Hàng</a>
-            </li>
-            <li><a href="manage-categories.html">Quản Lý Loại Sản Phẩm</a></li>
-            <li><a href="manage-products.html">Quản Lý Sản Phẩm</a></li>
-            <li><a href="manage-imports.html">Quản Lý Nhập Hàng</a></li>
-            <li><a href="manage-pricing.html">Quản Lý Giá Bán</a></li>
-            <li><a href="manage-orders.html">Quản Lý Đơn Hàng</a></li>
-            <li><a href="manage-inventory.html">Quản Lý Tồn Kho</a></li>
-            <li><a href="login.html">Đăng Xuất</a></li>
-          </ul>
-        </nav>
-      </div>
     </header>
 
     <div class="admin-wrapper">
-      <main class="main-content">
-        <header class="main-header">
-          <h1>Quản Lý Khách Hàng</h1>
-        </header>
-        <div class="content-body">
-          <div class="card filter-card">
-            <form class="filter-form">
-              <div class="input-group" style="flex-grow: 2">
-                <label>Tìm kiếm khách hàng</label>
-                <input type="text" placeholder="Nhập tên, email hoặc SĐT..." />
-              </div>
-              <div class="input-group">
-                <label>Trạng thái</label>
-                <select>
-                  <option value="">Tất cả</option>
-                  <option value="active">Hoạt động</option>
-                  <option value="locked">Đã khóa</option>
-                </select>
-              </div>
-              <button type="submit" class="btn">Tìm Kiếm</button>
-            </form>
-          </div>
-          <div class="card">
-            <table>
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Tên Khách Hàng</th>
-                  <th>Email</th>
-                  <th>Số Điện Thoại</th>
-                  <th>Trạng Thái</th>
-                  <th>Hành Động</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Nguyễn Văn A</td>
-                  <td>nguyenvana@email.com</td>
-                  <td>0901234567</td>
-                  <td><span class="status active">Hoạt động</span></td>
-                  <td>
-                    <button class="btn btn-sm">Reset Mật Khẩu</button>
-                    <button class="btn btn-sm btn-danger">Khóa</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Trần Thị B</td>
-                  <td>tranthib@email.com</td>
-                  <td>0907654321</td>
-                  <td><span class="status locked">Đã khóa</span></td>
-                  <td>
-                    <button class="btn btn-sm">Reset Mật Khẩu</button>
-                    <button class="btn btn-sm btn-success">Mở Khóa</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </main>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Quản Lý Khách Hàng</h1>
+            </header>
+            <div class="content-body">
+                <div class="card filter-card">
+                    <form class="filter-form">
+                        <div class="input-group" style="flex-grow: 2;">
+                            <label>Tìm kiếm khách hàng</label>
+                            <input type="text" placeholder="Nhập tên, email hoặc SĐT...">
+                        </div>
+                        <div class="input-group">
+                            <label>Trạng thái</label>
+                            <select>
+                                <option value="">Tất cả</option>
+                                <option value="active">Hoạt động</option>
+                                <option value="locked">Đã khóa</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn">Tìm Kiếm</button>
+                    </form>
+                </div>
+                <div class="card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên Khách Hàng</th>
+                                <th>Email</th>
+                                <th>Số Điện Thoại</th>
+                                <th>Trạng Thái</th>
+                                <th>Hành Động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>example@gmail.com</td>
+                                <td>0901234567</td>
+                                <td><span class="status active">Hoạt động</span></td>
+                                <td>
+                                    <a href="view-user.html" class="btn btn-sm">Xem / Sửa</a>
+                                    <button class="btn btn-sm btn-secondary">Reset Mật Khẩu</button>
+                                    <button class="btn btn-sm btn-danger">Khóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Trần Thị B</td>
+                                <td>tranthib@email.com</td>
+                                <td>0907654321</td>
+                                <td><span class="status locked">Đã khóa</span></td>
+                                <td>
+                                    <a href="view-user.html" class="btn btn-sm">Xem / Sửa</a>
+                                    <button class="btn btn-sm btn-secondary">Reset Mật Khẩu</button>
+                                    <button class="btn btn-sm btn-success">Mở Khóa</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
     </div>
-  </body>
+
+</body>
 </html>
