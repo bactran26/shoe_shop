@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <a href="../index.html" class="view-site-button">
+    <a href="../index.html"  class="view-site-button">
         <i class="ti-world"></i> Xem Trang Web
     </a>
 
@@ -39,12 +39,13 @@
     <div class="admin-wrapper">
         <main class="main-content">
             <header class="main-header">
-                <h1>Thông Tin Khách Hàng: Nguyễn Văn A</h1>
+                <h1>Chi Tiết Khách Hàng: Nguyễn Văn A</h1>
             </header>
             <div class="content-body">
+
                 <div class="card">
-                    <h2>Chi tiết thông tin</h2>
-                    <form>
+                    <h2>Thông tin cá nhân</h2>
+                    <form class="user-form">
                         <div class="input-group">
                             <label for="fullName">Họ và tên *</label>
                             <input type="text" id="fullName" value="Nguyễn Văn A" required>
@@ -52,7 +53,7 @@
 
                         <div class="input-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" value="example@gmail.com" required readonly style="background-color: #f0f0f0;">
+                            <input type="email" id="email" value="example@gmail.com" readonly style="background-color: #f0f0f0;" required>
                         </div>
 
                         <div class="input-group">
@@ -62,20 +63,19 @@
 
                         <div class="input-group">
                             <label for="address">Địa chỉ</label>
-                            <input type="text" id="address" value="123 Đường Láng, Quận 1, TP. Hồ Chí Minh">
+                            <input type="text" id="address" value="Nhập địa chỉ của bạn">
                         </div>
 
                         <div class="input-group">
                             <label for="birthday">Ngày sinh</label>
-                            <input type="date" id="birthday" value="1995-01-10">
+                            <input type="date" id="birthday">
                         </div>
 
                         <div class="input-group">
                             <label>Giới tính</label>
                             <div class="radio-group-admin">
                                 <label>
-                                    <input type="radio" name="gender" value="male" checked>
-                                    Nam
+                                    <input type="radio" name="gender" value="male" checked> Nam
                                 </label>
                                 <label>
                                     <input type="radio" name="gender" value="female"> Nữ
@@ -87,14 +87,47 @@
                         </div>
 
                         <div class="form-actions">
-                            <button type="submit" class="btn">LƯU THAY ĐỔI</button>
+                            <button type="submit" class="btn">CẬP NHẬT THÔNG TIN</button>
                             <a href="manage-users.html" class="btn btn-secondary">QUAY LẠI</a>
                         </div>
                     </form>
                 </div>
+
+                <div class="card">
+                    <h2>Đặt Lại Mật Khẩu</h2>
+                    <p style="margin-top: -15px; margin-bottom: 20px; font-size: 14px; color: #555;">Admin không cần nhập mật khẩu cũ. Chỉ cần nhập mật khẩu mới và xác nhận.</p>
+                    <form class="password-form">
+                        <div class="input-group">
+                            <label for="newPassword">Mật khẩu mới *</label>
+                            <input type="password" id="newPassword" placeholder="Nhập mật khẩu mới" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="confirmPassword">Xác nhận mật khẩu mới *</label>
+                            <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu mới" required>
+                        </div>
+
+                        <div class="form-actions">
+                             <button type="submit" class="btn">ĐẶT LẠI MẬT KHẨU</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </main>
     </div>
+
+    <style>
+        .radio-group-admin {
+            display: flex; flex-wrap: wrap; gap: 20px; padding-top: 8px;
+        }
+        .radio-group-admin label {
+            display: flex; align-items: center; gap: 5px; font-weight: normal; margin: 0;
+        }
+        .radio-group-admin input[type="radio"] {
+            width: auto; margin: 0;
+        }
+    </style>
 
 </body>
 </html>
