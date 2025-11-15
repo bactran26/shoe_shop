@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <a href="../index.html" class="view-site-button">
+    <a href="../index.html"  class="view-site-button">
         <i class="ti-world"></i> Xem Trang Web
     </a>
 
@@ -51,6 +51,12 @@
                         <hr style="margin: 20px 0;">
                         <h3>Chi Tiết Sản Phẩm Nhập</h3>
                         
+                        <div class="product-entry-header">
+                            <div class="header-label">Tên Sản Phẩm</div>
+                            <div class="header-label">Số Lượng</div>
+                            <div class="header-label">Giá Nhập</div>
+                        </div>
+
                         <div id="product-list">
                             <div class="product-entry">
                                 <select class="product-selector">
@@ -64,6 +70,7 @@
                                     <input type="text" class="product-cost" placeholder="Giá nhập" inputmode="numeric">
                                     <span>VNĐ</span>
                                 </div>
+                                <div></div> 
                             </div>
                         </div>
 
@@ -80,31 +87,24 @@
     </div>
 
     <script>
-
+        // (JavaScript giữ nguyên, không thay đổi)
         function formatPrice(value) {
-            // Xóa mọi ký tự không phải số
             let num = value.replace(/[^0-9]/g, '');
             if (num === '') return '';
-            // Định dạng theo kiểu Việt Nam (dấu chấm)
             return new Intl.NumberFormat('vi-VN').format(num);
         }
-
         function applyPriceFormatting(input) {
             input.addEventListener('input', (e) => {
                 let value = e.target.value;
                 let selectionStart = e.target.selectionStart;
                 let originalLength = value.length;
-
                 let formattedValue = formatPrice(value);
                 e.target.value = formattedValue;
-
-                // Cập nhật lại vị trí con trỏ sau khi định dạng
                 let newLength = formattedValue.length;
                 let newCursorPos = selectionStart + (newLength - originalLength);
                 e.target.setSelectionRange(newCursorPos, newCursorPos);
             });
         }
-
         function addProductEntry() {
             const list = document.getElementById('product-list');
             const newEntry = document.createElement('div');
@@ -124,30 +124,40 @@
                 <button type="button" class="btn btn-danger btn-sm" onclick="this.parentElement.remove()">Xóa</button>
             `;
             list.appendChild(newEntry);
-
-            // Áp dụng định dạng giá cho ô input mới
             applyPriceFormatting(newEntry.querySelector('.product-cost'));
         }
-
         document.querySelectorAll('.product-cost').forEach(applyPriceFormatting);
-
         document.getElementById('import-form').addEventListener('submit', (e) => {
-            // e.preventDefault(); // Bỏ comment để test
-            
             document.querySelectorAll('.product-cost').forEach(input => {
-                // Chuyển "1.200.000" thành "1200000"
                 input.value = input.value.replace(/\./g, '');
             });
-            
-            // alert("Đang gửi dữ liệu với giá đã được làm sạch!");
-            // Form sẽ tiếp tục được gửi đi
         });
     </script>
 
     <style>
+        /* ## CSS CHO TÊN CỘT ## */
+        .product-entry-header {
+            display: grid;
+            /* Cấu trúc cột phải khớp với .product-entry */
+            grid-template-columns: 3fr 1fr 1.5fr auto; 
+            gap: 15px;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header-label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+            /* Căn lề cho cột giá nhập và hành động */
+        }
+        .product-entry-header .header-label:nth-child(3) { text-align: left; }
+        .product-entry-header .header-label:nth-child(4) { text-align: left; }
+
+
+        /* CSS CŨ */
         .product-entry {
             display: grid;
-            /* Cập nhật lại cột: Select | Số lượng | Giá | Nút Xóa */
             grid-template-columns: 3fr 1fr 1.5fr auto;
             gap: 15px;
             margin-bottom: 15px;
@@ -157,7 +167,6 @@
         .product-entry .product-quantity {
             width: 100%;
         }
-        
         .price-input-wrapper {
             position: relative;
             display: flex;
@@ -165,9 +174,8 @@
         }
         .price-input-wrapper input.product-cost {
             width: 100%;
-            /* Thêm khoảng trống bên phải cho chữ VNĐ */
             padding-right: 50px; 
-            box-sizing: border-box; /* Đảm bảo padding không làm vỡ layout */
+            box-sizing: border-box; 
         }
         .price-input-wrapper span {
             position: absolute;
