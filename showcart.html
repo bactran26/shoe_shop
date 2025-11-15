@@ -6,6 +6,8 @@
     <title>shoe-shop - Show Cart</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/products.css" />
+    <link rel="stylesheet" href="assets/css/product.css" />
+
     <link
       rel="stylesheet"
       href="assets/fonts/themify-icons/themify-icons.css"
@@ -41,17 +43,26 @@
                 </div>
               </div>
 
-              <div class="header-search">
+              <div class="header-search" style="max-width: 800px">
                 <div class="header-space-search"></div>
-                <form class="header-input-search">
+                <form
+                  class="header-input-search"
+                  onsubmit="event.preventDefault(); apply();"
+                >
                   <input
                     type="text"
                     placeholder="Search for products"
                     class="input-search"
                   />
-                  <button class="button-search">
+                  <button
+                    class="button-search"
+                    type="button"
+                    onclick="window.location='products-find.html'"
+                  >
                     <i class="ti-search"></i>
                   </button>
+
+                  <div id="searchResults" class="search-results"></div>
                 </form>
                 <div class="header-space-after"></div>
               </div>
@@ -78,54 +89,42 @@
             </a>
             <ul class="sub-nav">
               <li>
-                <a href="products.html?category=sneaker&brand=nike">Nike</a>
+                <a href="all_products.html">Nike</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=adidas">Adidas</a>
+                <a href="all_products.html">Adidas</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=newbalance"
-                  >New Balance</a
-                >
+                <a href="all_products.html">New Balance</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=jordan">Jordan</a>
+                <a href="all_products.html">Jordan</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=vans">Vans</a>
+                <a href="all_products.html">Vans</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=mlb">MLB</a>
+                <a href="all_products.html">MLB</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=converse"
-                  >Converse</a
-                >
+                <a href="all_products.html">Converse</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=balenciaga"
-                  >Balenciaga</a
-                >
+                <a href="all_products.html">Balenciaga</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="products.html?category=dep" style="font-weight: bold"
-              >RUNNING</a
-            >
+            <a href="all_products.html" style="font-weight: bold">RUNNING</a>
           </li>
           <li>
-            <a href="products.html?category=ao" style="font-weight: bold"
-              >CASUAL</a
-            >
+            <a href="all_products.html" style="font-weight: bold">CASUAL</a>
           </li>
           <li>
-            <a href="products.html?category=quan" style="font-weight: bold"
-              >SKATE</a
-            >
+            <a href="all_products.html" style="font-weight: bold">SKATE</a>
           </li>
           <li>
-            <a href="products.html?category=balo" style="font-weight: bold"
+            <a href="all_products.html" style="font-weight: bold"
               >LIMITED EDITION</a
             >
           </li>
@@ -153,20 +152,20 @@
             <div class="cart-col">
               <div class="product-info">
                 <img
-                  src="assets/images/giay1.jpg"
+                  src="assets/images/ariford1.jpg"
                   style="transform: translateX(-15px)"
                   alt="H-FORCE BLUE"
                 />
-                <span>H-FORCE BLUE / - 43</span>
+                <span>Nike Air Force 1</span>
               </div>
             </div>
-            <div class="cart-col">1.190.000₫</div>
+            <div class="cart-col">1.200.000₫</div>
             <div class="cart-col">
               <div class="quantity-box">
                 <span id="quantity">1</span>
               </div>
             </div>
-            <div class="cart-col">1.190.000₫</div>
+            <div class="cart-col">1.200.000₫</div>
             <div class="cart-col">
               <span class="status completed">Hoàn thành</span>
             </div>
@@ -181,20 +180,20 @@
             <div class="cart-col">
               <div class="product-info">
                 <img
-                  src="assets/images/giay1.jpg"
+                  src="assets/images/ariford1.jpg"
                   style="transform: translateX(-15px)"
                   alt="Balenciaga Triple S"
                 />
-                <span>Balenciaga Triple S / - 37</span>
+                <span>Nike Air Force 1</span>
               </div>
             </div>
-            <div class="cart-col">888.000₫</div>
+            <div class="cart-col">1.200.000₫</div>
             <div class="cart-col">
               <div class="quantity-box">
                 <span id="quantity">2</span>
               </div>
             </div>
-            <div class="cart-col">1.776.000₫</div>
+            <div class="cart-col">1.200.000₫</div>
             <div class="cart-col">
               <span class="status canceled">Bị hủy</span>
             </div>
@@ -209,20 +208,20 @@
             <div class="cart-col">
               <div class="product-info">
                 <img
-                  src="assets/images/giay1.jpg"
+                  src="assets/images/ariford1.jpg"
                   style="transform: translateX(-15px)"
                   alt="Nike Air Max"
                 />
-                <span>Nike Air Max / - 42</span>
+                <span>Nike Air Force 1</span>
               </div>
             </div>
-            <div class="cart-col">1.500.000₫</div>
+            <div class="cart-col">1.200.000₫</div>
             <div class="cart-col">
               <div class="quantity-box">
                 <span id="quantity">1</span>
               </div>
             </div>
-            <div class="cart-col">1.500.000₫</div>
+            <div class="cart-col">1.200.000₫</div>
             <div class="cart-col">
               <span class="status processing">Đang xử lý</span>
             </div>
@@ -234,62 +233,63 @@
           </div>
         </div>
       </div>
-      <div class="linebodycart"></div>
-      <div class="boxrong"></div>
-      <div class="sanphamvuaxem">SẢN PHẨM ĐÃ MUA</div>
-      <div class="underbodycart">
-        <div class="underbodycart-item">
-          <a href="product.html">
-            <img src="assets/images/giay1.jpg" alt="Giay nu"
-          /></a>
-          <p class="name">H-FORCE BLUE - Size 43</p>
-          <p class="brand">local brand</p>
-          <p class="brand">★★★★★</p>
-          <div class="price-container">
-            <span class="old-price">1.300.000₫</span>
-            <span class="new-price">1.190.000₫</span>
+      <div class="recent-products-section-gradient">
+        <h2>SẢN PHẨM VỪA XEM</h2>
+      </div>
+      <div class="boxsanphamtrongtrang">
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <img
+              src="assets/images/ariford1.jpg"
+              alt="NIKE AIR FORCE 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info" style="flex-direction: column">
+            <h3 class="product-name">NIKE AIR FORCE 1</h3>
+            <div class="product-price">1.200.000₫</div>
           </div>
         </div>
-        <div class="underbodycart-item">
-          <a href="product.html">
-            <img src="assets/images/giay1.jpg" alt="Giay nu"
-          /></a>
-          <p class="name">
-            Balenciaga Triple S Clear Sole Orange Grey Black - Size 37
-          </p>
-          <p class="brand">local brand</p>
-          <p class="brand">★★★★★</p>
-          <div class="price-container">
-            <span class="old-price">999.000₫</span>
-            <span class="new-price">888.000₫</span>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <img
+              src="assets/images/ariford1.jpg"
+              alt="NIKE AIR FORCE 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info" style="flex-direction: column">
+            <h3 class="product-name">NIKE AIR FORCE 1</h3>
+            <div class="product-price">1.200.000₫</div>
           </div>
         </div>
-        <div class="underbodycart-item">
-          <a href="product.html">
-            <img src="assets/images/giay1.jpg" alt="Giay nu"
-          /></a>
-          <p class="name">Nike Air Max - Size 42</p>
-          <p class="brand">local brand</p>
-          <p class="brand">★★★★★</p>
-          <div class="price-container">
-            <span class="old-price">1.700.000₫</span>
-            <span class="new-price">1.500.000₫</span>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <img
+              src="assets/images/ariford1.jpg"
+              alt="NIKE AIR FORCE 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info" style="flex-direction: column">
+            <h3 class="product-name">NIKE AIR FORCE 1</h3>
+            <div class="product-price">1.200.000₫</div>
           </div>
         </div>
-        <div class="underbodycart-item">
-          <a href="product.html">
-            <img src="assets/images/giay1.jpg" alt="Giay nu"
-          /></a>
-          <p class="name">Nike Air Limited - Size 36</p>
-          <p class="brand">local brand</p>
-          <p class="brand">★★★★★</p>
-          <div class="price-container">
-            <span class="old-price">1.700.000₫</span>
-            <span class="new-price">1.500.000₫</span>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <img
+              src="assets/images/ariford1.jpg"
+              alt="NIKE AIR FORCE 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info" style="flex-direction: column">
+            <h3 class="product-name">NIKE AIR FORCE 1</h3>
+            <div class="product-price">1.200.000₫</div>
           </div>
         </div>
       </div>
-      <div class="boxrong"></div>
       <div class="boxrong"></div>
       <div id="footer-section">
         <div class="footer-container">

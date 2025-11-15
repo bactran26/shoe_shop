@@ -157,3 +157,125 @@ body {
 .anh-nho img:hover {
   transform: scale(1.1);
 }
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: popupShow 0.3s ease;
+}
+
+@keyframes popupShow {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.chon-size label {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 6px 10px;
+  margin: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chon-size label:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Khi radio được chọn, label sẽ đổi màu */
+.chon-size input[type="radio"]:checked + label {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.mo-ta-san-pham {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px; /* tăng từ 16px lên 18px */
+  color: #333;
+}
+
+.mo-ta-san-pham h2 {
+  font-size: 26px; /* tăng từ 24px lên 26px */
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.mo-ta-san-pham h3 {
+  font-size: 22px; /* tăng từ 20px lên 22px */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.mo-ta-san-pham p {
+  line-height: 1.6;
+}
+
+.mo-ta-san-pham ul {
+  list-style: disc inside;
+  line-height: 1.6;
+  font-size: 18px; /* tăng chữ trong danh sách */
+}
+
+.linebodycart-product {
+  width: 100%;
+  max-width: 1200px;   /* giới hạn chiều rộng giống box sản phẩm */
+  height: 3px;
+  background-color: rgb(197, 197, 190);
+  margin: 30px auto;   /* căn giữa trang */
+  border-radius: 20px;
+}
+.boxsanphamtrongtrang {
+  display: flex;              /* bật flex */
+  justify-content: center;    /* căn giữa các sản phẩm */
+  gap: 20px;                  /* khoảng cách giữa các sản phẩm */
+  max-width: 1200px;          /* giống phần khung trên */
+  margin: 30px auto;          /* căn giữa trang */
+  padding: 20px;              /* padding xung quanh */
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recent-products-section-gradient {
+  max-width: 1200px;           /* giống box sản phẩm */
+  margin: 40px auto 20px auto; /* căn giữa, margin trên dưới */
+padding: 12px 20px;              /* khoảng cách trong box */
+  text-align: center;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #ff4b2b, #ff416c); /* đỏ cam → hồng */
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

@@ -186,10 +186,16 @@
 .half-width {
   width: 48%; /* Gần 50% nhưng để lại khoảng trống giữa */
 }
+.half-width input::placeholder {
+  color: black;
+}
 
 .full-width {
   width: 100%;
   gap: 20px;
+}
+.full-width input::placeholder {
+  color: black;
 }
 
 label {

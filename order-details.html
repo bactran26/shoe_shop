@@ -42,17 +42,26 @@
                 </div>
               </div>
 
-              <div class="header-search">
+              <div class="header-search" style="max-width: 800px">
                 <div class="header-space-search"></div>
-                <form class="header-input-search">
+                <form
+                  class="header-input-search"
+                  onsubmit="event.preventDefault(); apply();"
+                >
                   <input
                     type="text"
                     placeholder="Search for products"
                     class="input-search"
                   />
-                  <button class="button-search">
+                  <button
+                    class="button-search"
+                    type="button"
+                    onclick="window.location='products-find.html'"
+                  >
                     <i class="ti-search"></i>
                   </button>
+
+                  <div id="searchResults" class="search-results"></div>
                 </form>
                 <div class="header-space-after"></div>
               </div>
@@ -79,54 +88,42 @@
             </a>
             <ul class="sub-nav">
               <li>
-                <a href="products.html?category=sneaker&brand=nike">Nike</a>
+                <a href="all_products.html">Nike</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=adidas">Adidas</a>
+                <a href="all_products.html">Adidas</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=newbalance"
-                  >New Balance</a
-                >
+                <a href="all_products.html">New Balance</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=jordan">Jordan</a>
+                <a href="all_products.html">Jordan</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=vans">Vans</a>
+                <a href="all_products.html">Vans</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=mlb">MLB</a>
+                <a href="all_products.html">MLB</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=converse"
-                  >Converse</a
-                >
+                <a href="all_products.html">Converse</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=balenciaga"
-                  >Balenciaga</a
-                >
+                <a href="all_products.html">Balenciaga</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="products.html?category=dep" style="font-weight: bold"
-              >RUNNING</a
-            >
+            <a href="all_products.html" style="font-weight: bold">RUNNING</a>
           </li>
           <li>
-            <a href="products.html?category=ao" style="font-weight: bold"
-              >CASUAL</a
-            >
+            <a href="all_products.html" style="font-weight: bold">CASUAL</a>
           </li>
           <li>
-            <a href="products.html?category=quan" style="font-weight: bold"
-              >SKATE</a
-            >
+            <a href="all_products.html" style="font-weight: bold">SKATE</a>
           </li>
           <li>
-            <a href="products.html?category=balo" style="font-weight: bold"
+            <a href="all_products.html" style="font-weight: bold"
               >LIMITED EDITION</a
             >
           </li>
@@ -169,16 +166,17 @@
             <h3>Thông tin giao hàng</h3>
             <p><strong>Họ và tên:</strong> Nguyễn Văn A</p>
             <p>
-              <strong>Địa chỉ:</strong> 123 Đường Láng, Quận 1, TP. Hồ Chí Minh
+              <strong>Địa chỉ:</strong> 273 An Dương Vương,Phường Chợ Quán, TP.
+              Hồ Chí Minh
             </p>
             <p><strong>Số điện thoại:</strong> 0903 123 456</p>
-            <p><strong>Email:</strong> example@saigonsneaker.com</p>
+            <p><strong>Email:</strong> nguyenvana@gmail.com</p>
             <p><strong>Ghi chú:</strong> Giao hàng trong giờ hành chính</p>
           </div>
           <div class="payment-info">
             <h3>Thông tin thanh toán</h3>
             <p><strong>Phương thức thanh toán:</strong> COD</p>
-            <p><strong>Tổng tiền hàng:</strong> 1.190.000₫</p>
+            <p><strong>Tổng tiền hàng:</strong> 1.290.000₫</p>
             <p><strong>Phí vận chuyển:</strong> 30.000₫</p>
             <p><strong>Tổng thanh toán:</strong> 1.220.000₫</p>
           </div>
@@ -308,21 +306,21 @@
             status: "completed",
             statusText: "Hoàn thành",
             productName: "H-FORCE BLUE / - 43",
-            price: "1.190.000₫",
+            price: "1.200.000₫",
             quantity: 1,
-            total: "1.190.000₫",
+            total: "1.200.000₫",
             shipping: {
               name: "Nguyễn Văn A",
-              address: "123 Đường Láng, Quận 1, TP. Hồ Chí Minh",
-              phone: "0903 123 456",
-              email: "example@saigonsneaker.com",
+              address: "273 An Dương Vương, Phường Chợ Quán , Tp Hồ Chí Minh",
+              phone: "0123 456 789",
+              email: "nguyenvana@gmail.com",
               note: "Giao hàng trong giờ hành chính",
             },
             payment: {
               method: " COD",
-              subtotal: "1.190.000₫",
+              subtotal: "1.200.000₫",
               shippingFee: "30.000₫",
-              total: "1.220.000₫",
+              total: "1.230.000₫",
             },
             timeline: [
               { status: "Đặt hàng", date: "18/10/2025 09:00", completed: true },
@@ -338,22 +336,22 @@
           2: {
             status: "canceled",
             statusText: "Bị hủy",
-            productName: "Balenciaga Triple S / - 37",
-            price: "888.000₫",
+            productName: "Nike Air Force 1",
+            price: "1.200.000₫",
             quantity: 2,
-            total: "1.776.000₫",
+            total: "1.200.000₫",
             shipping: {
-              name: "Trần Thị B",
-              address: "456 Lê Lợi, Quận 3, TP. Hồ Chí Minh",
-              phone: "0904 567 890",
-              email: "tranb@saigonsneaker.com",
+              name: "Nguyễn Văn A",
+              address: "273 An Dương Vương, Phường Chợ Quán , Tp Hồ Chí Minh",
+              phone: "0123 456 789",
+              email: "nguyenvana@gmail.com",
               note: "Không có ghi chú",
             },
             payment: {
               method: "Cash on Delivery",
-              subtotal: "1.776.000₫",
+              subtotal: "1.200.000₫",
               shippingFee: "30.000₫",
-              total: "1.806.000₫",
+              total: "1.230.000₫",
             },
             timeline: [
               { status: "Đặt hàng", date: "18/10/2025 09:00", completed: true },
@@ -364,22 +362,22 @@
           3: {
             status: "processing",
             statusText: "Đang xử lý",
-            productName: "Nike Air Max / - 42",
-            price: "1.500.000₫",
+            productName: "Nike Air Force 1",
+            price: "1.200.000₫",
             quantity: 1,
-            total: "1.500.000₫",
+            total: "1.200.000₫",
             shipping: {
-              name: "Lê Văn C",
-              address: "789 Nguyễn Trãi, Quận 5, TP. Hồ Chí Minh",
-              phone: "0905 678 901",
-              email: "levanc@saigonsneaker.com",
+              name: "Nguyễn Văn A",
+              address: "273 An Dương Vương, Phường Chợ Quán , Tp Hồ Chí Minh",
+              phone: "0123 456 789",
+              email: "nguyenvana@gmail.com",
               note: "Giao hàng nhanh",
             },
             payment: {
               method: "Visa",
-              subtotal: "1.500.000₫",
+              subtotal: "1.200.000₫",
               shippingFee: "30.000₫",
-              total: "1.530.000₫",
+              total: "1.230.000₫",
             },
             timeline: [
               { status: "Đặt hàng", date: "18/10/2025 09:00", completed: true },

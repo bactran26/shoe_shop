@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,14 +6,16 @@
     <title>shoe-shop</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/products.css" />
-        <link rel="stylesheet" href="assets/css/search.css" />
+    <link rel="stylesheet" href="assets/css/product.css" />
+
+    <link rel="stylesheet" href="assets/css/search.css" />
 
     <link
       rel="stylesheet"
       href="assets/fonts/themify-icons/themify-icons.css"
     />
     <link rel="stylesheet" href="assets/css/cart.css" />
-    <link rel="stylesheet" href="assets/css/cartcheckout.css">
+    <link rel="stylesheet" href="assets/css/cartcheckout.css" />
   </head>
   <body>
     <div id="main">
@@ -44,38 +45,25 @@
                 </div>
               </div>
 
-               <div class="header-search">
+              <div class="header-search">
                 <div class="header-space-search"></div>
                 <form
                   class="header-input-search"
                   onsubmit="event.preventDefault(); apply();"
                 >
                   <input
+                    style="border-radius: 25px"
                     type="text"
                     placeholder="Search for products"
                     class="input-search"
                   />
-                  <button class="button-search">
+                  <button
+                    class="button-search"
+                    type="button"
+                    onclick="window.location='products-find.html'"
+                  >
                     <i class="ti-search"></i>
                   </button>
-
-                  <div id="advancedBox" class="advanced-box">
-                    
-
-                    <div class="filter-row">
-                      <label>Giá từ:</label>
-                      <input type="number" id="minPrice" placeholder="0" />
-
-                      <label>đến:</label>
-                      <input type="number" id="maxPrice" placeholder="0" />
-                    </div>
-
-                    <div class="search-btn-box">
-                      <button type="button" class="apply-btn" onclick="apply()">
-                        Tìm kiếm
-                      </button>
-                    </div>
-                  </div>
 
                   <div id="searchResults" class="search-results"></div>
                 </form>
@@ -96,61 +84,55 @@
         </div>
       </div>
       <div class="header-bottom">
-          <ul class="nav-bars">
-            <li>
-              <a href="" style="font-weight: bold">
+        <ul class="nav-bars">
+          <li>
+            <a href="" style="font-weight: bold">
               SNEAKER
-                <i class="ti-angle-down"></i>
-              </a>
-              <ul class="sub-nav">
+              <i class="ti-angle-down"></i>
+            </a>
+            <ul class="sub-nav">
               <li>
-                <a href="products.html?category=sneaker&brand=nike">Nike</a>
+                <a href="all_products.html">Nike</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=adidas">Adidas</a>
+                <a href="all_products.html">Adidas</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=newbalance">New Balance</a>
+                <a href="all_products.html">New Balance</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=jordan">Jordan</a>
+                <a href="all_products.html">Jordan</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=vans">Vans</a>
+                <a href="all_products.html">Vans</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=mlb">MLB</a>
+                <a href="all_products.html">MLB</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=converse">Converse</a>
+                <a href="all_products.html">Converse</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=balenciaga">Balenciaga</a>
+                <a href="all_products.html">Balenciaga</a>
               </li>
             </ul>
-            </li>
-            <li>
-            <a href="products.html?category=dep" style="font-weight: bold"
-              >RUNNING</a
-            >
           </li>
           <li>
-            <a href="products.html?category=ao" style="font-weight: bold"
-              >CASUAL</a
-            >
+            <a href="all_products.html" style="font-weight: bold">RUNNING</a>
           </li>
           <li>
-            <a href="products.html?category=quan" style="font-weight: bold"
-              >SKATE</a
-            >
+            <a href="all_products.html" style="font-weight: bold">CASUAL</a>
           </li>
           <li>
-            <a href="products.html?category=balo" style="font-weight: bold"
+            <a href="all_products.html" style="font-weight: bold">SKATE</a>
+          </li>
+          <li>
+            <a href="all_products.html" style="font-weight: bold"
               >LIMITED EDITION</a
             >
           </li>
-          </ul>
-        </div>
+        </ul>
+      </div>
       <div class="box">
         <a class="link2" href="cart.html">SHOPING CART</a>
         <a class="link3">CHECK OUT</a>
@@ -160,193 +142,249 @@
       <div class="boxrong"></div>
       <div class="bodycartcheck">
         <div class="bodycartcheck-left">
-           <div class="section-header">THANH TOÁN VÀ GIAO HÀNG</div>
+          <div class="section-header">THANH TOÁN VÀ GIAO HÀNG</div>
 
-    <div class="input-group-row">
-        <div class="input-box half-width">
-            <label for="ho">Họ *</label>
-            <input type="text" id="ho" placeholder="" style="border-radius: 40px"
->
-        </div>
-        <div class="input-box half-width">
-            <label for="ten">Tên *</label>
-            <input type="text" id="ten" placeholder="" style="border-radius: 40px"
- class="highlighted-input" >
-        </div>
-    </div>
-
-    <div class="input-box full-width">
-        <label for="quoc-gia">Quốc gia/Khu vực *</label>
-        <input type="text" id="quoc-gia" value="Việt Nam" readonly style="border-radius: 40px;"
->
-    </div>
-
-    
-
-
-    <div class="input-box full-width select-box" >
-        <label for="thanh-pho">Thị trấn / Thành phố *</label>
-        <select id="thanh-pho" style="border-radius: 40px;"
->
-            <option  disabled selected >Chọn tỉnh/thành phố</option>
-            <option>TP. Hồ Chí Minh</option>
-            </select>
-    </div>
-
-    <div class="input-box full-width select-box" >
-        <label for="thanh-pho">Phường / Xã *</label>
-        <select id="thanh-pho" style="border-radius: 40px;"
->
-            <option  disabled selected >Chọn phường / xã</option>
-            <option> Phường Chợ Lớn</option>
-            </select>
-    </div>
-
-    <div class="input-box full-width">
-        <label for="dia-chi">Địa chỉ *</label>
-        <input type="text" id="dia-chi" placeholder="Địa chỉ" style="border-radius: 40px;"
->
-    </div>
-
-    
-
-    <div class="input-box full-width">
-        <label for="sdt">Số điện thoại *</label>
-        <input type="tel" id="sdt" placeholder="" style="border-radius: 40px;"
->
-    </div>
-
-    <div class="input-box full-width">
-        <label for="email">Địa chỉ email *</label>
-        <input type="email" id="email" placeholder="" style="border-radius: 40px;"
->
-    </div>
-
-    <div class="create-account-group">
-        
-        <div class="recaptcha-box">
-            <p>For security, use of Google’s reCAPTCHA service is required which is subject to the Google Privacy Policy and Terms of Use.</p>
-            <div class="terms-checkbox">
-                <input type="checkbox" id="agree-terms">
-                <label for="agree-terms">I agree to these terms (required).</label>
+          <div class="input-group-row">
+            <div class="input-box half-width">
+              <label for="ho">Họ *</label>
+              <input
+                type="text"
+                id="ho"
+                placeholder="Nguyễn Văn"
+                style="border-radius: 40px"
+              />
             </div>
-        </div>
-    </div>
+            <div class="input-box half-width">
+              <label for="ten">Tên *</label>
+              <input
+                type="text"
+                id="ten"
+                placeholder="A"
+                style="border-radius: 40px"
+                class="highlighted-input"
+              />
+            </div>
+          </div>
 
-    ---
+          <div class="input-box full-width">
+            <label for="quoc-gia">Quốc gia/Khu vực *</label>
+            <input
+              type="text"
+              id="quoc-gia"
+              value="Việt Nam"
+              readonly
+              style="border-radius: 40px"
+            />
+          </div>
 
-    <div class="section-header additional-info-header">THÔNG TIN BỔ SUNG</div>
-    <div class="input-box full-width">
-        <label for="ghi-chu">Ghi chú đơn hàng (tùy chọn)</label>
-        <textarea id="ghi-chu" rows="6" style="border-radius: 20px" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
-    </div>
+          <div class="input-box full-width select-box">
+            <label for="thanh-pho">Thị trấn / Thành phố *</label>
+            <select id="thanh-pho" style="border-radius: 40px">
+              <option disabled selected>Chọn tỉnh/thành phố</option>
+              <option>TP. Hồ Chí Minh</option>
+            </select>
+          </div>
+
+          <div class="input-box full-width select-box">
+            <label for="thanh-pho">Phường / Xã *</label>
+            <select id="thanh-pho" style="border-radius: 40px">
+              <option disabled selected>Chọn phường / xã</option>
+              <option>Phường Chợ Lớn</option>
+            </select>
+          </div>
+
+          <div class="input-box full-width">
+            <label for="dia-chi">Địa chỉ *</label>
+            <input
+              type="text"
+              id="dia-chi"
+              placeholder="273 An Dương Vương"
+              style="border-radius: 40px"
+            />
+          </div>
+
+          <div class="input-box full-width">
+            <label for="sdt">Số điện thoại *</label>
+            <input
+              type="tel"
+              id="sdt"
+              placeholder="0123456789"
+              style="border-radius: 40px"
+            />
+          </div>
+
+          <div class="input-box full-width">
+            <label for="email">Địa chỉ email *</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="nguyenvana@gmail.com"
+              style="border-radius: 40px"
+            />
+          </div>
+
+          <div class="create-account-group">
+            <div class="recaptcha-box">
+              <p>
+                For security, use of Google’s reCAPTCHA service is required
+                which is subject to the Google Privacy Policy and Terms of Use.
+              </p>
+              <div class="terms-checkbox">
+                <input type="checkbox" id="agree-terms" />
+                <label for="agree-terms"
+                  >I agree to these terms (required).</label
+                >
+              </div>
+            </div>
+          </div>
+
+          ---
+
+          <div class="section-header additional-info-header">
+            THÔNG TIN BỔ SUNG
+          </div>
+          <div class="input-box full-width">
+            <label for="ghi-chu">Ghi chú đơn hàng (tùy chọn)</label>
+            <textarea
+              id="ghi-chu"
+              rows="6"
+              style="border-radius: 20px"
+              placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."
+            ></textarea>
+          </div>
         </div>
-        <div class="bodycartcheck-right" >
+        <div class="bodycartcheck-right">
           <div class="dautren">đơn hàng của bạn</div>
           <div class="than">
             <div class="boxrong"></div>
             <div class="small">
-              <div class="left" style="font-size:19px; font-weight:bold;">SẢN PHẨM</div>
-              <div class="right" style="font-size:19px; font-weight:bold;">TẠM TÍNH</div>
+              <div class="left" style="font-size: 19px; font-weight: bold">
+                SẢN PHẨM
+              </div>
+              <div class="right" style="font-size: 19px; font-weight: bold">
+                TẠM TÍNH
+              </div>
             </div>
-              <div class="big">
-                  <div class="left">
-                      <span><img src="assets/images/giay1.jpg" ></span>
-                      <span style="font-size: 22px;">H-FORCE BLUE / - 43 <br> x1</span>
-                  </div>
-                  <div class="right" >888,000₫</div>
-               
+            <div class="big">
+              <div class="left">
+                <span><img src="assets/images/giay1.jpg" /></span>
+                <span style="font-size: 22px"
+                  >H-FORCE BLUE / - 43 <br />
+                  x1</span
+                >
               </div>
-              
-              <div class="big">
-                  <div class="left">
-                      <span><img src="assets/images/giay1.jpg" ></span>
-                      <span style="font-size: 22px;">H-FORCE BLUE / - 43 <br> x1</span>
-                  </div>
-                  <div class="right" >888,000₫</div>
-               
+              <div class="right">888,000₫</div>
+            </div>
+
+            <div class="big">
+              <div class="left">
+                <span><img src="assets/images/giay1.jpg" /></span>
+                <span style="font-size: 22px"
+                  >H-FORCE BLUE / - 43 <br />
+                  x1</span
+                >
               </div>
-              <div class="big">
-                  <div class="left">
-                      <span><img src="assets/images/giay1.jpg" ></span>
-                      <span style="font-size: 22px;">H-FORCE BLUE / - 43 <br> x1</span>
-                  </div>
-                  <div class="right" >888,000₫</div>
-               
+              <div class="right">888,000₫</div>
+            </div>
+            <div class="big">
+              <div class="left">
+                <span><img src="assets/images/giay1.jpg" /></span>
+                <span style="font-size: 22px"
+                  >H-FORCE BLUE / - 43 <br />
+                  x1</span
+                >
               </div>
-              <div class="big">
-                  <div class="left">
-                      <span><img src="assets/images/giay1.jpg" ></span>
-                      <span style="font-size: 22px;">H-FORCE BLUE / - 43 <br> x1</span>
-                  </div>
-                  <div class="right" >888,000₫</div>
-               
+              <div class="right">888,000₫</div>
+            </div>
+            <div class="big">
+              <div class="left">
+                <span><img src="assets/images/giay1.jpg" /></span>
+                <span style="font-size: 22px"
+                  >H-FORCE BLUE / - 43 <br />
+                  x1</span
+                >
               </div>
-              
-              <div class="small">
-                <div class="left">Tạm Tính</div>
-                <div class="right" style="font-weight: bold; ">3,552,000₫</div>
+              <div class="right">888,000₫</div>
+            </div>
+
+            <div class="small">
+              <div class="left">Tạm Tính</div>
+              <div class="right" style="font-weight: bold">3,552,000₫</div>
+            </div>
+
+            <div class="small">
+              <div class="left" style="width: 30%">Giao Hàng</div>
+              <div class="right" style="width: 70%">
+                Tiêu chuẩn (3-4 ngày): 35,000₫
               </div>
-              
-              <div class="small">
-                <div class="left" style="width:30%;">Giao Hàng</div>
-                <div class="right" style="width: 70%;">Tiêu chuẩn (3-4 ngày): 35,000₫</div>
-              </div>
-              
-              <div class="small">
-                <div class="left">Tổng Tiền</div>
-                <div class="right" style="font-weight: bold; ">3,587,000₫</div>
-              </div>
+            </div>
+
+            <div class="small">
+              <div class="left">Tổng Tiền</div>
+              <div class="right" style="font-weight: bold">3,587,000₫</div>
+            </div>
           </div>
-         <div class="gancuoi">Thanh toán khi nhận hàng (COD)</div>
-         <div class="daucuoi"><a href="cartcomplete.html"><button>THANH TOÁN</button></a></div>
+          <div class="gancuoi">Thanh toán khi nhận hàng (COD)</div>
+          <div class="daucuoi">
+            <a href="cartcomplete.html"><button>THANH TOÁN</button></a>
+          </div>
         </div>
       </div>
-      <div class="boxrong"></div>
-      <div class="linebodycart"></div>
-      <div class="boxrong"></div>
-      <div class="sanphamvuaxem">sản phẩm vừa xem</div>
-      <div class="underbodycart">
-        <div class="underbodycart-item">
-            <a href="product.html"> <img src="assets/images/giay1.jpg" alt="Giay nu"></i></a>
-            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
-            <p class="brand">local brand</p>
-            <p class="brand">★★★★★</p>
-            <div class="price-container">
-              <span class="old-price">999,000₫</span>
-              <span class="new-price">888,000₫</span> 
-            </div>
+      <div class="recent-products-section-gradient">
+        <h2>SẢN PHẨM VỪA XEM</h2>
+      </div>
+      <div class="boxsanphamtrongtrang">
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <img
+              src="assets/images/ariford1.jpg"
+              alt="NIKE AIR FORCE 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info" style="flex-direction: column">
+            <h3 class="product-name">NIKE AIR FORCE 1</h3>
+            <div class="product-price">1.200.000₫</div>
+          </div>
         </div>
-        <div class="underbodycart-item">
-            <a href="product.html"> <img src="assets/images/giay1.jpg" alt="Giay nu"></i></a>
-            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
-            <p class="brand">local brand</p>
-            <p class="brand">★★★★★</p>
-            <div class="price-container">
-              <span class="old-price">999,000₫</span>
-              <span class="new-price">888,000₫</span> 
-            </div>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <img
+              src="assets/images/ariford1.jpg"
+              alt="NIKE AIR FORCE 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info" style="flex-direction: column">
+            <h3 class="product-name">NIKE AIR FORCE 1</h3>
+            <div class="product-price">1.200.000₫</div>
+          </div>
         </div>
-        <div class="underbodycart-item">
-            <a href="product.html"> <img src="assets/images/giay1.jpg" alt="Giay nu"></i></a>
-            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
-            <p class="brand">local brand</p>
-            <p class="brand">★★★★★</p>
-            <div class="price-container">
-              <span class="old-price">999,000₫</span>
-              <span class="new-price">888,000₫</span> 
-            </div>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <img
+              src="assets/images/ariford1.jpg"
+              alt="NIKE AIR FORCE 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info" style="flex-direction: column">
+            <h3 class="product-name">NIKE AIR FORCE 1</h3>
+            <div class="product-price">1.200.000₫</div>
+          </div>
         </div>
-    
-        <div class="underbodycart-item">
-            <a href="product.html"> <img src="assets/images/giay1.jpg" alt="Giay nu"></i></a>
-            <p class="name">Balenciaga Triple S Clear Sole Orange Grey Black- Sale Size 37</p>
-            <p class="brand">local brand</p>
-            <p class="brand">★★★★★</p>
-            <div class="price-container">
-              <span class="old-price">999,000₫</span>
-              <span class="new-price">888,000₫</span> 
-            </div>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="product-image">
+            <img
+              src="assets/images/ariford1.jpg"
+              alt="NIKE AIR FORCE 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info" style="flex-direction: column">
+            <h3 class="product-name">NIKE AIR FORCE 1</h3>
+            <div class="product-price">1.200.000₫</div>
+          </div>
         </div>
       </div>
       <div class="boxrong"></div>
@@ -444,6 +482,5 @@
     <script type="module" src="assets/js/products.js"></script>
     <script src="assets/js/cart.js"></script>
     <script src="assets/js/search.js"></script>
-
   </body>
 </html>

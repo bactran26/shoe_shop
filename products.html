@@ -36,37 +36,43 @@
             </div>
 
             <div class="header-search">
-              <form
-                class="header-input-search"
-                method="get"
-                action="products.html"
-                onsubmit="return validateSearch(event)"
-              >
-                <input
-                  type="text"
-                  name="q"
-                  class="input-search"
-                  placeholder="Search for products"
-                />
-                <button class="button-search" type="submit">
-                  <i class="ti-search"></i>
-                </button>
-              </form>
-            </div>
+                <div class="header-space-search"></div>
+                <form
+                  class="header-input-search"
+                  onsubmit="event.preventDefault(); apply();"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search for products"
+                    class="input-search"
+                  />
+                  <button
+                    class="button-search"
+                    type="button"
+                    onclick="window.location='products-find.html'"
+                  >
+                    <i class="ti-search"></i>
+                  </button>
 
-            <div class="header-right">
-              <div class="header-user">
-                <a href="user-infor.html"><i class="ti-user"></i></a>
+                  <div id="searchResults" class="search-results"></div>
+                </form>
+                <div class="header-space-after"></div>
               </div>
-              <div class="header-cart">
-                <a href="cart.html"><i class="ti-shopping-cart"></i></a>
+
+              <div class="header-right">
+                <div class="header-user">
+                  <a href="user-infor.html"><i class="ti-stamp"></i></a>
+                </div>
+
+                <div class="header-cart">
+                  <a href="#"><i class="ti-shopping-cart"></i></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="header-bottom">
+      <div class="header-bottom">
         <ul class="nav-bars">
           <li>
             <a href="" style="font-weight: bold">
@@ -75,54 +81,42 @@
             </a>
             <ul class="sub-nav">
               <li>
-                <a href="products.html?category=sneaker&brand=nike">Nike</a>
+                <a href="all_products.html">Nike</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=adidas">Adidas</a>
+                <a href="all_products.html">Adidas</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=newbalance"
-                  >New Balance</a
-                >
+                <a href="all_products.html">New Balance</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=jordan">Jordan</a>
+                <a href="all_products.html">Jordan</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=vans">Vans</a>
+                <a href="all_products.html">Vans</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=mlb">MLB</a>
+                <a href="all_products.html">MLB</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=converse"
-                  >Converse</a
-                >
+                <a href="all_products.html">Converse</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=balenciaga"
-                  >Balenciaga</a
-                >
+                <a href="all_products.html">Balenciaga</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="products.html?category=dep" style="font-weight: bold"
-              >RUNNING</a
-            >
+            <a href="all_products.html" style="font-weight: bold">RUNNING</a>
           </li>
           <li>
-            <a href="products.html?category=ao" style="font-weight: bold"
-              >CASUAL</a
-            >
+            <a href="all_products.html" style="font-weight: bold">CASUAL</a>
           </li>
           <li>
-            <a href="products.html?category=quan" style="font-weight: bold"
-              >SKATE</a
-            >
+            <a href="all_products.html" style="font-weight: bold">SKATE</a>
           </li>
           <li>
-            <a href="products.html?category=balo" style="font-weight: bold"
+            <a href="all_products.html" style="font-weight: bold"
               >LIMITED EDITION</a
             >
           </li>
@@ -220,43 +214,43 @@
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/ariford1.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/ariford1.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
-              <h3 class="product-name">AIR FORD 1</h3>
+              <h3 class="product-name">AIR FORCE 1</h3>
               <div class="product-price">1.290.000₫</div>
             </div>
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/ariford1.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/ariford1.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
-              <h3 class="product-name">AIR FORD 1</h3>
+              <h3 class="product-name">AIR FORCE 1</h3>
               <div class="product-price">1.290.000₫</div>
             </div>
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/ariford1.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/ariford1.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
-              <h3 class="product-name">AIR FORD 1</h3>
+              <h3 class="product-name">AIR FORCE 1</h3>
               <div class="product-price">1.290.000₫</div>
             </div>
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/ariford1.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/ariford1.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
-              <h3 class="product-name">AIR FORD 1</h3>
+              <h3 class="product-name">AIR FORCE 1</h3>
               <div class="product-price">1.290.000₫</div>
             </div>
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/KD.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/KD.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
               <h3 class="product-name">KD18 "AUNT PEARL" EP</h3>
@@ -265,7 +259,7 @@
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/KD.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/KD.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
               <h3 class="product-name">KD18 "AUNT PEARL" EP</h3>
@@ -274,7 +268,7 @@
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/KD.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/KD.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
               <h3 class="product-name">KD18 "AUNT PEARL" EP</h3>
@@ -283,7 +277,7 @@
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/KD.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/KD.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
               <h3 class="product-name">KD18 "AUNT PEARL" EP</h3>
@@ -292,7 +286,7 @@
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/ultra.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/ultra.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
               <h3 class="product-name">ULTRA BOUNCE</h3>
@@ -301,7 +295,7 @@
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/ultra.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/ultra.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
               <h3 class="product-name">ULTRA BOUNCE</h3>
@@ -310,7 +304,7 @@
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/ultra.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/ultra.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
               <h3 class="product-name">ULTRA BOUNCE</h3>
@@ -319,7 +313,7 @@
           </a>
           <a class="product-card" href="product.html" data-name="h-force blue">
             <div class="product-image">
-              <img src="assets/images/ultra.jpg" alt="AIR FORD 1" />
+              <img src="assets/images/ultra.jpg" alt="AIR FORCE 1" />
             </div>
             <div class="product-info">
               <h3 class="product-name">ULTRA BOUNCE</h3>

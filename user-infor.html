@@ -53,25 +53,13 @@
                     placeholder="Search for products"
                     class="input-search"
                   />
-                  <button class="button-search">
+                  <button
+                    class="button-search"
+                    type="button"
+                    onclick="window.location='products-find.html'"
+                  >
                     <i class="ti-search"></i>
                   </button>
-
-                  <div id="advancedBox" class="advanced-box">
-                    <div class="filter-row">
-                      <label>Giá từ:</label>
-                      <input type="number" id="minPrice" placeholder="0" />
-
-                      <label>đến:</label>
-                      <input type="number" id="maxPrice" placeholder="0" />
-                    </div>
-
-                    <div class="search-btn-box">
-                      <button type="button" class="apply-btn" onclick="apply()">
-                        Tìm kiếm
-                      </button>
-                    </div>
-                  </div>
 
                   <div id="searchResults" class="search-results"></div>
                 </form>
@@ -91,7 +79,6 @@
           </div>
         </div>
       </div>
-
       <div class="header-bottom">
         <ul class="nav-bars">
           <li>
@@ -101,60 +88,47 @@
             </a>
             <ul class="sub-nav">
               <li>
-                <a href="products.html?category=sneaker&brand=nike">Nike</a>
+                <a href="all_products.html">Nike</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=adidas">Adidas</a>
+                <a href="all_products.html">Adidas</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=newbalance"
-                  >New Balance</a
-                >
+                <a href="all_products.html">New Balance</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=jordan">Jordan</a>
+                <a href="all_products.html">Jordan</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=vans">Vans</a>
+                <a href="all_products.html">Vans</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=mlb">MLB</a>
+                <a href="all_products.html">MLB</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=converse"
-                  >Converse</a
-                >
+                <a href="all_products.html">Converse</a>
               </li>
               <li>
-                <a href="products.html?category=sneaker&brand=balenciaga"
-                  >Balenciaga</a
-                >
+                <a href="all_products.html">Balenciaga</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="products.html?category=dep" style="font-weight: bold"
-              >RUNNING</a
-            >
+            <a href="all_products.html" style="font-weight: bold">RUNNING</a>
           </li>
           <li>
-            <a href="products.html?category=ao" style="font-weight: bold"
-              >CASUAL</a
-            >
+            <a href="all_products.html" style="font-weight: bold">CASUAL</a>
           </li>
           <li>
-            <a href="products.html?category=quan" style="font-weight: bold"
-              >SKATE</a
-            >
+            <a href="all_products.html" style="font-weight: bold">SKATE</a>
           </li>
           <li>
-            <a href="products.html?category=balo" style="font-weight: bold"
+            <a href="all_products.html" style="font-weight: bold"
               >LIMITED EDITION</a
             >
           </li>
         </ul>
       </div>
-
       <div class="user-infor-container">
         <h1 class="page-title">THÔNG TIN TÀI KHOẢN</h1>
         <p class="breadcrumb">Home / Tài khoản</p>
@@ -201,19 +175,34 @@
                   <input
                     type="email"
                     id="email"
-                    placeholder="example@gmail.com"
+                    placeholder="nguyenvana@gmail.com"
                     required
                   />
                 </div>
 
                 <div class="form-group">
                   <label for="phone">Số điện thoại *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    placeholder="0901234567"
-                    required
-                  />
+                  <input type="tel" id="phone" placeholder="0123456789" />
+                </div>
+                <div class="form-group">
+                  <label for="city">Thành phố *</label>
+                  <select id="city">
+                    <option value="">Hồ Chí Minh</option>
+                    <option value="hn">Hà Nội</option>
+                    <option value="dn">Đà Nẵng</option>
+                    <!-- Thêm thành phố khác nếu muốn -->
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="ward">Phường *</label>
+                  <select id="ward">
+                    <option value="">Chợ Quán</option>
+                    <option value="tanbinh">Chợ Lớn</option>
+                    <option value="tanbinh2">Cần Thơ</option>
+                    <option value="tandinh">Tân Bình</option>
+                    <!-- Thêm phường khác nếu muốn -->
+                  </select>
                 </div>
 
                 <div class="form-group">
@@ -221,13 +210,13 @@
                   <input
                     type="text"
                     id="address"
-                    placeholder="Nhập địa chỉ của bạn"
+                    placeholder="273 An Dương Vương"
                   />
                 </div>
 
                 <div class="form-group">
                   <label for="birthday">Ngày sinh</label>
-                  <input type="date" id="birthday" />
+                  <input type="date" id="birthday" value="2000-01-01" />
                 </div>
 
                 <div class="form-group">
