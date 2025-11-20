@@ -1,13 +1,15 @@
 .bodycartcheck {
   display: flex;
   height: 1400px;
-  background-color: #ffffff;
   position: relative;
   width: 85%;
   transform: translateX(140px);
   justify-content: center;
   gap: 20px;
   font-family: "Lexend", Sans-serif;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  
 }
 
 .bodycartcheck-left {
@@ -19,6 +21,7 @@
   padding: 5px;
   padding-top: 20px;
   margin: 0 auto;
+  border-radius: 25px;
 }
 
 .bodycartcheck-right {
